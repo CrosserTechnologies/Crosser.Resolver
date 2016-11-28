@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Benchmarks - Crosser Technologies</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_colors.css" type="text/css" />
+    <link rel="stylesheet" href="../css/styles/vs.css">
+    <link rel="stylesheet" href="../css/font-awesome.4.5.0.min.css">
+</head>
+<body role="document">
+    <div class="grid-for-nav">
+        <nav data-toggle="nav-shift" class="nav-side stickynav">
+            <div class="side-nav-search">
+                <a href="../index.htm"><i class="fa fa-home"></i> Crosser Technologies</a>
+                <div role="search">
+                    <form id="search-form" class="form" action="../Docnet_search.htm" method="get">
+                        <input type="text" name="q" placeholder="Search docs" />
+                    </form>
+                </div>
+            </div>
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+<ul>
+<li class="tocentry"><a href="../index.htm">Home</a>
+</li>
+
+<li class="tocentry">
+<ul>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../resolver/index.htm">Crosser.Resolver</a></span></li>
+
+<li class="tocentry current"><a class="current" href="../resolver/benchmarks.htm">Benchmarks</a>
+<ul class="currentrelative">
+<li class="tocentry"><a href="#tests">Tests</a></li>
+<li class="tocentry"><a href="#result">Result</a></li>
+<li class="tocentry"><a href="#hardware">Hardware</a></li>
+</ul>
+<li class="tocentry"><a href="../resolver/features.htm">Features</a>
+</li>
+<li class="tocentry"><a href="../resolver/installing.htm">Installing</a>
+</li>
+<li class="tocentry"><a href="../resolver/usage.htm">Usage</a>
+</li>
+<li class="tocentry"><a href="../resolver/usage-advanced.htm">Advanced Usage</a>
+</li>
+</ul>
+</li>
+</ul>
+				<div class="toc-footer">
+					<span class="text-small">
+						<hr/>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+					</span>
+				</div>	
+			</div>
+            &nbsp;
+        </nav>
+        <section data-toggle="nav-shift" class="nav-content-wrap">
+            <nav class="nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="nav-top" class="fa fa-bars"></i>
+                <a href="../index.htm">Crosser Technologies</a>
+            </nav>
+            <div class="nav-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <div class="breadcrumbs">
+<ul><li><a href="../index.htm">Home</a></li> / <li><a href="../resolver/index.htm">Crosser.Resolver</a></li> / <li><a href="../resolver/benchmarks.htm">Benchmarks</a></li></ul>
+					
+                    </div>
+                    <hr />
+                </div>
+                <div role="main">
+                    <div class="section">
+<h1 id="crosser-technologies---dependency-resolver">Crosser Technologies - Dependency Resolver<a class="headerlink" href="#crosser-technologies---dependency-resolver" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>We used the <a href="https://github.com/danielpalme/IocPerformance" target="_blank">IoCPerformance Benchmarks</a> from <a href="https://github.com/danielpalme" target="_blank">Daniel Palme</a></p>
+<p>The <code>Crosser Dependency Resolver</code> was (as already mentioned) written for the needs in the <code>Crosser</code> Framework. 
+The Resolver does not have all features and functions in a full DI/IoC framework, and certainly DOES NOT try to compete with all DI/IoC containers out there. 
+Instead we aimed at being the best/fastest when is comes to the features needed for our realtime streaming framework. </p>
+<h2 id="result">Result<a class="headerlink" href="#result" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>Not all frameworks in the original test was included our benchmark.</p>
+<ul>
+<li>We removed the slowest frameworks as well as the frameworks that broke during the test. </li>
+<li><code>DryIoC</code> was removed since we got exceptions in that test. No efforts to fix <code>DryIoC</code> was done but according to the tests from <a href="https://github.com/danielpalme" target="_blank">Daniel Palme</a> <code>DryIoC</code> is very fast!</li>
+</ul>
+<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>Note: the scale is <code>logarithmic</code>! This means that the difference is much bigger than you might think, see the <code>x-axis</code> values!</p>
+</div><p>Every interface is resolved <code>500.000</code> times during the benchmark and the time is measured in <code>milliseconds</code>. Each test is executed single threaded and multi threaded.</p>
+<h3 id="singleton">Singleton<a class="headerlink" href="#singleton" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>Numbers in <strong>bold</strong> is the fastest (lower is better)</p>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Container</th>
+	<th>SingleThread</th>
+	<th>MultiThread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>No Container</td>
+	<td>42</td>
+	<td>38</td>
+</tr>
+<tr>
+	<td>Crosser</td>
+	<td><strong>7</strong></td>
+	<td><strong>21</strong></td>
+</tr>
+<tr>
+	<td>LightInject</td>
+	<td>33</td>
+	<td>31</td>
+</tr>
+<tr>
+	<td>fFastInjector</td>
+	<td>47</td>
+	<td>41</td>
+</tr>
+<tr>
+	<td>IfInjector</td>
+	<td>65</td>
+	<td>53</td>
+</tr>
+<tr>
+	<td>Func</td>
+	<td>104</td>
+	<td>69</td>
+</tr>
+<tr>
+	<td>Microsoft DI</td>
+	<td>138</td>
+	<td>156</td>
+</tr>
+<tr>
+	<td>Mef2</td>
+	<td>183</td>
+	<td>110</td>
+</tr>
+<tr>
+	<td>TinyIoC</td>
+	<td>364</td>
+	<td>348</td>
+</tr>
+<tr>
+	<td>Windsor</td>
+	<td>552</td>
+	<td>336</td>
+</tr>
+<tr>
+	<td>Unity</td>
+	<td>2743</td>
+	<td>1418</td>
+</tr>
+<tr>
+	<td>Ninject</td>
+	<td>4535</td>
+	<td>2650</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img src="../images/01-Singleton.png" title="Singleton" width="800" height="600" />
+<p>Singleton</p>
+</div>
+<h3 id="transient">Transient<a class="headerlink" href="#transient" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>Numbers in <strong>bold</strong> is the fastest (lower is better)</p>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Container</th>
+	<th>SingleThread</th>
+	<th>MultiThread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>No Container</td>
+	<td>54</td>
+	<td>52</td>
+</tr>
+<tr>
+	<td>Crosser</td>
+	<td><strong>21</strong></td>
+	<td><strong>41</strong></td>
+</tr>
+<tr>
+	<td>LightInject</td>
+	<td>39</td>
+	<td>48</td>
+</tr>
+<tr>
+	<td>fFastInjector</td>
+	<td>91</td>
+	<td>71</td>
+</tr>
+<tr>
+	<td>IfInjector</td>
+	<td>104</td>
+	<td>71</td>
+</tr>
+<tr>
+	<td>Func</td>
+	<td>130</td>
+	<td>879</td>
+</tr>
+<tr>
+	<td>Microsoft DI</td>
+	<td>102</td>
+	<td>73</td>
+</tr>
+<tr>
+	<td>Mef2</td>
+	<td>192</td>
+	<td>121</td>
+</tr>
+<tr>
+	<td>TinyIoC</td>
+	<td>1409</td>
+	<td>810</td>
+</tr>
+<tr>
+	<td>Windsor</td>
+	<td>1849</td>
+	<td>992</td>
+</tr>
+<tr>
+	<td>Unity</td>
+	<td>4195</td>
+	<td>2181</td>
+</tr>
+<tr>
+	<td>Ninject</td>
+	<td>14505</td>
+	<td>11248</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img src="../images/02-Transient.png" title="Transient" width="800" height="600" />
+<p>Transient</p>
+</div>
+<h3 id="enumerable">Enumerable<a class="headerlink" href="#enumerable" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>Numbers in <strong>bold</strong> is the fastest (lower is better). Not that not all containers support Enumerable.</p>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>Container</th>
+	<th>SingleThread</th>
+	<th>MultiThread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>No Container</td>
+	<td>158</td>
+	<td>102</td>
+</tr>
+<tr>
+	<td>Crosser</td>
+	<td>481</td>
+	<td>272</td>
+</tr>
+<tr>
+	<td>LightInject</td>
+	<td><strong>234</strong></td>
+	<td><strong>146</strong></td>
+</tr>
+<tr>
+	<td>fFastInjector</td>
+	<td>-</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>IfInjector</td>
+	<td>-</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>Func</td>
+	<td>-</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>Microsoft DI</td>
+	<td>586</td>
+	<td>353</td>
+</tr>
+<tr>
+	<td>Mef2</td>
+	<td>1125</td>
+	<td>604</td>
+</tr>
+<tr>
+	<td>TinyIoC</td>
+	<td>-</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>Windsor</td>
+	<td>13417</td>
+	<td>7136</td>
+</tr>
+<tr>
+	<td>Unity</td>
+	<td>45463</td>
+	<td>23510</td>
+</tr>
+<tr>
+	<td>Ninject</td>
+	<td>99840</td>
+	<td>55253</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img src="../images/07-IEnumerable.png" title="Enumerable" width="800" height="600" />
+<p>Enumerable</p>
+</div>
+<h2 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>The benchmark was executed on the following machine:</p>
+<ul>
+<li>Processor: Intel(R) Core(TM) i7-4850HQ CPU @ 2.30GHz, 2301 Mhz, 4 Core(s), 8 Logical Processor(s)</li>
+<li>Memory:	15,9 GB</li>
+</ul>
+
+                    </div>
+                </div>
+                <footer>
+                    <hr />
+                    <div role="contentinfo">
+Made with DocNet. Get your copy at: <a href='https://github.com/FransBouma/DocNet' target='_blank'>https://github.com/FransBouma/DocNet</a>.
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

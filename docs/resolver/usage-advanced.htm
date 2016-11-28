@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced Usage - Crosser Technologies</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_colors.css" type="text/css" />
+    <link rel="stylesheet" href="../css/styles/vs.css">
+    <link rel="stylesheet" href="../css/font-awesome.4.5.0.min.css">
+</head>
+<body role="document">
+    <div class="grid-for-nav">
+        <nav data-toggle="nav-shift" class="nav-side stickynav">
+            <div class="side-nav-search">
+                <a href="../index.htm"><i class="fa fa-home"></i> Crosser Technologies</a>
+                <div role="search">
+                    <form id="search-form" class="form" action="../Docnet_search.htm" method="get">
+                        <input type="text" name="q" placeholder="Search docs" />
+                    </form>
+                </div>
+            </div>
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+<ul>
+<li class="tocentry"><a href="../index.htm">Home</a>
+</li>
+
+<li class="tocentry">
+<ul>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../resolver/index.htm">Crosser.Resolver</a></span></li>
+
+<li class="tocentry"><a href="../resolver/benchmarks.htm">Benchmarks</a>
+</li>
+<li class="tocentry"><a href="../resolver/features.htm">Features</a>
+</li>
+<li class="tocentry"><a href="../resolver/installing.htm">Installing</a>
+</li>
+<li class="tocentry"><a href="../resolver/usage.htm">Usage</a>
+</li>
+<li class="tocentry current"><a class="current" href="../resolver/usage-advanced.htm">Advanced Usage</a>
+<ul class="currentrelative">
+<li class="tocentry"><a href="#dependency-injection">Dependency Injection</a></li>
+<li class="tocentry"><a href="#property-injection">Property Injection</a></li>
+<li class="tocentry"><a href="#sample-code">Sample Code</a></li>
+</ul>
+</ul>
+</li>
+</ul>
+				<div class="toc-footer">
+					<span class="text-small">
+						<hr/>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+					</span>
+				</div>	
+			</div>
+            &nbsp;
+        </nav>
+        <section data-toggle="nav-shift" class="nav-content-wrap">
+            <nav class="nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="nav-top" class="fa fa-bars"></i>
+                <a href="../index.htm">Crosser Technologies</a>
+            </nav>
+            <div class="nav-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <div class="breadcrumbs">
+<ul><li><a href="../index.htm">Home</a></li> / <li><a href="../resolver/index.htm">Crosser.Resolver</a></li> / <li><a href="../resolver/usage-advanced.htm">Advanced Usage</a></li></ul>
+					
+                    </div>
+                    <hr />
+                </div>
+                <div role="main">
+                    <div class="section">
+<h1 id="crosser-technologies---dependency-resolver">Crosser Technologies - Dependency Resolver<a class="headerlink" href="#crosser-technologies---dependency-resolver" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p>Sample interfaces/classes used can be found at <a href="usage-advanced.htm#sample-code">the bottom</a> of this page.</p>
+<p>All samples assumes that you have included the namespace for the static <code>Crosser.Resolver</code> container.</p>
+<pre><code>// include the namespace
+using Crosser.Resolve;
+</code></pre>
+
+<h2 id="dependency-injection">Dependency Injection<a class="headerlink" href="#dependency-injection" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>If you take a look at the <a href="usage-advanced.html#sample-code">sample classes</a> you can see a common way to decouple concrete implementation from each other.
+Basically all we do is using the interfaces instad of the concrete type so that we can change the implementation with minimal efforts.</p>
+<p>Register the <code>ICarService</code> to <code>CarService</code>, also pass <code>ICarRepository</code> to the ctor since it needs one</p>
+<pre><code>One&lt;ICarService&gt;.As(()=&gt;new CarService(One&lt;ICarRepository&gt;.Get()));
+</code></pre>
+
+<p>Register the <code>ICarRepository</code> to <code>CarRepository</code> so that the mapping above will be ok</p>
+<pre><code>One&lt;ICarRepository&gt;.As(()=&gt; new CarRepository());
+</code></pre>
+
+<p>Now when we ask for the <code>ICarService</code> we will get a <code>CarService</code> with the <code>ICarRepository</code> registered</p>
+<pre><code>var carService = One&lt;ICarService&gt;.Get();
+foreach(var car in carService.GetFastestCars(3))
+{
+    Console.WriteLine(&quot;Name: {0}, Speed: {1}&quot;,car.Name, car.TopSpeed);
+}
+</code></pre>
+
+<h2 id="property-injection">Property Injection<a class="headerlink" href="#property-injection" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>Above we used <code>Dependency Injection</code> by passing <code>interfaces</code> on the <code>constructor</code>, but we could also do <code>Property Injection</code> if the <code>interface</code> we map has public properties.</p>
+<p>Interfaces</p>
+<pre><code>public interface ISomeInterface
+{
+    IAnotherInterface SomeProperty {get;set;}
+}
+public interface IAnotherInterface
+{
+
+}
+</code></pre>
+
+<p>Registration</p>
+<pre><code>One&lt;ISomeInterface&gt;.As(()=&gt;new SomeInterfaceImplementation{SomeProperty = One&lt;IAnotherInterface&gt;.Get();});
+One&lt;IAnotherInterface&gt;.As(()=&gt; new AnotherInterfaceImplementation());
+</code></pre>
+
+<p>Implementation</p>
+<pre><code>// TODO: To test this... Implement ISomeInterface in SomeInterfaceImplementation and IAnotherInterface in SomeProperty
+</code></pre>
+
+<h2 id="sample-code">Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p><code>interfaces</code> and <code>classes</code> used in this page</p>
+<h3 id="model">Model<a class="headerlink" href="#model" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>public class Car
+{
+    public int Id{get;set;}
+    public string Name{get;set;}
+    public int TopSpeed{get;set;}
+}
+</code></pre>
+
+<h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>public interface ICarService
+{        
+    IEnumerable&lt;Car&gt; GetFastestCars(int maxHits);
+} 
+
+public interface ICarRepository
+{
+    IEnumerable&lt;Car&gt; GetFastestCars(int maxHits);
+} 
+</code></pre>
+
+<h3 id="implementations">implementations<a class="headerlink" href="#implementations" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>public class CarRepository : ICarRepository
+{
+    public IEnumerable&lt;Car&gt; GetFastestCars(int maxHits = 3)
+    {
+        return new List&lt;Car&gt;(){
+            new Car{Id = 1, Name=&quot;Ferrari 1&quot;, TopSpeed=365},
+            new Car{Id = 2, Name=&quot;Ferrari 2&quot;, TopSpeed=400},
+            new Car{Id = 3, Name=&quot;Ferrari 3&quot;, TopSpeed=332},
+            new Car{Id = 4, Name=&quot;Ferrari 4&quot;, TopSpeed=450},
+            new Car{Id = 5, Name=&quot;Ferrari 5&quot;, TopSpeed=320},
+        }.OrderByDescending(p =&gt; p.TopSpeed).Take(maxHits);
+    }
+}
+
+public class CarService : ICarService
+{
+    protected ICarRepository Repository;
+    public CarService(ICarRepository repository)
+    {
+        Repository = repository;
+    }
+    public IEnumerable&lt;Car&gt; GetFastestCars(int maxHits = 3)
+    {
+        return this.Repository.GetFastestCars(maxHits);
+    }
+}
+</code></pre>
+
+
+                    </div>
+                </div>
+                <footer>
+                    <hr />
+                    <div role="contentinfo">
+Made with DocNet. Get your copy at: <a href='https://github.com/FransBouma/DocNet' target='_blank'>https://github.com/FransBouma/DocNet</a>.
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

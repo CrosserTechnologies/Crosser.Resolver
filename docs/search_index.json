@@ -1,0 +1,34 @@
+{
+  "docs": [
+    {
+      "location": "resolver/benchmarks.htm",
+      "breadcrumbs": "Home / Crosser.Resolver / Benchmarks",
+      "keywords": "000 01 02 07 102 104 110 11248 1125 121 130 13417 138 1409 1418 14505 146 15 156 158 183 1849 192 2 21 2181 2301 234 23510 2650 272 2743 30GHz 31 33 336 348 353 364 38 39 4 41 4195 42 4535 45463 47 48 481 4850HQ 500 52 53 54 552 55253 586 604 65 69 7 71 7136 73 8 810 879 9 91 992 99840 a according aimed alert all already and as at axis being benchmark Benchmarks best better bigger bold broke but certainly com comes compete Container containers Core CPU Crosser Daniel danielpalme Dependency DI difference does DOES done DryIoC during Each efforts end Enumerable Every exceptions executed fast fastest features fFastInjector fix following for framework Framework frameworks from full Func functions GB github got Hardware have https i7 IEnumerable IfInjector images in included info Instead Intel interface IoC IocPerformance IoCPerformance is LightInject logarithmic Logical lower machine means measured Mef2 Memory mentioned Mhz Microsoft might milliseconds much multi MultiThread needed needs Ninject No not Not NOT Note Numbers on original our out Palme png Processor R realtime removed resolved Resolver Result s scale see since single SingleThread Singleton slowest streaming support Technologies test tests Tests than that the The there think This threaded time times TinyIoC TM to Transient try Unity used values was we We well very when Windsor with written x you",
+      "title": "Benchmarks"
+    },
+    {
+      "location": "resolver/features.htm",
+      "breadcrumbs": "Home / Crosser.Resolver / Features",
+      "keywords": "a about all at basic below Crosser Dependency Designing Disable Enable Enumerable features few for Get had htm IDictionary instances listed mappings Named needs object properties Read Resolver Rewrite runtime Set Singleton specific string Support Technologies the to Transient under usage we",
+      "title": "Features"
+    },
+    {
+      "location": "resolver/installing.htm",
+      "breadcrumbs": "Home / Crosser.Resolver / Installing",
+      "keywords": "can Crosser Dependency from https install Install nuget Nuget org Package Resolver Technologies the You",
+      "title": "Installing"
+    },
+    {
+      "location": "resolver/usage.htm",
+      "breadcrumbs": "Home / Crosser.Resolver / Usage",
+      "keywords": "0 1 123 a above add Add adding alert all All ALL Also although always an and And another answer appears approach as As ask asking assumes at attach back be being between bit both bottom but by call can cant change changed choose chuck Chuck chuck1 chuck2 chuckProperties class classes code Code collection collections concrete Console container create Creating Crosser currently custom default Dependency developers Dictionary did different directly disable Disable DisableAll DisableAllOf disabled Disbale do doesn each easy enable Enable EnableAll EnableAllOf end enumerable exception fa fake FakeChuck fakeChuckProperties fakeChuckProps feature feel fine for foreach forward found Framework from get Get GetAll GetFact GetNamedInstance grouped gt has have Having hello here htm IAmFake IChuckNorris IDictionary if If implementation in In include included individually info instance instances instead interface interfaces IRL is IS it Iterate just keyword let little look looks lt magic Many map Map mapped mapping mappings mark may metadata might migth mirror modules n name named Named namedInstance NamedInstance namespace need new never normally Norris not NOT nothing now Now null num number object objects odd of on once one One only or our over page pass passing phone properties Properties property props public real realchuck realChuckProperties realChuckProps reason Register remap Resolve Resolver return returns rewritable Rewritable rewrite same sample Sample samples sealed second seen set setting several should since Since single singleton Singleton so some Some specific star statement static str straight string supported supposed T Technologies that the The TheOnlyChuck there There theRealChuck TheRealDeal they this This throw time to transient Transient true type Type types usage Use used using wanna want var was way we well when When Whenever where will with without working works Works world WriteLine wrong yet you You your",
+      "title": "Usage"
+    },
+    {
+      "location": "resolver/usage-advanced.htm",
+      "breadcrumbs": "Home / Crosser.Resolver / Advanced Usage",
+      "keywords": "0 1 2 3 320 332 365 4 400 450 5 a above Above advanced all All also and AnotherInterfaceImplementation As ask assumes at Basically be bottom but by can car Car CarRepository carService CarService change class classes code Code common concrete Console constructor container could Crosser ctor decouple Dependency do each efforts Ferrari for foreach found from get Get GetFastestCars has have htm html IAnotherInterface ICarRepository ICarService Id IEnumerable if If Implement implementation Implementation implementations in include included Injection instad int interface interfaces Interfaces is ISomeInterface it List look map mapping maxHits minimal Model Name namespace needs new Now of ok on one One OrderByDescending other p page pass passing properties Property protected public Register registered Registration repository Repository Resolve Resolver return sample Sample samples see set since so SomeInterfaceImplementation SomeProperty Speed static string take Take Technologies test that the this to To TODO TopSpeed type usage used using var way we when will with WriteLine you",
+      "title": "Advanced Usage"
+    }
+  ]
+}

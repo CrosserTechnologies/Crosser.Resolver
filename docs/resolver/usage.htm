@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Usage - Crosser Technologies</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_colors.css" type="text/css" />
+    <link rel="stylesheet" href="../css/styles/vs.css">
+    <link rel="stylesheet" href="../css/font-awesome.4.5.0.min.css">
+</head>
+<body role="document">
+    <div class="grid-for-nav">
+        <nav data-toggle="nav-shift" class="nav-side stickynav">
+            <div class="side-nav-search">
+                <a href="../index.htm"><i class="fa fa-home"></i> Crosser Technologies</a>
+                <div role="search">
+                    <form id="search-form" class="form" action="../Docnet_search.htm" method="get">
+                        <input type="text" name="q" placeholder="Search docs" />
+                    </form>
+                </div>
+            </div>
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+<ul>
+<li class="tocentry"><a href="../index.htm">Home</a>
+</li>
+
+<li class="tocentry">
+<ul>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../resolver/index.htm">Crosser.Resolver</a></span></li>
+
+<li class="tocentry"><a href="../resolver/benchmarks.htm">Benchmarks</a>
+</li>
+<li class="tocentry"><a href="../resolver/features.htm">Features</a>
+</li>
+<li class="tocentry"><a href="../resolver/installing.htm">Installing</a>
+</li>
+<li class="tocentry current"><a class="current" href="../resolver/usage.htm">Usage</a>
+<ul class="currentrelative">
+<li class="tocentry"><a href="#singletont">Singleton&lt;T&gt;</a></li>
+<li class="tocentry"><a href="#onet">One&lt;T&gt;</a></li>
+<li class="tocentry"><a href="#manyt">Many&lt;T&gt;</a></li>
+<li class="tocentry"><a href="#properties">Properties</a></li>
+<li class="tocentry"><a href="#rewritable">Rewritable</a></li>
+<li class="tocentry"><a href="#enabledisable">Enable/Disable</a></li>
+</ul>
+<li class="tocentry"><a href="../resolver/usage-advanced.htm">Advanced Usage</a>
+</li>
+</ul>
+</li>
+</ul>
+				<div class="toc-footer">
+					<span class="text-small">
+						<hr/>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+					</span>
+				</div>	
+			</div>
+            &nbsp;
+        </nav>
+        <section data-toggle="nav-shift" class="nav-content-wrap">
+            <nav class="nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="nav-top" class="fa fa-bars"></i>
+                <a href="../index.htm">Crosser Technologies</a>
+            </nav>
+            <div class="nav-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <div class="breadcrumbs">
+<ul><li><a href="../index.htm">Home</a></li> / <li><a href="../resolver/index.htm">Crosser.Resolver</a></li> / <li><a href="../resolver/usage.htm">Usage</a></li></ul>
+					
+                    </div>
+                    <hr />
+                </div>
+                <div role="main">
+                    <div class="section">
+<h1 id="crosser-technologies---dependency-resolver">Crosser Technologies - Dependency Resolver<a class="headerlink" href="#crosser-technologies---dependency-resolver" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p>Sample interfaces/classes used can be found at <a href="usage.htm#sample-code">the bottom</a> of this page.</p>
+<p>All samples assumes that you have included the namespace for the static <code>Crosser.Resolver</code> container.</p>
+<pre><code>// include the namespace
+using Crosser.Resolve;
+</code></pre>
+
+<h2 id="singletont">Singleton&lt;T&gt;<a class="headerlink" href="#singletont" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>Use the <code>Singleton&lt;T&gt;</code> to map and get <code>singleton</code> objects.</p>
+<pre><code>// set `IChuckNorris` to be a singleton that always returns the same instance of the implementation `TheOnlyChuck`
+Singleton&lt;IChuckNorris&gt;.As(()=&gt; new TheOnlyChuck());
+
+// get the mapping for `IChuckNorris`
+var theRealChuck = Singleton&lt;IChuckNorris&gt;.Get();
+</code></pre>
+
+<h2 id="onet">One&lt;T&gt;<a class="headerlink" href="#onet" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>Use <code>One&lt;T&gt;</code> to map and get <code>transient</code> objects</p>
+<pre><code>// set IChuckNorris to map as transient (always return a new instance).
+One&lt;IChuckNorris&gt;.As(()=&gt; new TheOnlyChuck());
+
+// get a new IChuckNorris
+var chuck1 = One&lt;IChuckNorris&gt;.Get();
+
+// get another chuck. 
+var chuck2 = One&lt;IChuckNorris&gt;.Get(); 
+</code></pre>
+
+<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>The statement above Works fine here, but IRL this should throw an exception since there can be only one Chuck Norris <i class="fa fa-star"></i></p>
+</div><h2 id="manyt">Many&lt;T&gt;<a class="headerlink" href="#manyt" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p><code>Many&lt;T&gt;</code> is grouped/enumerable <code>transient</code> mapping where you can map several instances to one <code>interface</code>.</p>
+<pre><code>// map TheOnlyChuck and the FakeChuck to the IChuckNorris interface
+Many&lt;IChuckNorris&gt;.Add(()=&gt;new TheOnlyChuck());
+Many&lt;IChuckNorris&gt;.Add(()=&gt;new FakeChuck());
+
+//Iterate over the IChuckNorris collection
+foreach(var chuck in Many&lt;IChuckNorris&gt;.GetAll())
+{
+    Console.WriteLine(chuck.GetFact());
+}
+</code></pre>
+
+<h3 id="named-instance">Named instance<a class="headerlink" href="#named-instance" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>When working with collections of <code>Many&lt;T&gt;</code> you migth wanna get a specific instance from the collection</p>
+<pre><code>// map TheOnlyChuck to a named instance 'realchuck'
+Many&lt;IChuckNorris&gt;.Add(() =&gt; new TheOnlyChuck(), namedInstance: &quot;realchuck&quot;);
+
+// add another instance, this time fake chuck without being named
+Many&lt;IChuckNorris&gt;.Add(() =&gt; new FakeChuck());
+
+// get the named instance
+var chuck = Many&lt;IChuckNorris&gt;.GetNamedInstance(&quot;realchuck&quot;);
+Console.WriteLine(chuck.GetFact());
+</code></pre>
+
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>The <code>Crosser Resolver</code> let you add <code>properties</code> to your mappings by passing in a <code>IDictionary&lt;string,object&gt;</code>.
+You may look at this as setting metadata to a mapping type.</p>
+<h3 id="onet--singletont">One&lt;T&gt; &amp; Singleton&lt;T&gt;<a class="headerlink" href="#onet--singletont" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>When mapping properties to <code>One&lt;T&gt;</code>, <code>Singleton&lt;T&gt;</code> the properties is mapped directly on the <code>interface</code> of <code>T</code>.</p>
+<pre><code>/// Some properties to attach to a mapping
+var props = new Dictionary&lt;string, object&gt;() { { &quot;num&quot;, 123 }, { &quot;str&quot;, &quot;hello world&quot; } };
+
+// map TheOnlyChuck to IChuckNorris and pass in the properties
+One&lt;IChuckNorris&gt;.As(() =&gt; new TheOnlyChuck(), properties: props);
+
+// get properties for IChuckNorris
+var chuckProperties = One&lt;IChuckNorris&gt;.Properties;
+Console.WriteLine(&quot;IChuckNorris has properties num:{0}, str:{1}&quot;, chuckProperties[&quot;num&quot;], chuckProperties[&quot;str&quot;]);
+</code></pre>
+
+<h3 id="manyt-1">Many&lt;T&gt;<a class="headerlink" href="#manyt-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>When mapping <code>properties</code> to <code>Many&lt;T&gt;</code> the <code>properties</code> is mapped to each mapping by type or named instance.</p>
+<p>Creating some <code>properties</code> for <code>TheOnlyChuck</code> and <code>FakeChuck</code></p>
+<pre><code>// some properties for real chuck
+var realChuckProps = new Dictionary&lt;string, object&gt;() { { &quot;TheRealDeal&quot;, true } };
+
+
+// some properties for fake chuck
+var fakeChuckProps = new Dictionary&lt;string, object&gt;() { { &quot;IAmFake&quot;, true } };
+</code></pre>
+
+<p>Map <code>TheOnlyChuck</code> and <code>FakeChuck</code> with <code>properties</code></p>
+<pre><code>// map TheOnlyChuck to a named instance 'realchuck' with properties
+Many&lt;IChuckNorris&gt;.Add(() =&gt; new TheOnlyChuck(), namedInstance: &quot;realchuck&quot;, properties : realChuckProps);
+
+// add another instance, this time fake chuck without being named but with properties
+Many&lt;IChuckNorris&gt;.Add(() =&gt; new FakeChuck(), properties : fakeChuckProps);
+</code></pre>
+
+<p>Get <code>properties</code> by type of mapping.</p>
+<pre><code>var realChuckProperties = Many&lt;IChuckNorris&gt;.Properties&lt;TheOnlyChuck&gt;();
+Console.WriteLine(&quot;TheOnlyChuck has property TheRealDeal:{0}&quot;, realChuckProperties[&quot;TheRealDeal&quot;]);
+
+var fakeChuckProperties = Many&lt;IChuckNorris&gt;.Properties&lt;FakeChuck&gt;();
+Console.WriteLine(&quot;FakeChuck has property IAmFake:{0}&quot;, chuckProperties[&quot;IAmFake&quot;]);
+</code></pre>
+
+<p>Since <code>TheOnlyChuck</code> was mapped as a named instance <code>realchuck</code> we can get the <code>properties</code> by name as well</p>
+<pre><code>var realChuckProperties = Many&lt;IChuckNorris&gt;.Properties(&quot;realchuck&quot;);
+Console.WriteLine(&quot;TheOnlyChuck has property TheRealDeal:{0}, realChuckProperties[&quot;TheRealDeal&quot;]);
+</code></pre>
+
+<h2 id="rewritable">Rewritable<a class="headerlink" href="#rewritable" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>Having this feature might feel odd since you normally just remap the interface to a new concrete type. In <code>Crosser</code> the default is that mappings <strong>IS NOT</strong> <code>rewritable</code>.
+The reason for this is that not all of our modules is supposed to be <code>rewritable</code>. Also if developers create new custom modules they might wanna mark the mapping as not being <code>rewritable</code>.
+You might look at this as using the <code>sealed</code> keyword but on mappings between interfaces and concrete types instead of a class.</p>
+<p>You can rewrite both <code>Singleton&lt;T&gt;</code> and <code>Transient</code> (<code>One&lt;T&gt;</code> and <code>Many&lt;T&gt;</code>) mappings.</p>
+<p>Register a rewritable instance of <code>Singleton&lt;IChuckNorris&gt;</code> to <code>FakeChuck</code></p>
+<pre><code>Singleton&lt;IChuckNorris&gt;.As(() =&gt; new FakeChuck(), rewritable : true);
+</code></pre>
+
+<p>Whenever we ask for <code>IChuckNorris</code> we will get the <code>FakeChuck</code>, but since it is <code>rewritable</code> we can change this by just adding a new mapping for <code>IChuckNorris</code>.</p>
+<pre><code>Singleton&lt;IChuckNorris&gt;.As(() =&gt; new TheOnlyChuck());
+</code></pre>
+
+<p>Now we will get <code>TheOnlyChuck</code>  when asking for <code>IChuckNorris</code> <i class="fa fa-magic"></i>
+Since we did not mark the new mapping as <code>rewritable</code> this mapping is now <code>sealed</code> and cant be changed.</p>
+<h2 id="enabledisable">Enable/Disable<a class="headerlink" href="#enabledisable" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>If you want to <code>disable/enable</code> mappings you can do so for all type of mappings. <code>Singleton&lt;T&gt;</code> and <code>One&lt;T&gt;</code> works in the same way, but <code>Many&lt;T&gt;</code> has a different approach.
+If a mapping is disabled it will return <code>null</code>.</p>
+<h3 id="singletont-onet">Singleton&lt;T&gt; One&lt;T&gt;<a class="headerlink" href="#singletont-onet" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>Since both <code>Singleton&lt;T&gt;</code> and <code>One&lt;T&gt;</code> returns a single instance the <code>enable/disable</code> is straight forward.</p>
+<pre><code>One&lt;IChuckNorris&gt;.Enable();
+One&lt;IChuckNorris&gt;.Disable();
+</code></pre>
+
+<p>And <code>Singleton&lt;T&gt;</code> look the same</p>
+<pre><code>Singleton&lt;IChuckNorris&gt;.Enable();
+Singleton&lt;IChuckNorris&gt;.Disable();
+</code></pre>
+
+<h3 id="manyt-2">Many&lt;T&gt;<a class="headerlink" href="#manyt-2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>Many&lt;T&gt;</code> looks a little bit different since you can get <code>0-n</code> instances back. You can choose to <code>enable/disable</code> ALL at once or do it individually by using the type of the concrete implementation.</p>
+<h4 id="disableenable-all">Disable/Enable All<a class="headerlink" href="#disableenable-all" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<pre><code>Many&lt;IChuckNorris&gt;.EnableAll();
+Many&lt;IChuckNorris&gt;.DisableAll();
+</code></pre>
+
+<h4 id="disbaleenable-by-type">Disbale/Enable by Type<a class="headerlink" href="#disbaleenable-by-type" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<pre><code>Many&lt;IChuckNorris&gt;EnableAllOf&lt;TheOnlyChuck&gt;();
+Many&lt;IChuckNorris&gt;DisableAllOf&lt;FakeChuck&gt;();
+</code></pre>
+
+<h4 id="disable-by-namedinstance">Disable by NamedInstance<a class="headerlink" href="#disable-by-namedinstance" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<p>This is currently not supported, although easy to add we have not yet seen the need for it in <code>Crosser Framework</code></p>
+<h1 id="sample-code">Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p><code>interfaces</code> and <code>classes</code> used in this page</p>
+<pre><code>interface IChuckNorris
+{
+    string GetFact();
+} 
+
+
+public class TheOnlyChuck : IChuckNorris
+{
+    public string GetFact()
+    {
+        return &quot;Chuck Norris doesn't call the wrong number. You answer the wrong phone.&quot;;
+    }
+}
+
+public class FakeChuck : IChuckNorris
+{
+    public string GetFact()
+    {
+        return &quot;When Chuck Norris looks in the mirror nothing appears. There can never be a second Chuck Norris.&quot;;
+    }
+}
+</code></pre>
+
+
+                    </div>
+                </div>
+                <footer>
+                    <hr />
+                    <div role="contentinfo">
+Made with DocNet. Get your copy at: <a href='https://github.com/FransBouma/DocNet' target='_blank'>https://github.com/FransBouma/DocNet</a>.
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
