@@ -49,6 +49,7 @@
 <li class="tocentry"><a href="#properties">Properties</a></li>
 <li class="tocentry"><a href="#rewritable">Rewritable</a></li>
 <li class="tocentry"><a href="#enabledisable">Enable/Disable</a></li>
+<li class="tocentry"><a href="#reset">Reset</a></li>
 </ul>
 <li class="tocentry"><a href="../resolver/usage-advanced.htm">Advanced Usage</a>
 </li>
@@ -81,6 +82,14 @@
                     <div class="section">
 <h1 id="crosser-technologies---dependency-resolver">Crosser Technologies - Dependency Resolver<a class="headerlink" href="#crosser-technologies---dependency-resolver" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
 <p>Sample interfaces/classes used can be found at <a href="usage.htm#sample-code">the bottom</a> of this page.</p>
+<p>The Crosser Resolver contains 3 different ways to map interfaces to conrecte classes.</p>
+<ul>
+<li>Singleton&lt;T&gt;</li>
+<li>One&lt;T&gt;</li>
+<li>Many&lt;T&gt;</li>
+</ul>
+<p>The resolver is static so you do not need to create any instance of the container.</p>
+<hr />
 <p>All samples assumes that you have included the namespace for the static <code>Crosser.Resolver</code> container.</p>
 <pre><code>// include the namespace
 using Crosser.Resolve;
@@ -225,6 +234,20 @@ Many&lt;IChuckNorris&gt;DisableAllOf&lt;FakeChuck&gt;();
 
 <h4 id="disable-by-namedinstance">Disable by NamedInstance<a class="headerlink" href="#disable-by-namedinstance" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <p>This is currently not supported, although easy to add we have not yet seen the need for it in <code>Crosser Framework</code></p>
+<h2 id="reset">Reset<a class="headerlink" href="#reset" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>If you for some reason need to reset the resolver on a specific type you do so by calling </p>
+<pre><code>Singleton&lt;T&gt;.Reset();
+</code></pre>
+
+<p>or </p>
+<pre><code>One&lt;T&gt;.Reset();
+</code></pre>
+
+<p>or </p>
+<pre><code>Many&lt;T&gt;.Reset();
+</code></pre>
+
+<p>where T is the interface to reset the mappings for.</p>
 <h1 id="sample-code">Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
 <p><code>interfaces</code> and <code>classes</code> used in this page</p>
 <pre><code>interface IChuckNorris
