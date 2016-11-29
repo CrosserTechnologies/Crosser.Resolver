@@ -23,7 +23,7 @@
             //Verify that TInterface is an interface
             if (!typeof(TInterface).IsInterface)
             {
-                throw new ResolverException("TInterface is not an interface");
+                throw new ArgumentException("TInterface is not an interface");
             }
             dependencyObject = new SingletonDependencyObject<TInterface>();
         }

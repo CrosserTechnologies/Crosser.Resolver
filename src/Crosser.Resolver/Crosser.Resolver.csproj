@@ -47,7 +47,6 @@
     <Compile Include="Model\SingletonDependencyObject.cs" />
     <Compile Include="One.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\ResolverException.cs" />
     <Compile Include="Singleton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

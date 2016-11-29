@@ -12,7 +12,7 @@ namespace Crosser.DependencyResolver.Tests.Model
         public abstract T Instance();
     }
 
-    public class FakeHub : BaseHub<FakeHub>//IHub<FakeHub>
+    public class FakeHub : BaseHub<FakeHub>
     {
         public override FakeHub Instance()
         {

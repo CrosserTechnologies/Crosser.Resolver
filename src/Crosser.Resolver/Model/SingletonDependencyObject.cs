@@ -18,7 +18,7 @@ namespace Crosser.Resolve.Model
         {
         }
 
-        public SingletonDependencyObject(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null) :base(creator, rewritable, enabled, properties){}
+        //public SingletonDependencyObject(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null) :base(creator, rewritable, enabled, properties){}
 
         public override void Reset()
         {

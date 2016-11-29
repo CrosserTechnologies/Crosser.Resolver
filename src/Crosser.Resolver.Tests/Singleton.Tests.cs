@@ -13,7 +13,7 @@ namespace Crosser.DependencyResolver.Tests
         public void ShouldNotBeAbleToMapToClass()
         {
             var ex = Assert.ThrowsAny<TypeInitializationException>(()=> { Singleton<Person>.As(() => new Person { Name = "Ben"}); });
-            Assert.IsType(typeof(ResolverException), ex.InnerException);
+            Assert.IsType(typeof(ArgumentException), ex.InnerException);
         }
 
         [Fact]

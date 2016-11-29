@@ -16,7 +16,7 @@ namespace Crosser.DependencyResolver.Tests
         public void ShouldNotBeAbleToMapToClass()
         {
             var ex = Assert.ThrowsAny<TypeInitializationException>(()=> { One<string>.As(() => ""); });
-            Assert.IsType(typeof(ResolverException), ex.InnerException);
+            Assert.IsType(typeof(ArgumentException), ex.InnerException);
         }
 
         [Fact]
