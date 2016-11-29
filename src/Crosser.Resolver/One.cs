@@ -3,7 +3,6 @@
     using System;
     using Model;
     using System.Collections.Generic;
-    using System.Runtime.CompilerServices;
 
     /// <summary>
     /// Handles mapping between a interface and concrete types
@@ -17,10 +16,10 @@
         
         static One()
         {
-            //Verify that T is an interface
+            //Verify that TInterface is an interface
             if (!typeof(TInterface).IsInterface)
             {
-                throw new ResolverException("T is not an interface");
+                throw new ResolverException("TInterface is not an interface");
             }
             dependencyObject = new DependencyObject<TInterface>();            
         }
@@ -53,10 +52,9 @@
         }
 
         /// <summary>
-        /// Returns the T from the func passed in to the method <see cref="As(Func{TInterface}, bool, bool, IDictionary{string, object})"/>
+        /// Returns a transient object for TInterface from the func passed in to the method <see cref="As(Func{TInterface}, bool, bool, IDictionary{string, object})"/>
         /// </summary>
-        /// <returns>Returns the concrete type of T</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        /// <returns>Returns the concrete type of TInterface</returns>        
         public static TInterface Get()
         {            
             return dependencyObject.Get();

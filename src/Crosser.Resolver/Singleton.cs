@@ -4,8 +4,7 @@
     using Model;
     using System.Collections.Generic;
     using System.Linq.Expressions;
-    using System.Runtime.CompilerServices;
-
+    
     /// <summary>
     /// Handles mapping for a interface and a concrete type
     /// 
@@ -21,16 +20,16 @@
         
         static Singleton()
         {
-            //Verify that T is an interface
+            //Verify that TInterface is an interface
             if (!typeof(TInterface).IsInterface)
             {
-                throw new ResolverException("T is not an interface");
+                throw new ResolverException("TInterface is not an interface");
             }
             dependencyObject = new SingletonDependencyObject<TInterface>();
         }
 
         /// <summary>
-        /// This will clear the mapping.
+        /// This will clear the mapping for TInterface.
         /// </summary>
         public static void Reset()
         {
@@ -56,8 +55,7 @@
         /// Returns the TInterface from the func passed in to the method <see cref="As(Func{TInterface}, bool, bool, IDictionary{string, object})"/>
         /// </summary>
         /// <exception cref="Exception">Throws if there is no mapping available for T</exception>
-        /// <returns>Returns the concrete singleton type of T</returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        /// <returns>Returns the concrete singleton type of T</returns>        
         public static TInterface Get()
         {
             return dependencyObject.Get();

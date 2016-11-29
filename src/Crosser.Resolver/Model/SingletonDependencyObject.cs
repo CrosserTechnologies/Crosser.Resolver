@@ -7,42 +7,42 @@ namespace Crosser.Resolve.Model
     /// <summary>
     /// The generic class for mapping Singleton instances
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class SingletonDependencyObject<T> : DependencyObject<T>
+    /// <typeparam name="TInterface"></typeparam>
+    public class SingletonDependencyObject<TInterface> : DependencyObject<TInterface>
     {
         // ReSharper disable once StaticMemberInGenericType
         private  static readonly object locker = new object();
-        internal T  Instance { get; set; }
+        internal TInterface Instance { get; set; }
 
         public SingletonDependencyObject():base()
         {
         }
 
-        public SingletonDependencyObject(Expression<Func<T>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null) :base(creator, rewritable, enabled, properties){}
+        public SingletonDependencyObject(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null) :base(creator, rewritable, enabled, properties){}
 
         public override void Reset()
         {
-            this.Instance = default(T);
+            this.Instance = default(TInterface);
             base.Reset();
         }
 
-        public override T Get()
+        public override TInterface Get()
         {            
             if (Enabled)
             {
                 return this.Instance;
             }
-            return default(T);
+            return default(TInterface);
         }
 
-        public void Set(Expression<Func<T>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null)
+        public void Set(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null)
         {
             lock (locker)
             {
                 if (this.Instance != null && this.Rewritable == false)
                 {                    
                     //Not allowed to override
-                    throw new Exception(string.Format("The singleton type {0} has already been mapped and that mapping does not allow rewriting", typeof(T).Name));
+                    throw new Exception(string.Format("The singleton type {0} has already been mapped and that mapping does not allow rewriting", typeof(TInterface).Name));
                 }
                 // Set the latest rule for overriding
                 this.Rewritable = rewritable;
@@ -50,7 +50,7 @@ namespace Crosser.Resolve.Model
                 this.Instance = this.Creator();
                 this.Enabled = enabled;
                 this.Properties = properties;
-                this.InstanceType = creator.Body.Type; // creator.Method.ReturnType;//
+                this.InstanceType = creator.Body.Type;
             }
         }
     }

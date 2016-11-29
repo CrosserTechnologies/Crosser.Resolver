@@ -6,7 +6,6 @@
     using System.Collections.Concurrent;
     using System.Linq;
     using System.Linq.Expressions;    
-    using System.Runtime.CompilerServices;
 
     /// <summary>
     /// Handles mapping between a interface and a concrete type
@@ -28,10 +27,10 @@
 
         static Many()
         {
-            //Verify that T is an interface
+            //Verify that TInterface is an interface
             if (!typeof(TInterface).IsInterface)
             {
-                throw new ResolverException("T is not an interface");
+                throw new ResolverException("TInterface is not an interface");
             }
             dependencies = new List<DependencyObject<TInterface>>();
             lookUp = new ConcurrentDictionary<string, DependencyObject<TInterface>>();
@@ -106,7 +105,6 @@
         /// Will return all enabled mapping for this interface
         /// </summary>
         /// <returns></returns>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IEnumerable<TInterface> GetAll()
         {
             for (var i = 0; i < dependencies.Count; i++)
@@ -117,7 +115,7 @@
         }
 
         /// <summary>
-        /// Returns a transient instance of type T (if found)
+        /// Returns a transient instance of type TInterface (if found)
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>

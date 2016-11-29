@@ -7,25 +7,25 @@ namespace Crosser.Resolve.Model
     /// <summary>
     /// The generic class for mapping One/Many instances
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class DependencyObject<T>
+    /// <typeparam name="TInterface"></typeparam>
+    public class DependencyObject<TInterface>
     {
         /// <summary>
         /// Can the depencency be overwritten with another depencency?
         /// 
         /// By default false
         /// </summary>
-        internal bool Rewritable { get; set; }
+        internal bool Rewritable { get; set; } = false;
 
         /// <summary>
         /// If disabled you will not be able to get an instance of the dependency
         /// </summary>
-        internal bool Enabled { get; set; }
+        internal bool Enabled { get; set; } = true;
 
         /// <summary>
         /// The func that is resposible for creating the dependency object
         /// </summary>
-        internal Func<T> Creator { get; set; }
+        internal Func<TInterface> Creator { get; set; }
 
         /// <summary>
         /// The concrete type that the depencency object represents 
@@ -40,7 +40,7 @@ namespace Crosser.Resolve.Model
         public DependencyObject(){}
 
 
-        public DependencyObject(Expression<Func<T>> creator, bool rewritable = false, bool enabled = true, IDictionary<string,object> properties = null)
+        public DependencyObject(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, IDictionary<string,object> properties = null)
         {
             this.Creator = creator.Compile();
             this.InstanceType = creator.Body.Type;
@@ -63,13 +63,13 @@ namespace Crosser.Resolve.Model
         /// Returns a new instance of the mapped object
         /// </summary>
         /// <returns></returns>
-        public virtual T Get()
+        public virtual TInterface Get()
         {
             if (Enabled)
             {
                 return this.Creator();
             }
-            return default(T);
+            return default(TInterface);
         }
     }
 }
