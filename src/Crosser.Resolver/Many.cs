@@ -5,20 +5,27 @@
     using Model;
     using System.Collections.Concurrent;
     using System.Linq;
-    using System.Linq.Expressions;    
+    using System.Linq.Expressions;
 
     /// <summary>
-    /// Handles mapping between a interface and a concrete type
+    /// Handles mapping between a interface and concrete type(s)
     /// 
     /// This is grouped transient objects...
     /// </summary>
     /// <typeparam name="TInterface">Interface to map to</typeparam>
     public static class Many<TInterface>
     {
+        private static object _locker = new object();
+
         /// <summary>
         /// The Func that will return a new instance of the interface
         /// </summary>
         private static IList<DependencyObject<TInterface>> dependencies;
+
+        /// <summary>
+        /// To avoid checking for Enabled flags
+        /// </summary>
+        private static DependencyObject<TInterface>[] availableDependencies;
 
         /// <summary>
         /// A lookup dictionary for named instances
@@ -33,6 +40,7 @@
                 throw new ArgumentException("TInterface is not an interface");
             }
             dependencies = new List<DependencyObject<TInterface>>();
+            availableDependencies = dependencies.ToArray();
             lookUp = new ConcurrentDictionary<string, DependencyObject<TInterface>>();
         }
 
@@ -41,8 +49,12 @@
         /// </summary>
         public static void Reset()
         {
-            dependencies.Clear();
-            lookUp.Clear();
+            lock (_locker)
+            {
+                dependencies.Clear();
+                availableDependencies = dependencies.ToArray();
+                lookUp.Clear();
+            }
         }
 
         /// <summary>
@@ -55,32 +67,37 @@
         /// <param name="properties">Lets you set custom properties as metadata for a mapping signature</param>
         public static void Add(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, string namedInstance = null, IDictionary<string, object> properties = null)
         {
-            var i = new DependencyObject<TInterface>(creator, rewritable, enabled, properties);
-            if (dependencies.Any(p => p.InstanceType == i.InstanceType))
+            lock (_locker)
             {
-                IList<DependencyObject<TInterface>> toRemove = new List<DependencyObject<TInterface>>();
-                foreach (var dependency in dependencies.Where(p => p.InstanceType == i.InstanceType))
+                var i = new DependencyObject<TInterface>(creator, rewritable, enabled, properties);
+                if (dependencies.Any(p => p.InstanceType == i.InstanceType))
                 {
-                    if (dependency.Rewritable)
+                    IList<DependencyObject<TInterface>> toRemove = new List<DependencyObject<TInterface>>();
+                    foreach (var dependency in dependencies.Where(p => p.InstanceType == i.InstanceType))
                     {
-                        toRemove.Add(dependency);
+                        if (dependency.Rewritable)
+                        {
+                            toRemove.Add(dependency);
+                        }
                     }
+
+                    foreach (var removeMe in toRemove)
+                    {
+                        dependencies.Remove(removeMe);
+                        if (!string.IsNullOrEmpty(namedInstance))
+                        {
+                            DependencyObject<TInterface> _;
+                            lookUp.TryRemove(namedInstance, out _);
+                        }
+                    }
+                }
+                dependencies.Add(i);
+                if (!string.IsNullOrEmpty(namedInstance))
+                {
+                    lookUp.TryAdd(namedInstance, i);
                 }
 
-                foreach (var removeMe in toRemove)
-                {
-                    dependencies.Remove(removeMe);
-                    if (!string.IsNullOrEmpty(namedInstance))
-                    {
-                        DependencyObject<TInterface> _;
-                        lookUp.TryRemove(namedInstance, out _);
-                    }
-                }
-            }
-            dependencies.Add(i);
-            if (!string.IsNullOrEmpty(namedInstance))
-            {
-                lookUp.TryAdd(namedInstance, i);
+                availableDependencies = dependencies.ToArray();
             }
         }
 
@@ -90,14 +107,18 @@
         /// <typeparam name="TClass"></typeparam>
         public static void Remove<TClass>()
         {
-            IList<DependencyObject<TInterface>> toRemove = new List<DependencyObject<TInterface>>();
-            foreach (var dependency in dependencies.Where(p => p.InstanceType == typeof(TClass)))
+            lock (_locker)
             {
-                toRemove.Add(dependency);
-            }
-            foreach (var dependency in toRemove)
-            {
-                dependencies.Remove(dependency);
+                IList<DependencyObject<TInterface>> toRemove = new List<DependencyObject<TInterface>>();
+                foreach (var dependency in dependencies.Where(p => p.InstanceType == typeof(TClass)))
+                {
+                    toRemove.Add(dependency);
+                }
+                foreach (var dependency in toRemove)
+                {
+                    dependencies.Remove(dependency);
+                }
+                availableDependencies = dependencies.ToArray();
             }
         }
 
@@ -107,10 +128,9 @@
         /// <returns></returns>
         public static IEnumerable<TInterface> GetAll()
         {
-            for (var i = 0; i < dependencies.Count; i++)
+            foreach (var obj in availableDependencies)
             {
-                if (dependencies[i].Enabled)
-                    yield return dependencies[i].Creator();
+                yield return obj.Creator();
             }
         }
 
@@ -157,6 +177,8 @@
         {
             foreach (var dependency in dependencies)
                 dependency.Enabled = true;
+
+            availableDependencies = dependencies.ToArray();
         }
 
         /// <summary>
@@ -166,6 +188,8 @@
         {
             foreach (var dependency in dependencies)
                 dependency.Enabled = false;
+
+            availableDependencies = new DependencyObject<TInterface>[0];
         }
 
         /// <summary>
@@ -176,6 +200,8 @@
         {
             foreach (var dependency in dependencies.Where(p => p.InstanceType == typeof(TClass)))
                 dependency.Enabled = true;
+
+            availableDependencies = dependencies.Where(p => p.Enabled).ToArray();
         }
 
         /// <summary>
@@ -186,6 +212,8 @@
         {
             foreach (var dependency in dependencies.Where(p => p.InstanceType == typeof(TClass)))
                 dependency.Enabled = false;
+
+            availableDependencies = dependencies.Where(p => p.Enabled).ToArray();
         }
     }
 }
