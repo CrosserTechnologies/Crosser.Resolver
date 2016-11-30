@@ -92,7 +92,8 @@ Instead we aimed at being the best/fastest when is comes to the features needed 
 <li>We removed the slowest frameworks as well as the frameworks that broke during the test. </li>
 <li><code>DryIoC</code> was removed since we got exceptions in that test. No efforts to fix <code>DryIoC</code> was done but according to the tests from <a href="https://github.com/danielpalme" target="_blank">Daniel Palme</a> <code>DryIoC</code> is very fast!</li>
 </ul>
-<p>Every interface is resolved <code>500.000</code> times during the benchmark and the time is measured in <code>milliseconds</code>. Each test is executed single threaded and multi threaded.</p>
+<p>Every interface is resolved <code>500.000</code> times during the benchmark and the time is measured in <code>milliseconds</code>. Each test is executed single threaded and multi threaded.
+Note that our multithreaded test was running 8 threads due to 8 logical processors on the test machine. The <a href="https://github.com/danielpalme/IocPerformance" target="_blank">original test</a> only ran 2 threads in the multithreaded tests.</p>
 <h3 id="overview-fast-containers">Overview Fast Containers<a class="headerlink" href="#overview-fast-containers" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <div class="figure">
 <img src="../images/Overview_Basic_Fast.png" title="Basic Fast" width="800" height="600" />
