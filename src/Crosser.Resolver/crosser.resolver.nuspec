@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>Crosser.Resolver</id>
+        <version>0.0.5-dev-$buildNumber$</version>
+        <title>Crosser.Resolver</title>
+        <authors>Crosser Technologies AB</authors>
+        <owners>Crosser Technologies AB</owners>
+        <licenseUrl>https://github.com/CrosserTechnologies/Crosser.Resolver/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://crossertechnologies.github.io/Crosser.Resolver/CrosserResolver.htm</projectUrl>
+        <iconUrl>https://crossertechnologies.github.io/Crosser.Resolver/favicon.ico</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A tiny DI/IoC container</description>
+        <summary>High speed resolver of interfaces and the concrete types mapped </summary>
+        <releaseNotes>Improved performance! See bechmark in documentation for more information</releaseNotes>
+        <copyright>Crosser Technologies AB</copyright>
+        <language>en-US</language>
+        <tags>Crosser, Dependency Injection, Inversion Of Control, DI, IoC, Dependency Resolver, Dependency Container</tags>
+    </metadata>
+    <files>
+      <file src="Resolver\Crosser.Resolver\bin\Release\Crosser.Resolver.dll" target="lib\net45\Crosser.Resolver.dll" />
+    </files>
+</package>
