@@ -3,9 +3,10 @@
     using System;
     using System.Collections.Generic;
     using Model;
-    using System.Collections.Concurrent;
     using System.Linq;
     using System.Linq.Expressions;
+    using System.Collections.Concurrent;
+    using PlatformHelpers;
 
     /// <summary>
     /// Handles mapping between a interface and concrete type(s)
@@ -35,8 +36,8 @@
         static Many()
         {
             //Verify that TInterface is an interface
-            if (!typeof(TInterface).IsInterface)
-            {
+            if (!TypeExtensions.IsInterface<TInterface>())
+            {                
                 throw new ArgumentException("TInterface is not an interface");
             }
             dependencies = new List<DependencyObject<TInterface>>();

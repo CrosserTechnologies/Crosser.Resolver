@@ -1,0 +1,31 @@
+﻿-d:DEBUG
+-d:TRACE
+-d:NET
+-d:NET451
+-nowarn:CS1701
+-nowarn:CS1702
+-nowarn:CS1705
+-platform:anycpu
+-t:library
+-debug:full
+-nostdlib
+-nologo
+"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\obj\Debug\net451\dotnet-compile.assemblyinfo.cs"
+-out:"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\bin\Debug\net451\Crosser.Resolver.Tests.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Linq.Expressions.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Threading.Tasks.dll"
+-r:"C:\Users\Uffe\.nuget\packages\xunit.abstractions\2.0.0\lib\net35\xunit.abstractions.dll"
+-r:"C:\Users\Uffe\.nuget\packages\xunit.assert\2.1.0\lib\dotnet\xunit.assert.dll"
+-r:"C:\Users\Uffe\.nuget\packages\xunit.extensibility.core\2.1.0\lib\dotnet\xunit.core.dll"
+-r:"C:\Users\Uffe\.nuget\packages\xunit.extensibility.execution\2.1.0\lib\net45\xunit.execution.desktop.dll"
+-r:"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\bin\Debug\net451\Crosser.Resolver.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\mscorlib.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll"
+"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Many.Tests.cs"
+"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\One.Tests.cs"
+"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Singleton.Tests.cs"
+"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Model\SampleObjects.cs"
+"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Properties\AssemblyInfo.cs"

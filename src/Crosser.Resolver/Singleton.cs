@@ -4,7 +4,8 @@
     using Model;
     using System.Collections.Generic;
     using System.Linq.Expressions;
-    
+    using PlatformHelpers;
+
     /// <summary>
     /// Handles mapping for a interface and a concrete type
     /// 
@@ -21,7 +22,7 @@
         static Singleton()
         {
             //Verify that TInterface is an interface
-            if (!typeof(TInterface).IsInterface)
+            if (!TypeExtensions.IsInterface<TInterface>())
             {
                 throw new ArgumentException("TInterface is not an interface");
             }

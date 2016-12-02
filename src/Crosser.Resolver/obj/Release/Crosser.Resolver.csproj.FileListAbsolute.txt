@@ -1,5 +1,0 @@
-C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\bin\Release\Crosser.Resolver.dll
-C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\bin\Release\Crosser.Resolver.pdb
-C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\obj\Release\Crosser.Resolver.dll
-C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\obj\Release\Crosser.Resolver.pdb
-C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\obj\Release\Crosser.Resolver.csprojResolveAssemblyReference.cache

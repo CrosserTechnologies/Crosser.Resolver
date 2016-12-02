@@ -1,0 +1,36 @@
+--temp-output:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\obj\Debug\netstandard1.0\
+--out:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\bin\Debug\netstandard1.0\Crosser.Resolver.dll
+--define:DEBUG
+--define:TRACE
+--define:DOTNETCORE
+--define:NETSTANDARD1_0
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--platform:anycpu
+--optimize:False
+--output-name:Crosser.Resolver
+--title:Crosser.Resolver - A tiny high speed dependency resolver
+--description:Built for Crosser Technologies realtime streaming framework
+--copyright:Crosser Technologies AB
+--file-version:0.0.6.0
+--version:0.0.6.0
+--informational-version:0.0.6
+--target-framework:.NETStandard,Version=v1.0
+--reference:C:\Users\Uffe\.nuget\packages\Microsoft.CSharp\4.0.1\ref\netstandard1.0\Microsoft.CSharp.dll
+--reference:C:\Users\Uffe\.nuget\packages\System.Dynamic.Runtime\4.0.11\ref\netstandard1.0\System.Dynamic.Runtime.dll
+--reference:C:\Users\Uffe\.nuget\packages\System.IO\4.1.0\ref\netstandard1.0\System.IO.dll
+--reference:C:\Users\Uffe\.nuget\packages\System.Linq.Expressions\4.1.0\ref\netstandard1.0\System.Linq.Expressions.dll
+--reference:C:\Users\Uffe\.nuget\packages\System.ObjectModel\4.0.12\ref\netstandard1.0\System.ObjectModel.dll
+--reference:C:\Users\Uffe\.nuget\packages\System.Reflection\4.1.0\ref\netstandard1.0\System.Reflection.dll
+--reference:C:\Users\Uffe\.nuget\packages\System.Reflection.Primitives\4.0.1\ref\netstandard1.0\System.Reflection.Primitives.dll
+--reference:C:\Users\Uffe\.nuget\packages\System.Runtime\4.1.0\ref\netstandard1.0\System.Runtime.dll
+--reference:C:\Users\Uffe\.nuget\packages\System.Text.Encoding\4.0.11\ref\netstandard1.0\System.Text.Encoding.dll
+--reference:C:\Users\Uffe\.nuget\packages\System.Threading.Tasks\4.0.11\ref\netstandard1.0\System.Threading.Tasks.dll
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Many.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\One.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Singleton.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Model\DependencyObject.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Model\SingletonDependencyObject.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\PlatformHelpers\TypeExtensions.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Properties\AssemblyInfo.cs

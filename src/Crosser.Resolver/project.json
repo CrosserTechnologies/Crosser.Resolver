@@ -1,0 +1,86 @@
+﻿{
+  "title": "Crosser.Resolver",
+  "description": "Simple resolver for simple needs. A (tiny) high speed dependency resolver built for Crosser Technologies realtime streaming framework",
+  "version": "0.0.7-dev-*",
+  //"version": "0.0.6",
+  "authors": [ "Uffe Björklund - @ulfbjo" ],
+  "copyright": "Crosser Technologies AB",
+  "buildOptions": {
+    "platform": "anycpu" //,
+    //"compile": {
+    //  "includeFiles": [ "../../GlobalAssemblyInfo.cs" ]
+    //}
+  },
+  "configurations": {
+    "Release": {
+      "buildOptions": {
+        "optimize": true,
+        "xmlDoc": true
+      }
+    }
+  },
+  "packOptions": {
+    "summary": "A tiny high speed dependency resolver",
+    "tags": [ "DI/IoC", "Inversion Of Control", "Depencency Injection", "Dependency Resolver", "Resolver", "DI", "IoC" ],
+    "owners": [ "Crosser Technologies AB" ],
+    "projectUrl": "https://crossertechnologies.github.io/Crosser.Resolver/CrosserResolver.htm",
+    "licenseUrl": "http://www.opensource.org/licenses/MIT",
+    "requireLicenseAcceptance": false,
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/CrosserTechnologies/Crosser.Resolver"
+    },
+    "releaseNotes": "https://crossertechnologies.github.io/Crosser.Resolver/CrosserResolver.htm"
+  },
+  "frameworks": {
+    "netstandard1.1": {
+      //"imports": "dnxcore50",
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1",
+        "System.Collections": "4.0.11",
+        "System.Collections.Concurrent": "4.0.12",
+        "System.Linq": "4.1.0",
+        "System.Threading": "4.0.11"
+      },
+      "buildOptions": {
+        "define": [ "DOTNETCORE" ]
+      }
+    },
+    "netstandard1.3": {
+      "dependencies": {
+        "Microsoft.CSharp": "4.0.1",
+        "System.Collections": "4.0.11",
+        "System.Collections.Concurrent": "4.0.12",
+        "System.Linq": "4.1.0",
+        "System.Threading": "4.0.11"
+      },
+      "buildOptions": {
+        "define": [ "DOTNETCORE" ]
+      }
+    },
+    "netstandard1.6": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0"
+      },
+      "buildOptions": {
+        "define": [ "DOTNETCORE" ]
+      }
+    },
+
+    "net451": {
+      "buildOptions": {
+        "define": [ "NET" ]
+      }
+    },
+    "net452": {
+      "buildOptions": {
+        "define": [ "NET" ]
+      }
+    },
+    "net46": {
+      "buildOptions": {
+        "define": [ "NET" ]
+      }
+    }
+  }
+}

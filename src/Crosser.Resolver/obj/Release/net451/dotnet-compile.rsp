@@ -1,0 +1,29 @@
+--temp-output:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\obj\Release\net451\
+--out:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\bin\Release\net451\Crosser.Resolver.dll
+--define:NET
+--define:NET451
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--platform:anycpu
+--optimize:True
+--generate-xml-documentation:True
+--output-name:Crosser.Resolver
+--title:Crosser.Resolver
+--description:A tiny high speed dependency resolver built for Crosser Technologies realtime streaming framework
+--copyright:Crosser Technologies AB
+--file-version:0.0.6.0
+--version:0.0.6.0
+--informational-version:0.0.6
+--target-framework:.NETFramework,Version=v4.5.1
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\mscorlib.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Many.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\One.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Singleton.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Model\DependencyObject.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Model\SingletonDependencyObject.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\PlatformHelpers\TypeExtensions.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Properties\AssemblyInfo.cs

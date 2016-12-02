@@ -3,6 +3,7 @@
     using System;
     using Model;
     using System.Collections.Generic;
+    using PlatformHelpers;
 
     /// <summary>
     /// Handles mapping between a interface and concrete types
@@ -17,7 +18,7 @@
         static One()
         {
             //Verify that TInterface is an interface
-            if (!typeof(TInterface).IsInterface)
+            if (!TypeExtensions.IsInterface<TInterface>())
             {
                 throw new ArgumentException("TInterface is not an interface");
             }

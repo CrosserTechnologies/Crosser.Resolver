@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
+//using System.Runtime.Remoting.Messaging;
 using Crosser.DependencyResolver.Tests.Model;
 using Xunit;
 using Crosser.Resolve;
 using System.Collections.Generic;
-using Crosser.Resolve.Model;
+//using Crosser.Resolve.Model;
 
 namespace Crosser.DependencyResolver.Tests
 {

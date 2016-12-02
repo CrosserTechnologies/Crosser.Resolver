@@ -88,9 +88,11 @@ The Resolver does not have all features and functions in a full DI/IoC framework
 Instead we aimed at being the best/fastest when is comes to the features needed for our realtime streaming framework. </p>
 <h2 id="result">Result<a class="headerlink" href="#result" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>Not all frameworks in the original test was included our benchmark.</p>
+<p>Disclaimer</p>
 <ul>
 <li>We removed the slowest frameworks as well as the frameworks that broke during the test. </li>
 <li><code>DryIoC</code> was removed since we got exceptions in that test. No efforts to fix <code>DryIoC</code> was done but according to the tests from <a href="https://github.com/danielpalme" target="_blank">Daniel Palme</a> <code>DryIoC</code> is very fast!</li>
+<li>The tests was performed on .NET 4.5. The resolver supports dotnet core, but since the original tests was written for .NET 4.5 we used that for comparison.  </li>
 </ul>
 <p>Every interface is resolved <code>500.000</code> times during the benchmark and the time is measured in <code>milliseconds</code>. Each test is executed single threaded and multi threaded.
 Note that our multithreaded test was running 8 threads due to 8 logical processors on the test machine. The <a href="https://github.com/danielpalme/IocPerformance" target="_blank">original test</a> only ran 2 threads in the multithreaded tests.</p>

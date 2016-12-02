@@ -1,0 +1,34 @@
+--temp-output:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\obj\Debug\net451\
+--out:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\bin\Debug\net451\Crosser.Resolver.Tests.dll
+--define:DEBUG
+--define:TRACE
+--define:NET
+--define:NET451
+--suppress-warning:CS1701
+--suppress-warning:CS1702
+--suppress-warning:CS1705
+--platform:anycpu
+--optimize:False
+--emit-entry-point:False
+--output-name:Crosser.Resolver.Tests
+--file-version:0.0.0.0
+--version:0.0.0.0
+--informational-version:0.0.0
+--target-framework:.NETFramework,Version=v4.5.1
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Linq.Expressions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Threading.Tasks.dll
+--reference:C:\Users\Uffe\.nuget\packages\xunit.abstractions\2.0.0\lib\net35\xunit.abstractions.dll
+--reference:C:\Users\Uffe\.nuget\packages\xunit.assert\2.1.0\lib\dotnet\xunit.assert.dll
+--reference:C:\Users\Uffe\.nuget\packages\xunit.extensibility.core\2.1.0\lib\dotnet\xunit.core.dll
+--reference:C:\Users\Uffe\.nuget\packages\xunit.extensibility.execution\2.1.0\lib\net45\xunit.execution.desktop.dll
+--reference:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\bin\Debug\net451\Crosser.Resolver.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\mscorlib.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Microsoft.CSharp.dll
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Many.Tests.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\One.Tests.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Singleton.Tests.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Model\SampleObjects.cs
+C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Properties\AssemblyInfo.cs
