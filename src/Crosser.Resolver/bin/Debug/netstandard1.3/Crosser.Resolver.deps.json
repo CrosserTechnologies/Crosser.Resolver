@@ -7,13 +7,14 @@
   "targets": {
     ".NETStandard,Version=v1.3": {},
     ".NETStandard,Version=v1.3/": {
-      "Crosser.Resolver/0.0.6": {
+      "Crosser.Resolver/0.0.7": {
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
           "System.Collections": "4.0.11",
           "System.Collections.Concurrent": "4.0.12",
           "System.Linq": "4.1.0",
-          "System.Threading": "4.0.11"
+          "System.Threading": "4.0.11",
+          "System.Linq.Expressions": "4.1.0"
         },
         "runtime": {
           "Crosser.Resolver.dll": {}
@@ -261,7 +262,7 @@
     }
   },
   "libraries": {
-    "Crosser.Resolver/0.0.6": {
+    "Crosser.Resolver/0.0.7": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

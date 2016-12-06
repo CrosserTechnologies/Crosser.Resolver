@@ -90,6 +90,7 @@ using Crosser.Resolve;
 <h2 id="dependency-injection">Dependency Injection<a class="headerlink" href="#dependency-injection" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>If you take a look at the <a href="usage-advanced.html#sample-code">sample classes</a> you can see a common way to decouple concrete implementation from each other.
 Basically all we do is using the interfaces instad of the concrete type so that we can change the implementation with minimal efforts.</p>
+<h3 id="register">Register<a class="headerlink" href="#register" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>Register the <code>ICarService</code> to <code>CarService</code>, also pass <code>ICarRepository</code> to the ctor since it needs one</p>
 <pre><code>One&lt;ICarService&gt;.As(()=&gt;new CarService(One&lt;ICarRepository&gt;.Get()));
 </code></pre>
@@ -98,6 +99,7 @@ Basically all we do is using the interfaces instad of the concrete type so that 
 <pre><code>One&lt;ICarRepository&gt;.As(()=&gt; new CarRepository());
 </code></pre>
 
+<h3 id="resolve">Resolve<a class="headerlink" href="#resolve" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>Now when we ask for the <code>ICarService</code> we will get a <code>CarService</code> with the <code>ICarRepository</code> registered</p>
 <pre><code>var carService = One&lt;ICarService&gt;.Get();
 foreach(var car in carService.GetFastestCars(3))
@@ -119,12 +121,12 @@ public interface IAnotherInterface
 }
 </code></pre>
 
-<p>Registration</p>
+<h3 id="register-1">Register<a class="headerlink" href="#register-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>One&lt;ISomeInterface&gt;.As(()=&gt;new SomeInterfaceImplementation{SomeProperty = One&lt;IAnotherInterface&gt;.Get();});
 One&lt;IAnotherInterface&gt;.As(()=&gt; new AnotherInterfaceImplementation());
 </code></pre>
 
-<p>Implementation</p>
+<h3 id="resolve-1">Resolve<a class="headerlink" href="#resolve-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>// TODO: To test this... Implement ISomeInterface in SomeInterfaceImplementation and IAnotherInterface in SomeProperty
 </code></pre>
 

@@ -170,7 +170,7 @@
         </member>
         <member name="M:Crosser.Resolve.Singleton`1.Get">
             <summary>
-            Returns the TInterface from the func passed in to the method <see cref="!:As(Func&lt;TInterface&gt;, bool, bool, IDictionary&lt;string, object&gt;)"/>
+            Returns the TInterface from the func passed in to the method <see cref="!:Resolve.Singleton&lt;TInterface&gt;.As(Func&lt;TInterface&gt;, bool, bool, IDictionary&lt;string, object&gt;)"/>
             </summary>
             <exception cref="T:System.Exception">Throws if there is no mapping available for T</exception>
             <returns>Returns the concrete singleton type of T</returns>        
@@ -229,6 +229,18 @@
             The generic class for mapping Singleton instances
             </summary>
             <typeparam name="TInterface"></typeparam>
+        </member>
+        <member name="T:Crosser.Resolve.PlatformHelpers.TypeExtensions">
+            <summary>
+            Extensions for getting type information
+            </summary>
+        </member>
+        <member name="M:Crosser.Resolve.PlatformHelpers.TypeExtensions.IsInterface``1">
+            <summary>
+            returns true if T is an interface, otherwise false
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
         </member>
     </members>
 </doc>

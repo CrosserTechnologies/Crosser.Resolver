@@ -1,0 +1,3 @@
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\bin\Crosser.Resolver.Tests.pdb
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\obj\Debug\Crosser.Resolver.Tests.dll
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\obj\Debug\Crosser.Resolver.Tests.pdb

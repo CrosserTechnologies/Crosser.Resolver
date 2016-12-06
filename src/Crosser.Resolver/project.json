@@ -1,7 +1,7 @@
 ﻿{
   "title": "Crosser.Resolver",
   "description": "Simple resolver for simple needs. A (tiny) high speed dependency resolver built for Crosser Technologies realtime streaming framework",
-  "version": "0.0.7-dev-*",
+  "version": "0.0.7-*",
   //"version": "0.0.6",
   "authors": [ "Uffe Björklund - @ulfbjo" ],
   "copyright": "Crosser Technologies AB",
@@ -40,7 +40,8 @@
         "System.Collections": "4.0.11",
         "System.Collections.Concurrent": "4.0.12",
         "System.Linq": "4.1.0",
-        "System.Threading": "4.0.11"
+        "System.Threading": "4.0.11",
+        "System.Linq.Expressions": "4.1.0" 
       },
       "buildOptions": {
         "define": [ "DOTNETCORE" ]
@@ -52,7 +53,8 @@
         "System.Collections": "4.0.11",
         "System.Collections.Concurrent": "4.0.12",
         "System.Linq": "4.1.0",
-        "System.Threading": "4.0.11"
+        "System.Threading": "4.0.11",
+        "System.Linq.Expressions": "4.1.0"
       },
       "buildOptions": {
         "define": [ "DOTNETCORE" ]
@@ -60,7 +62,8 @@
     },
     "netstandard1.6": {
       "dependencies": {
-        "NETStandard.Library": "1.6.0"
+        "NETStandard.Library": "1.6.0",
+        "System.Linq.Expressions": "4.1.0"
       },
       "buildOptions": {
         "define": [ "DOTNETCORE" ]
@@ -70,16 +73,24 @@
     "net451": {
       "buildOptions": {
         "define": [ "NET" ]
-      }
+      }, "frameworkAssemblies": {"System.Runtime": "4.0.10.0", "System.Linq.Expressions": "4.0.0.0"}
     },
     "net452": {
       "buildOptions": {
         "define": [ "NET" ]
+      },
+      "frameworkAssemblies": {
+        "System.Runtime": "4.0.10.0",
+        "System.Linq.Expressions": "4.0.0.0"
       }
     },
     "net46": {
       "buildOptions": {
         "define": [ "NET" ]
+      },
+      "frameworkAssemblies": {
+        "System.Runtime": "4.0.20.0",
+        "System.Linq.Expressions": "4.0.10.0"
       }
     }
   }

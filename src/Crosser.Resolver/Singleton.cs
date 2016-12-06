@@ -42,9 +42,9 @@
         /// </summary>
         /// <param name="creator">The func that creates the concrete type</param>
         /// <param name="rewritable">Pass in true to be able to change the mapping later</param>
-        public static void As(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null)
+        public static bool As(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null)
         {
-            dependencyObject.Set(creator, rewritable, enabled, properties);            
+            return dependencyObject.Set(creator, rewritable, enabled, properties);            
         }
 
         /// <summary>
@@ -53,7 +53,7 @@
         public static IDictionary<string, object> Properties => dependencyObject.Properties;
 
         /// <summary>
-        /// Returns the TInterface from the func passed in to the method <see cref="As(Func{TInterface}, bool, bool, IDictionary{string, object})"/>
+        /// Returns the TInterface from the func passed in to the method <see cref="Resolve.Singleton{TInterface}.As(Func{TInterface}, bool, bool, IDictionary{string, object})"/>
         /// </summary>
         /// <exception cref="Exception">Throws if there is no mapping available for T</exception>
         /// <returns>Returns the concrete singleton type of T</returns>        

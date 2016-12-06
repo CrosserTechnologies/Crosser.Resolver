@@ -6,7 +6,7 @@
   },
   "testRunner": "xunit",
   "dependencies": {
-    "Crosser.Resolver": "0.0.6-*"
+    "Crosser.Resolver": "0.0.7-dev*"
   },
   "frameworks": {
     "netcoreapp1.0": {

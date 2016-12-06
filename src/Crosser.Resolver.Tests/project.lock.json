@@ -2480,11 +2480,12 @@
           "lib/netstandard1.1/xunit.runner.utility.dotnet.dll": {}
         }
       },
-      "Crosser.Resolver/0.0.6-dev": {
+      "Crosser.Resolver/0.0.7": {
         "type": "project",
         "framework": ".NETStandard,Version=v1.6",
         "dependencies": {
-          "NETStandard.Library": "1.6.0"
+          "NETStandard.Library": "1.6.0",
+          "System.Linq.Expressions": "4.1.0"
         },
         "compile": {
           "netstandard1.6/Crosser.Resolver.dll": {}
@@ -7475,7 +7476,7 @@
         "xunit.runner.utility.nuspec"
       ]
     },
-    "Crosser.Resolver/0.0.6-dev": {
+    "Crosser.Resolver/0.0.7": {
       "type": "project",
       "path": "../Crosser.Resolver/project.json",
       "msbuildProject": "../Crosser.Resolver/Crosser.Resolver.xproj"
@@ -7483,7 +7484,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Crosser.Resolver >= 0.0.6-*"
+      "Crosser.Resolver >= 0.0.7-dev*"
     ],
     ".NETCoreApp,Version=v1.0": [
       "Microsoft.NETCore.App >= 1.0.1",

@@ -35,14 +35,18 @@ namespace Crosser.Resolve.Model
             return default(TInterface);
         }
 
-        public void Set(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null)
+        public bool Set(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null)
         {
             lock (locker)
             {
                 if (this.Instance != null && this.Rewritable == false)
-                {                    
-                    //Not allowed to override
-                    throw new Exception(string.Format("The singleton type {0} has already been mapped and that mapping does not allow rewriting", typeof(TInterface).Name));
+                {
+                    //Throw if config says so...
+                    if (ResolverConfig.ThrowErrorOnDeniedMapping)
+                    {
+                        throw new Exception(string.Format("The singleton type {0} has already been mapped and that mapping does not allow rewriting", typeof(TInterface).Name));
+                    }
+                    return false;
                 }
                 // Set the latest rule for overriding
                 this.Rewritable = rewritable;
@@ -51,6 +55,7 @@ namespace Crosser.Resolve.Model
                 this.Enabled = enabled;
                 this.Properties = properties;
                 this.InstanceType = creator.Body.Type;
+                return true;
             }
         }
     }

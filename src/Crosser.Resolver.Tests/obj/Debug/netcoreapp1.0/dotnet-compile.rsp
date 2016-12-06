@@ -1,5 +1,5 @@
---temp-output:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\obj\Debug\netcoreapp1.0\
---out:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\bin\Debug\netcoreapp1.0\Crosser.Resolver.Tests.dll
+--temp-output:C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\obj\Debug\netcoreapp1.0\
+--out:C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\bin\Debug\netcoreapp1.0\Crosser.Resolver.Tests.dll
 --define:DEBUG
 --define:TRACE
 --define:DOTNETCORE
@@ -110,9 +110,9 @@
 --reference:C:\Users\Uffe\.nuget\packages\xunit.extensibility.execution\2.2.0-beta2-build3300\lib\netstandard1.0\xunit.execution.dotnet.dll
 --reference:C:\Users\Uffe\.nuget\packages\xunit.runner.reporters\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.reporters.dotnet.dll
 --reference:C:\Users\Uffe\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.utility.dotnet.dll
---reference:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\bin\Debug\netstandard1.6\Crosser.Resolver.dll
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Many.Tests.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\One.Tests.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Singleton.Tests.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Model\SampleObjects.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver.Tests\Properties\AssemblyInfo.cs
+--reference:C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\bin\Debug\netstandard1.6\Crosser.Resolver.dll
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\Many.Tests.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\One.Tests.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\Singleton.Tests.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\Model\SampleObjects.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver.Tests\Properties\AssemblyInfo.cs

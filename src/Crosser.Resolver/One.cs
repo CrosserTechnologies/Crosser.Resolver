@@ -38,18 +38,22 @@
         /// </summary>
         /// <param name="creator">The func that creates the concrete type</param>
         /// <param name="rewritable">Pass in true to be able to change the mapping later</param>        
-        public static void As(Func<TInterface> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null)
+        public static bool As(Func<TInterface> creator, bool rewritable = false, bool enabled = true, IDictionary<string, object> properties = null)
         {
             if (dependencyObject.Creator != null && dependencyObject.Rewritable == false)
-            {                
-                //Not allowed to override
-                throw  new Exception(string.Format("The type {0} has already been mapped and that mapping does not allow rewriting",typeof(TInterface).Name));
+            {
+                if (ResolverConfig.ThrowErrorOnDeniedMapping)
+                { 
+                    throw  new Exception(string.Format("The type {0} has already been mapped and that mapping does not allow rewriting",typeof(TInterface).Name));
+                }
+                return false;
             }
             // Set the latest rule for overriding
             dependencyObject.Rewritable = rewritable;
             dependencyObject.Creator = creator;
             dependencyObject.Enabled = enabled;
             dependencyObject.Properties = properties;
+            return true;
         }
 
         /// <summary>

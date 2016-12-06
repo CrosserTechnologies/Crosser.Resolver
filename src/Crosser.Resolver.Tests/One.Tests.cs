@@ -40,7 +40,7 @@ namespace Crosser.DependencyResolver.Tests
             One<IPerson>.As(() => new Person { Name = "steve" });
             
             //Assert
-            Assert.ThrowsAny<Exception>(() => { One<IPerson>.As(() => new Student() { Name = "steve" }); });
+            Assert.False(One<IPerson>.As(() => new Student() { Name = "steve" }));
         }
 
 
@@ -64,7 +64,7 @@ namespace Crosser.DependencyResolver.Tests
             One<IPerson>.As(() => new Person { Name = "steve" }, true);
             One<IPerson>.As(() => new Student() { Name = "ben" });            
             //Assert
-            Assert.ThrowsAny<Exception>(() => { One<IPerson>.As(() => new Person() { Name = "steve" }); });
+            Assert.False(One<IPerson>.As(() => new Person() { Name = "steve" }));
         }
 
         [Fact]

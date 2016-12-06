@@ -1,0 +1,5 @@
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\bin\Debug\Crosser.Resolver.dll
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\bin\Debug\Crosser.Resolver.pdb
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\obj\Debug\Crosser.Resolver.dll
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\obj\Debug\Crosser.Resolver.pdb
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\obj\Debug\Crosser.Resolver.csprojResolveAssemblyReference.cache

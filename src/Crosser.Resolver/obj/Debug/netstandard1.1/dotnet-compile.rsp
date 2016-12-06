@@ -1,5 +1,5 @@
---temp-output:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\obj\Debug\netstandard1.1\
---out:C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\bin\Debug\netstandard1.1\Crosser.Resolver.dll
+--temp-output:C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\obj\Debug\netstandard1.1\
+--out:C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\bin\Debug\netstandard1.1\Crosser.Resolver.dll
 --define:DEBUG
 --define:TRACE
 --define:DOTNETCORE
@@ -11,11 +11,11 @@
 --optimize:False
 --output-name:Crosser.Resolver
 --title:Crosser.Resolver
---description:A tiny high speed dependency resolver built for Crosser Technologies realtime streaming framework
+--description:Simple resolver for simple needs. A (tiny) high speed dependency resolver built for Crosser Technologies realtime streaming framework
 --copyright:Crosser Technologies AB
---file-version:0.0.6.0
---version:0.0.6.0
---informational-version:0.0.6
+--file-version:0.0.7.0
+--version:0.0.7.0
+--informational-version:0.0.7
 --target-framework:.NETStandard,Version=v1.1
 --reference:C:\Users\Uffe\.nuget\packages\Microsoft.CSharp\4.0.1\ref\netstandard1.0\Microsoft.CSharp.dll
 --reference:C:\Users\Uffe\.nuget\packages\System.Collections\4.0.11\ref\netstandard1.0\System.Collections.dll
@@ -31,10 +31,11 @@
 --reference:C:\Users\Uffe\.nuget\packages\System.Text.Encoding\4.0.11\ref\netstandard1.0\System.Text.Encoding.dll
 --reference:C:\Users\Uffe\.nuget\packages\System.Threading\4.0.11\ref\netstandard1.0\System.Threading.dll
 --reference:C:\Users\Uffe\.nuget\packages\System.Threading.Tasks\4.0.11\ref\netstandard1.0\System.Threading.Tasks.dll
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Many.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\One.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Singleton.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Model\DependencyObject.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Model\SingletonDependencyObject.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\PlatformHelpers\TypeExtensions.cs
-C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Properties\AssemblyInfo.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Many.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\One.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\ResolverConfig.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Singleton.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Model\DependencyObject.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Model\SingletonDependencyObject.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\PlatformHelpers\TypeExtensions.cs
+C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Properties\AssemblyInfo.cs

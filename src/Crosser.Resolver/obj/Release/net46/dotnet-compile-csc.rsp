@@ -5,21 +5,22 @@
 -nowarn:CS1705
 -platform:anycpu
 -optimize
--doc:"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\bin\Release\net46\Crosser.Resolver.xml"
+-doc:"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\bin\Release\net46\Crosser.Resolver.xml"
 -t:library
 -debug:full
 -nostdlib
 -nologo
-"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\obj\Release\net46\dotnet-compile.assemblyinfo.cs"
--out:"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\bin\Release\net46\Crosser.Resolver.dll"
+"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\obj\Release\net46\dotnet-compile.assemblyinfo.cs"
+-out:"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\bin\Release\net46\Crosser.Resolver.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\mscorlib.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.Core.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\Microsoft.CSharp.dll"
-"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Many.cs"
-"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\One.cs"
-"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Singleton.cs"
-"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Model\DependencyObject.cs"
-"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Model\SingletonDependencyObject.cs"
-"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\PlatformHelpers\TypeExtensions.cs"
-"C:\TFS\CrosserTech\Crosser-NETCORE\Resolver\Crosser.Resolver\Properties\AssemblyInfo.cs"
+"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Many.cs"
+"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\One.cs"
+"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\ResolverConfig.cs"
+"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Singleton.cs"
+"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Model\DependencyObject.cs"
+"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Model\SingletonDependencyObject.cs"
+"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\PlatformHelpers\TypeExtensions.cs"
+"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\Properties\AssemblyInfo.cs"

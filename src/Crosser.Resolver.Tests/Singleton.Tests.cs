@@ -50,7 +50,7 @@ namespace Crosser.DependencyResolver.Tests
             Singleton<IPerson>.As(() => new Person { Name = "steve" });
 
             //Assert
-            Assert.ThrowsAny<Exception>(() => { Singleton<IPerson>.As(() => new Student() { Name = "steve" }); });
+            Assert.False(Singleton<IPerson>.As(() => new Student() { Name = "steve" }));
         }
 
 
@@ -74,7 +74,7 @@ namespace Crosser.DependencyResolver.Tests
             Singleton<IPerson>.As(() => new Person { Name = "steve" }, true);
             Singleton<IPerson>.As(() => new Student() { Name = "ben" });
             //Assert
-            Assert.ThrowsAny<Exception>(() => { Singleton<IPerson>.As(() => new Person() { Name = "steve" }); });
+            Assert.False(Singleton<IPerson>.As(() => new Person() { Name = "steve" }));
         }
 
         [Fact]
