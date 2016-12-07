@@ -12,6 +12,8 @@
 -nologo
 "C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\obj\Release\net451\dotnet-compile.assemblyinfo.cs"
 -out:"C:\TFS\CrosserTech\Crosser\Resolver\Crosser.Resolver\bin\Release\net451\Crosser.Resolver.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Runtime.dll"
+-r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\Facades\System.Linq.Expressions.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\mscorlib.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll"
 -r:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.Core.dll"

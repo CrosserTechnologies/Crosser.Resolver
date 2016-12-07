@@ -24,12 +24,12 @@ namespace Crosser.DependencyResolver.Tests
         {
             //Arrange
             Many<IPerson>.Reset();
-            Many<IPerson>.Add(() => new Person { Name = "steve" });
-            Many<IPerson>.Add(() => new Student { Name = "donny" });
+            var b1 = Many<IPerson>.Add(() => new Person { Name = "steve" });
+            var b2 = Many<IPerson>.Add(() => new Student { Name = "donny" });
             //Act
             var p = Many<IPerson>.GetAll();
             //Assert
-            Assert.True(p != null && p.Count() == 2 && p.Count(x => x.Name == "donny") == 1);
+            Assert.True(p != null && p.Count() == 2 && p.Count(x => x.Name == "donny") == 1 && b1 && b2);
         }
         
         [Fact]
@@ -51,6 +51,17 @@ namespace Crosser.DependencyResolver.Tests
             
 
             Assert.True(Many<IPerson>.GetNamedInstance("steve").Name == "steve");
+        }
+
+        [Fact]
+        public void CanAddSeveralNamedInstancesIfNotRewritable()
+        {
+            Many<IPerson>.Reset();
+            Many<IPerson>.Add(() => new Person { Name = "steve1" }, namedInstance: "steve1");
+            var b1 = Many<IPerson>.Add(() => new Person { Name = "steve2" }, namedInstance: "steve2");
+
+
+            Assert.True(Many<IPerson>.GetNamedInstance("steve1").Name == "steve1" && b1 == false);
         }
 
         [Fact]

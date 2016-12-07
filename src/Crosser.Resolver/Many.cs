@@ -7,6 +7,7 @@
     using System.Linq.Expressions;
     using System.Collections.Concurrent;
     using PlatformHelpers;
+    using System.Threading;
 
     /// <summary>
     /// Handles mapping between a interface and concrete type(s)
@@ -16,7 +17,7 @@
     /// <typeparam name="TInterface">Interface to map to</typeparam>
     public static class Many<TInterface>
     {
-        private static object _locker = new object();
+        private static SemaphoreSlim _semaphore = new SemaphoreSlim(1,1);
 
         /// <summary>
         /// The Func that will return a new instance of the interface
@@ -50,12 +51,15 @@
         /// </summary>
         public static void Reset()
         {
-            lock (_locker)
+            try
             {
+                _semaphore.Wait();
                 dependencies.Clear();
                 availableDependencies = dependencies.ToArray();
                 lookUp.Clear();
             }
+            catch { }
+            finally { _semaphore.Release(); }
         }
 
         /// <summary>
@@ -66,39 +70,58 @@
         /// <param name="enabled">If false the mapping is disabled and the instance will not be created</param>
         /// <param name="namedInstance">Will allow to get a transient instance by a custom name</param>
         /// <param name="properties">Lets you set custom properties as metadata for a mapping signature</param>
-        public static void Add(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, string namedInstance = null, IDictionary<string, object> properties = null)
+        public static bool Add(Expression<Func<TInterface>> creator, bool rewritable = false, bool enabled = true, string namedInstance = null, IDictionary<string, object> properties = null)
         {
-            lock (_locker)
+            try 
             {
+                _semaphore.Wait();
                 var i = new DependencyObject<TInterface>(creator, rewritable, enabled, properties);
                 if (dependencies.Any(p => p.InstanceType == i.InstanceType))
                 {
                     IList<DependencyObject<TInterface>> toRemove = new List<DependencyObject<TInterface>>();
                     foreach (var dependency in dependencies.Where(p => p.InstanceType == i.InstanceType))
                     {
-                        if (dependency.Rewritable)
-                        {
-                            toRemove.Add(dependency);
-                        }
+                        if (!dependency.Rewritable) return false;
+                        
+                        toRemove.Add(dependency);                        
                     }
 
                     foreach (var removeMe in toRemove)
                     {
-                        dependencies.Remove(removeMe);
+                        dependencies.Remove(removeMe);                        
                         if (!string.IsNullOrEmpty(namedInstance))
                         {
                             DependencyObject<TInterface> _;
-                            lookUp.TryRemove(namedInstance, out _);
+                            if(!lookUp.TryRemove(namedInstance, out _))
+                            {
+                                return false;
+                            }
                         }
                     }
                 }
                 dependencies.Add(i);
                 if (!string.IsNullOrEmpty(namedInstance))
                 {
-                    lookUp.TryAdd(namedInstance, i);
+                    if(!lookUp.TryAdd(namedInstance, i))
+                    {
+                        //if (ResolverConfig.ThrowErrorOnDeniedMapping)
+                        //{
+                        //    throw new Exception(string.Format("The type {0} has already been mapped and that mapping does not allow rewriting", typeof(TInterface).Name));
+                        //}
+                        return false;
+                    }
                 }
 
                 availableDependencies = dependencies.ToArray();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                _semaphore.Release();
             }
         }
 
@@ -108,8 +131,9 @@
         /// <typeparam name="TClass"></typeparam>
         public static void Remove<TClass>()
         {
-            lock (_locker)
+            try
             {
+                _semaphore.Wait();
                 IList<DependencyObject<TInterface>> toRemove = new List<DependencyObject<TInterface>>();
                 foreach (var dependency in dependencies.Where(p => p.InstanceType == typeof(TClass)))
                 {
@@ -120,6 +144,11 @@
                     dependencies.Remove(dependency);
                 }
                 availableDependencies = dependencies.ToArray();
+            }
+            catch{}
+            finally
+            {
+                _semaphore.Release();
             }
         }
 
