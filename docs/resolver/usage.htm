@@ -43,6 +43,7 @@
 <li class="tocentry"><a href="#singletont">Singleton&lt;T&gt;</a></li>
 <li class="tocentry"><a href="#onet">One&lt;T&gt;</a></li>
 <li class="tocentry"><a href="#manyt">Many&lt;T&gt;</a></li>
+<li class="tocentry"><a href="#singletoncollectiont">SingletonCollection&lt;T&gt;</a></li>
 <li class="tocentry"><a href="#properties">Properties</a></li>
 <li class="tocentry"><a href="#rewritable">Rewritable</a></li>
 <li class="tocentry"><a href="#enabledisable">Enable/Disable</a></li>
@@ -165,12 +166,46 @@ var chuck = Many&lt;IChuckNorris&gt;.GetNamedInstance(&quot;realchuck&quot;);
 Console.WriteLine(chuck.GetFact());
 </code></pre>
 
+<h2 id="singletoncollectiont">SingletonCollection&lt;T&gt;<a class="headerlink" href="#singletoncollectiont" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p><code>SingletonCollection&lt;T&gt;</code> is grouped/enumerable <code>singleton</code> mapping where you can map several singletons to one <code>interface</code>.</p>
+<h3 id="register-4">Register<a class="headerlink" href="#register-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>// map TheOnlyChuck and the FakeChuck to the IChuckNorris interface
+SingletonCollection&lt;IChuckNorris&gt;.Add(()=&gt;new TheOnlyChuck());
+SingletonCollection&lt;IChuckNorris&gt;.Add(()=&gt;new FakeChuck());
+</code></pre>
+
+<div class="alert alert-info"><span class="alert-title"><i class="fa fa-info-circle"></i> Info</span><p>Note that the <code>Add</code> method returns a <code>boolean</code> telling if the registration was a success or not.
+If you <a href="usage.htm#configuration">configure</a> the <code>ThrowErrorOnDeniedMapping</code> to <code>true</code> the <code>Add</code> method will throw an exception if registration fails.</p>
+</div><h3 id="resolve-4">Resolve<a class="headerlink" href="#resolve-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>//Iterate over the IChuckNorris collection
+foreach(var chuck in SingletonCollection&lt;IChuckNorris&gt;.GetAll())
+{
+    Console.WriteLine(chuck.GetFact());
+}
+</code></pre>
+
+<h3 id="named-instance-1">Named instance<a class="headerlink" href="#named-instance-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>When working with collections of <code>SingletonCollection&lt;T&gt;</code> you migth wanna get a specific instance from the collection</p>
+<h3 id="register-5">Register<a class="headerlink" href="#register-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>// map TheOnlyChuck to a named instance 'realchuck'
+SingletonCollection&lt;IChuckNorris&gt;.Add(() =&gt; new TheOnlyChuck(), namedInstance: &quot;realchuck&quot;);
+
+// add another instance, this time fake chuck without being named
+SingletonCollection&lt;IChuckNorris&gt;.Add(() =&gt; new FakeChuck());
+</code></pre>
+
+<h3 id="resolve-5">Resolve<a class="headerlink" href="#resolve-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>// get the named instance
+var chuck = SingletonCollection&lt;IChuckNorris&gt;.GetNamedInstance(&quot;realchuck&quot;);
+Console.WriteLine(chuck.GetFact());
+</code></pre>
+
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>The <code>Crosser Resolver</code> let you add <code>properties</code> to your mappings by passing in a <code>IDictionary&lt;string,object&gt;</code>.
 You may look at this as setting metadata to a mapping type.</p>
 <h3 id="onet--singletont">One&lt;T&gt; &amp; Singleton&lt;T&gt;<a class="headerlink" href="#onet--singletont" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>When mapping properties to <code>One&lt;T&gt;</code>, <code>Singleton&lt;T&gt;</code> the properties is mapped directly on the <code>interface</code> of <code>T</code>.</p>
-<h3 id="register-4">Register<a class="headerlink" href="#register-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="register-6">Register<a class="headerlink" href="#register-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>/// Some properties to attach to a mapping
 var props = new Dictionary&lt;string, object&gt;() { { &quot;num&quot;, 123 }, { &quot;str&quot;, &quot;hello world&quot; } };
 
@@ -178,16 +213,16 @@ var props = new Dictionary&lt;string, object&gt;() { { &quot;num&quot;, 123 }, {
 One&lt;IChuckNorris&gt;.As(() =&gt; new TheOnlyChuck(), properties: props);
 </code></pre>
 
-<h3 id="resolve-4">Resolve<a class="headerlink" href="#resolve-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="resolve-6">Resolve<a class="headerlink" href="#resolve-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>// get properties for IChuckNorris
 var chuckProperties = One&lt;IChuckNorris&gt;.Properties;
 Console.WriteLine(&quot;IChuckNorris has properties num:{0}, str:{1}&quot;, chuckProperties[&quot;num&quot;], chuckProperties[&quot;str&quot;]);
 </code></pre>
 
-<h3 id="manyt-1">Many&lt;T&gt;<a class="headerlink" href="#manyt-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>When mapping <code>properties</code> to <code>Many&lt;T&gt;</code> the <code>properties</code> is mapped to each mapping by type or named instance.</p>
+<h3 id="manyt--singletoncollectiont">Many&lt;T&gt; &amp; SingletonCollection&lt;T&gt;<a class="headerlink" href="#manyt--singletoncollectiont" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>When mapping <code>properties</code> to <code>Many&lt;T&gt;</code> &amp; <code>SingletonCollection&lt;T&gt;</code> the <code>properties</code> is mapped to each mapping by type or named instance.</p>
 <p>Creating some <code>properties</code> for <code>TheOnlyChuck</code> and <code>FakeChuck</code></p>
-<h3 id="register-5">Register<a class="headerlink" href="#register-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="register-7">Register<a class="headerlink" href="#register-7" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>// some properties for real chuck
 var realChuckProps = new Dictionary&lt;string, object&gt;() { { &quot;TheRealDeal&quot;, true } };
 
@@ -203,7 +238,7 @@ Many&lt;IChuckNorris&gt;.Add(() =&gt; new TheOnlyChuck(), namedInstance: &quot;r
 Many&lt;IChuckNorris&gt;.Add(() =&gt; new FakeChuck(), properties : fakeChuckProps);
 </code></pre>
 
-<h3 id="resolve-5">Resolve<a class="headerlink" href="#resolve-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="resolve-7">Resolve<a class="headerlink" href="#resolve-7" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>Get <code>properties</code> by type of mapping.</p>
 <pre><code>var realChuckProperties = Many&lt;IChuckNorris&gt;.Properties&lt;TheOnlyChuck&gt;();
 Console.WriteLine(&quot;TheOnlyChuck has property TheRealDeal:{0}&quot;, realChuckProperties[&quot;TheRealDeal&quot;]);
@@ -222,7 +257,7 @@ Console.WriteLine(&quot;TheOnlyChuck has property TheRealDeal:{0}, realChuckProp
 The reason for this is that not all of our modules is supposed to be <code>rewritable</code>. Also if developers create new custom modules they might wanna mark the mapping as not being <code>rewritable</code>.
 You might look at this as using the <code>sealed</code> keyword but on mappings between interfaces and concrete types instead of a class.</p>
 <p>You can rewrite both <code>Singleton&lt;T&gt;</code> and <code>Transient</code> (<code>One&lt;T&gt;</code> and <code>Many&lt;T&gt;</code>) mappings.</p>
-<h3 id="register-6">Register<a class="headerlink" href="#register-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="register-8">Register<a class="headerlink" href="#register-8" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>Register a rewritable instance of <code>Singleton&lt;IChuckNorris&gt;</code> to <code>FakeChuck</code></p>
 <pre><code>Singleton&lt;IChuckNorris&gt;.As(() =&gt; new FakeChuck(), rewritable : true);
 </code></pre>
@@ -231,7 +266,7 @@ You might look at this as using the <code>sealed</code> keyword but on mappings 
 <pre><code>Singleton&lt;IChuckNorris&gt;.As(() =&gt; new TheOnlyChuck());
 </code></pre>
 
-<h3 id="resolve-6">Resolve<a class="headerlink" href="#resolve-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="resolve-8">Resolve<a class="headerlink" href="#resolve-8" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>Now we will get <code>TheOnlyChuck</code>  when asking for <code>IChuckNorris</code> <i class="fa fa-magic"></i>
 Since we did not mark the new mapping as <code>rewritable</code> this mapping is now <code>sealed</code> and cant be changed.</p>
 <pre><code>var theOnlyChuck = Singleton&lt;IChuckNorris&gt;.Get();
@@ -251,7 +286,7 @@ One&lt;IChuckNorris&gt;.Disable();
 Singleton&lt;IChuckNorris&gt;.Disable();
 </code></pre>
 
-<h3 id="manyt-2">Many&lt;T&gt;<a class="headerlink" href="#manyt-2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="manyt-1">Many&lt;T&gt;<a class="headerlink" href="#manyt-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p><code>Many&lt;T&gt;</code> looks a little bit different since you can get <code>0-n</code> instances back. You can choose to <code>enable/disable</code> ALL at once or do it individually by using the type of the concrete implementation.</p>
 <h4 id="disableenable-all">Disable/Enable All<a class="headerlink" href="#disableenable-all" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
 <pre><code>Many&lt;IChuckNorris&gt;.EnableAll();
