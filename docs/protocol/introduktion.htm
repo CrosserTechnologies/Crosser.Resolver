@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crosser Protocol - Crosser Technologies</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../css/theme_colors.css" type="text/css" />
+    <link rel="stylesheet" href="../css/styles/vs.css">
+    <link rel="stylesheet" href="../css/font-awesome.4.5.0.min.css">
+</head>
+<body role="document">
+    <div class="grid-for-nav">
+        <nav data-toggle="nav-shift" class="nav-side stickynav">
+            <div class="side-nav-search">
+                <a href="../index.htm"><i class="fa fa-home"></i> Crosser Technologies</a>
+                <div role="search">
+                    <form id="search-form" class="form" action="../Docnet_search.htm" method="get">
+                        <input type="text" name="q" placeholder="Search docs" />
+                    </form>
+                </div>
+            </div>
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+<ul>
+<li class="tocentry"><a href="../index.htm">Home</a>
+</li>
+
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../CrosserResolver.htm">Crosser.Resolver</a></span>
+</li>
+<li class="tocentry">
+<ul class="current">
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../protocol/introduktion.htm">Crosser Protocol</a></span></li>
+
+</ul>
+</li>
+</ul>
+				<div class="toc-footer">
+					<span class="text-small">
+						<hr/>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+					</span>
+				</div>	
+			</div>
+            &nbsp;
+        </nav>
+        <section data-toggle="nav-shift" class="nav-content-wrap">
+            <nav class="nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="nav-top" class="fa fa-bars"></i>
+                <a href="../index.htm">Crosser Technologies</a>
+            </nav>
+            <div class="nav-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <div class="breadcrumbs">
+<ul><li><a href="../index.htm">Home</a></li> / <li><a href="../protocol/introduktion.htm">Crosser Protocol</a></li></ul>
+					
+                    </div>
+                    <hr />
+                </div>
+                <div role="main">
+                    <div class="section">
+<h1 id="crosser-protocol">Crosser Protocol<a class="headerlink" href="#crosser-protocol" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p>The <code>Crosser Protocol</code> is very simple and text-based. It was very much inspired by the protocol written by the people at <code>NATS.IO</code>, especially the idea about using a <a href="https://www.youtube.com/watch?v=ylRKac5kSOk&amp;feature=youtu.be&amp;t=10m46s" target="_blank">zero allocation byte parser</a>.
+The simplicity of the protocol makes it easy to write new clients or just connect via <code>TELNET</code> to test functionality.
+Although the protocol is inspired by NATS they are much different in functionality. The Crosser Protocol is RPC/RMI based (we do plan to add pub/sub as well).</p>
+<h2 id="crosser-protocol-operations">Crosser Protocol Operations<a class="headerlink" href="#crosser-protocol-operations" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>This table provides an overview for each protocol operation in the <code>Crosser Protocol</code>.
+The operation names are case insensitive, however the server will always send operation names as uppercase. </p>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>OPERATION</th>
+	<th>SENDER</th>
+	<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><a href="introduktion.htm#info">INFO</a></td>
+	<td>Server</td>
+	<td>Information about the server sent when a TCP/IP connection is established</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#hi">HI</a></td>
+	<td>Client</td>
+	<td>Set information about the connection</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#bye">BYE</a></td>
+	<td>Client</td>
+	<td>Close the connection</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#rpc">RPC</a></td>
+	<td>Client</td>
+	<td>Call a server-side controller/method</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#msg">MSG</a></td>
+	<td>Server</td>
+	<td>A message sent to client(s) from the server</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#req">REQ</a></td>
+	<td>Client</td>
+	<td>Call a server-side controller/method with a callback-id</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#resp">RESP</a></td>
+	<td>Server</td>
+	<td>The server response to a REQ-message</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#ping">PING</a></td>
+	<td>Both</td>
+	<td>Heartbeat, PING</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#pong">PONG</a></td>
+	<td>Both</td>
+	<td>Heartbeat, PONG</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#ok">+OK</a></td>
+	<td>Server</td>
+	<td>Confirmation that the message sent from the client was accepted by the protocol (sent only when Endpoint was started in Interactive mode)</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#err">-ERR</a></td>
+	<td>Server</td>
+	<td>Protocol Error, will terminate the connection</td>
+</tr>
+</tbody>
+</table>
+<h2 id="info">INFO<a class="headerlink" href="#info" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>INFO {&lt;key&gt;:&lt;value&gt;,&lt;key&gt;:&lt;value&gt;,...}\r\n
+</code></pre>
+
+<p>TODO: write possible key/value parameters  </p>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>INFO</code> is sent from the server when a client connects to a <code>Crosser Endpoint</code>. This message will not be sent to other built-in endpoints such as HTTP/WebSockets.</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>TODO: Show example output from telnet</p>
+<h2 id="hi">HI<a class="headerlink" href="#hi" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-1">Syntax<a class="headerlink" href="#syntax-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>HI {&lt;key&gt;:&lt;value&gt;,&lt;key&gt;:&lt;value&gt;,...}\r\n
+</code></pre>
+
+<p>TODO: write possible key/value parameters  </p>
+<h3 id="description-1">Description<a class="headerlink" href="#description-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>If the client <code>INFO</code> message states that the client have to authenticate the client have to send the <code>HI</code> message before anything else is sent to the server.</p>
+<h3 id="example-1">Example<a class="headerlink" href="#example-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>TODO: Show example output from telnet</p>
+<h2 id="bye">BYE<a class="headerlink" href="#bye" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-2">Syntax<a class="headerlink" href="#syntax-2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>BYE
+</code></pre>
+
+<h3 id="description-2">Description<a class="headerlink" href="#description-2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>BYE</code> will gracefully close the connection and cleanup resources.</p>
+<h3 id="example-2">Example<a class="headerlink" href="#example-2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>The following will send the close operation to the server</p>
+<pre><code>BYE\r\n
+</code></pre>
+
+<h2 id="rpc">RPC<a class="headerlink" href="#rpc" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-3">Syntax<a class="headerlink" href="#syntax-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>RPC &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt;\r\n[payload]\r\n 
+</code></pre>
+
+<h3 id="description-3">Description<a class="headerlink" href="#description-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>RPC</code> will let you call a server-side method on a specific controller.</p>
+<h3 id="example-3">Example<a class="headerlink" href="#example-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code>. </p>
+<pre><code>RPC foo bar 11\r\nHello World\r\n
+</code></pre>
+
+<h2 id="msg">MSG<a class="headerlink" href="#msg" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-4">Syntax<a class="headerlink" href="#syntax-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>MSG &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt;\r\n[payload]\r\n 
+</code></pre>
+
+<h3 id="description-4">Description<a class="headerlink" href="#description-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>MSG</code> is sent from the server-side to the clients. The logic for sending such messages is written by developers with the help of the Crosser server-side API</p>
+<h3 id="example-4">Example<a class="headerlink" href="#example-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the server controller <code>Foo</code> send a message with the topic <code>Bar</code> and the payload <code>Hello World</code>. </p>
+<pre><code>MSG foo bar 11\r\nHello World\r\n
+</code></pre>
+
+<h2 id="req">REQ<a class="headerlink" href="#req" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="resp">RESP<a class="headerlink" href="#resp" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="ping">PING<a class="headerlink" href="#ping" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="pong">PONG<a class="headerlink" href="#pong" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="ok">+OK<a class="headerlink" href="#ok" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="err">-ERR<a class="headerlink" href="#err" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+
+                    </div>
+                </div>
+                <footer>
+                    <hr />
+                    <div role="contentinfo">
+Made with DocNet. Get your copy at: <a href='https://github.com/FransBouma/DocNet' target='_blank'>https://github.com/FransBouma/DocNet</a>.
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/modernizr-2.8.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
