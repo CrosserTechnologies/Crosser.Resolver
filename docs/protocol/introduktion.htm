@@ -72,7 +72,7 @@
 <p>The <code>Crosser Protocol</code> is very simple and text-based. It was very much inspired by the protocol written by the people at <code>NATS.IO</code>, especially the idea about using a <a href="https://www.youtube.com/watch?v=ylRKac5kSOk&amp;feature=youtu.be&amp;t=10m46s" target="_blank">zero allocation byte parser</a>.
 The simplicity of the protocol makes it easy to write new clients or just connect via <code>TELNET</code> to test functionality.
 Although the protocol is inspired by NATS they are much different in functionality. The Crosser Protocol supports RPC/RMI as well as a basic PUB/SUB pattern.</p>
-<h2 id="crosser-protocol-v1-operations">Crosser Protocol (V1) Operations<a class="headerlink" href="#crosser-protocol-v1-operations" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="crosser-protocol-operations">Crosser Protocol Operations<a class="headerlink" href="#crosser-protocol-operations" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>This table provides an overview for each protocol operation in the <code>Crosser Protocol</code>.
 The PUB/SUB operations are case sensitive.
 The RPC/RMI operation are NOT case sensitive.</p>
@@ -90,85 +90,112 @@ The RPC/RMI operation are NOT case sensitive.</p>
 	<td><a href="introduktion.htm#info">INFO</a></td>
 	<td>Server</td>
 	<td>Information about the server sent when a TCP/IP connection is established</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#hi">HI</a></td>
 	<td>Client</td>
 	<td>Set information about the connection</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#bye">BYE</a></td>
 	<td>Client</td>
 	<td>Close the connection</td>
-	<td>ALL</td>
+	<td>AV1,V2LL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#call">CALL</a></td>
 	<td>Both</td>
 	<td>Call a controller/method on server/client</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#call">CALLACK</a></td>
+	<td>Both</td>
+	<td>Confirmation that the CALL operation was received</td>
+	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#cb">CB</a></td>
 	<td>Server</td>
 	<td>A callback to the client after the client doing a CALL to the server with a callback-id attached</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#sub">SUB</a></td>
 	<td>Client</td>
 	<td>A subscription sent from the client to the server.</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#sub">SUBACK</a></td>
+	<td>Server</td>
+	<td>Confirmation that the SUB was received</td>
+	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#pub">PUB</a></td>
 	<td>Client</td>
 	<td>A publish message sent to the server from a client</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#sub">PUBACK</a></td>
+	<td>Server</td>
+	<td>Confirmation that the PUB was received</td>
+	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#msg">MSG</a></td>
 	<td>Server</td>
 	<td>A message sent to subscribing client(s) from the server</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#msg">MSGACK</a></td>
+	<td>Client</td>
+	<td>Confirmation that the MSG was received</td>
+	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#unsub">UNSUB</a></td>
 	<td>Client</td>
 	<td>A client unsubscribe by sending a UNSUB message to the server</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#unsub">UNSUBACK</a></td>
+	<td>Server</td>
+	<td>Confirmation that the UNSUB was received</td>
+	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#ping">PING</a></td>
 	<td>Both</td>
 	<td>Heartbeat, PING</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#pong">PONG</a></td>
 	<td>Both</td>
 	<td>Heartbeat, PONG</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#ok">+OK</a></td>
 	<td>Server</td>
 	<td>Confirmation that the message sent from the client was accepted by the protocol (sent only when Endpoint was started in Interactive mode)</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#err">-ERR</a></td>
 	<td>Server</td>
 	<td>Protocol Error, will terminate the connection</td>
-	<td>ALL</td>
+	<td>V1,V2</td>
 </tr>
 </tbody>
 </table>
-<h2 id="crosser-protocol-v2-operations">Crosser Protocol (V2) Operations<a class="headerlink" href="#crosser-protocol-v2-operations" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>A more intelligent protocol...</p>
-<p>TBA</p>
 <h2 id="info">INFO<a class="headerlink" href="#info" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>INFO {&lt;key&gt;:&lt;value&gt;,&lt;key&gt;:&lt;value&gt;,...}\r\n
@@ -176,7 +203,7 @@ The RPC/RMI operation are NOT case sensitive.</p>
 
 <p>TODO: write possible key/value parameters  </p>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p><code>INFO</code> is sent from the server when a client connects to a <code>Crosser Endpoint</code>. This message will not be sent to other built-in endpoints such as HTTP/WebSockets.</p>
+<p><code>INFO</code> is sent from the server when a client connects to a <code>Crosser Endpoint</code>. This message will not be sent to halt duplex endpoints such as HTTP.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>TODO: Show example output from telnet</p>
 <h2 id="hi">HI<a class="headerlink" href="#hi" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
