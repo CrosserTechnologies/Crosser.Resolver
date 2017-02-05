@@ -71,7 +71,7 @@
 <h1 id="crosser-protocol">Crosser Protocol<a class="headerlink" href="#crosser-protocol" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
 <p>The <code>Crosser Protocol</code> is very simple and text-based. It was very much inspired by the protocol written by the people at <code>NATS.IO</code>, especially the idea about using a <a href="https://www.youtube.com/watch?v=ylRKac5kSOk&amp;feature=youtu.be&amp;t=10m46s" target="_blank">zero allocation byte parser</a>.
 The simplicity of the protocol makes it easy to write new clients or just connect via <code>TELNET</code> to test functionality.
-Although the protocol is inspired by NATS they are much different in functionality. The Crosser Protocol is RPC/RMI based (we do plan to add pub/sub as well).</p>
+Although the protocol is inspired by NATS they are much different in functionality. The Crosser Protocol supports RPC/RMI as well as a basic PUB/SUB pattern.</p>
 <h2 id="crosser-protocol-v1-operations">Crosser Protocol (V1) Operations<a class="headerlink" href="#crosser-protocol-v1-operations" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>This table provides an overview for each protocol operation in the <code>Crosser Protocol</code>.
 The PUB/SUB operations are case sensitive.
@@ -82,6 +82,7 @@ The RPC/RMI operation are NOT case sensitive.</p>
 	<th>OPERATION</th>
 	<th>SENDER</th>
 	<th>DESCRIPTION</th>
+	<th>PROTOCOL</th>
 </tr>
 </thead>
 <tbody>
@@ -89,69 +90,85 @@ The RPC/RMI operation are NOT case sensitive.</p>
 	<td><a href="introduktion.htm#info">INFO</a></td>
 	<td>Server</td>
 	<td>Information about the server sent when a TCP/IP connection is established</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#hi">HI</a></td>
 	<td>Client</td>
 	<td>Set information about the connection</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#bye">BYE</a></td>
 	<td>Client</td>
 	<td>Close the connection</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#call">CALL</a></td>
 	<td>Both</td>
 	<td>Call a controller/method on server/client</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#cb">CB</a></td>
 	<td>Server</td>
 	<td>A callback to the client after the client doing a CALL to the server with a callback-id attached</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#sub">SUB</a></td>
 	<td>Client</td>
 	<td>A subscription sent from the client to the server.</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#pub">PUB</a></td>
 	<td>Client</td>
 	<td>A publish message sent to the server from a client</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#msg">MSG</a></td>
 	<td>Server</td>
 	<td>A message sent to subscribing client(s) from the server</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#unsub">UNSUB</a></td>
 	<td>Client</td>
 	<td>A client unsubscribe by sending a UNSUB message to the server</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#ping">PING</a></td>
 	<td>Both</td>
 	<td>Heartbeat, PING</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#pong">PONG</a></td>
 	<td>Both</td>
 	<td>Heartbeat, PONG</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#ok">+OK</a></td>
 	<td>Server</td>
 	<td>Confirmation that the message sent from the client was accepted by the protocol (sent only when Endpoint was started in Interactive mode)</td>
+	<td>ALL</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#err">-ERR</a></td>
 	<td>Server</td>
 	<td>Protocol Error, will terminate the connection</td>
+	<td>ALL</td>
 </tr>
 </tbody>
 </table>
+<h2 id="crosser-protocol-v2-operations">Crosser Protocol (V2) Operations<a class="headerlink" href="#crosser-protocol-v2-operations" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>A more intelligent protocol...</p>
+<p>TBA</p>
 <h2 id="info">INFO<a class="headerlink" href="#info" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>INFO {&lt;key&gt;:&lt;value&gt;,&lt;key&gt;:&lt;value&gt;,...}\r\n
@@ -184,16 +201,16 @@ The RPC/RMI operation are NOT case sensitive.</p>
 <pre><code>BYE\r\n
 </code></pre>
 
-<h2 id="rpc">RPC<a class="headerlink" href="#rpc" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="call">CALL<a class="headerlink" href="#call" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <h3 id="syntax-3">Syntax<a class="headerlink" href="#syntax-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<pre><code>RPC &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt;\r\n[payload]\r\n 
+<pre><code>CALL &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt; [callback-id]\r\n[payload]\r\n 
 </code></pre>
 
 <h3 id="description-3">Description<a class="headerlink" href="#description-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p><code>RPC</code> will let you call a server-side method on a specific controller.</p>
+<p><code>CALL</code> will let you call a server-side method on a specific controller.</p>
 <h3 id="example-3">Example<a class="headerlink" href="#example-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code>. </p>
-<pre><code>RPC foo bar 11\r\nHello World\r\n
+<pre><code>CALL foo bar 11\r\nHello World\r\n
 </code></pre>
 
 <h2 id="msg">MSG<a class="headerlink" href="#msg" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.1.28.0" projectFile="C:\Users\Uffe\Desktop\CrosserApiDocs.shfbproj" started="2017-02-05 16:15:48">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.1.28.0" projectFile="C:\Users\Uffe\Desktop\CrosserApiDocs.shfbproj" started="2017-02-05 19:43:05">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -40,16 +40,16 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0120
+</plugIn>    Last step completed in 00:00:00,0170
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0165
+    Last step completed in 00:00:00,0140
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - GenerateRefInfo.proj]
-Build started 2017-02-05 16:15:56.
+Build started 2017-02-05 19:43:13.
 The target &quot;_ConvertPdbFiles&quot; listed in a BeforeTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)&quot; does not exist in the project, and will be ignored.
 The target &quot;_CollectPdbFiles&quot; listed in an AfterTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)&quot; does not exist in the project, and will be ignored.
 The target &quot;_CollectMdbFiles&quot; listed in a BeforeTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,38)&quot; does not exist in the project, and will be ignored.
@@ -73,13 +73,13 @@ Done Building Project &quot;C:\Users\Uffe\Desktop\Help\Working\GenerateRefInfo.p
 
 Build succeeded.
 
-Time Elapsed 00:00:00.93
-    Last step completed in 00:00:01,0409
+Time Elapsed 00:00:00.88
+    Last step completed in 00:00:00,9942
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - TransformManifest.proj]
-Build started 2017-02-05 16:15:57.
+Build started 2017-02-05 19:43:14.
 Project &quot;C:\Users\Uffe\Desktop\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2017.1.28.0)
@@ -103,12 +103,12 @@ Done Building Project &quot;C:\Users\Uffe\Desktop\Help\Working\TransformManifest
 
 Build succeeded.
 
-Time Elapsed 00:00:00.85
-    Last step completed in 00:00:00,9414
+Time Elapsed 00:00:00.88
+    Last step completed in 00:00:00,9718
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0475
+    Last step completed in 00:00:00,0461
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
@@ -122,7 +122,7 @@ Merging conceptual and additional tables of contents...
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 2017-02-05 16:15:58.
+Build started 2017-02-05 19:43:15.
 Project &quot;C:\Users\Uffe\Desktop\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2017.1.28.0)
@@ -133,26 +133,26 @@ Done Building Project &quot;C:\Users\Uffe\Desktop\Help\Working\GenerateIntermedi
 
 Build succeeded.
 
-Time Elapsed 00:00:00.13
+Time Elapsed 00:00:00.12
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,2337
+    Last step completed in 00:00:00,2147
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,1653
+    Last step completed in 00:00:00,1711
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Users\Uffe\Desktop\Help\Working\sandcastle.config
   Updating reference topic configurations.
   No conceptual content.  Removing conceptual content components.
-    Last step completed in 00:00:00,0120
+    Last step completed in 00:00:00,0105
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - BuildTopics.proj]
-Build started 2017-02-05 16:15:58.
+Build started 2017-02-05 19:43:16.
 Project &quot;C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2017.1.28.0)
@@ -226,12 +226,12 @@ Done Building Project &quot;C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj&
 
 Build succeeded.
 
-Time Elapsed 00:00:31.97
-    Last step completed in 00:00:32,1118
+Time Elapsed 00:00:32.93
+    Last step completed in 00:00:33,0659
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0060
+    Last step completed in 00:00:00,0080
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -247,7 +247,7 @@ Processed 1097 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to C:\Users\Uffe\Desktop\Help\Working\WebKI.xml
 Saving website table of contents to C:\Users\Uffe\Desktop\Help\Working\WebTOC.xml
-    Last step completed in 00:00:04,6260
+    Last step completed in 00:00:05,1127
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -327,7 +327,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\scripts\clipboard.min.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:00,0993
+    Last step completed in 00:00:00,1048
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
@@ -338,7 +338,7 @@ Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:05,1903
+</plugIn>    Last step completed in 00:00:05,2658
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
@@ -347,15 +347,15 @@ Copied 500 files
 Copied 1000 files
 Copied 1500 files
 Copied 1531 files for the website content
-    Last step completed in 00:00:01,3597
+    Last step completed in 00:00:01,5565
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,2461
+    Last step completed in 00:00:00,8332
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 2017-02-05 16:16:42.  Total time: 00:00:54,1635
+Build completed successfully at 2017-02-05 19:44:02.  Total time: 00:00:56,7591
 
 </buildStep>
 </shfbBuild>
