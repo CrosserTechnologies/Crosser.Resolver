@@ -85,6 +85,7 @@ The RPC/RMI operation are NOT case sensitive.</p>
 	<th>OPERATION</th>
 	<th>SENDER</th>
 	<th>DESCRIPTION</th>
+	<th>PATTERN</th>
 	<th>PROTOCOL</th>
 </tr>
 </thead>
@@ -93,108 +94,126 @@ The RPC/RMI operation are NOT case sensitive.</p>
 	<td><a href="introduktion.htm#info">INFO</a></td>
 	<td>Server</td>
 	<td>Information about the server sent when a TCP/IP connection is established</td>
+	<td>-</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#hi">HI</a></td>
 	<td>Client</td>
 	<td>Set information about the connection</td>
+	<td>-</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#bye">BYE</a></td>
 	<td>Client</td>
 	<td>Close the connection</td>
+	<td>-</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#call">CALL</a></td>
 	<td>Both</td>
 	<td>Call a controller/method on server/client</td>
+	<td>RPC/RMI</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#callack">CALLACK</a></td>
 	<td>Both</td>
 	<td>Confirmation that the CALL operation was received</td>
+	<td>RPC/RMI</td>
 	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#callback">CB</a></td>
 	<td>Server</td>
 	<td>A callback to the client after the client doing a CALL to the server with a callback-id attached</td>
+	<td>RPC/RMI</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#sub">SUB</a></td>
 	<td>Client</td>
 	<td>A subscription sent from the client to the server.</td>
+	<td>PUB/SUB</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#suback">SUBACK</a></td>
 	<td>Server</td>
 	<td>Confirmation that the SUB was received</td>
+	<td>PUB/SUB</td>
 	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#pub">PUB</a></td>
 	<td>Client</td>
 	<td>A publish message sent to the server from a client</td>
+	<td>PUB/SUB</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#puback">PUBACK</a></td>
 	<td>Server</td>
 	<td>Confirmation that the PUB was received</td>
+	<td>PUB/SUB</td>
 	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#msg">MSG</a></td>
 	<td>Server</td>
 	<td>A message sent to subscribing client(s) from the server</td>
+	<td>PUB/SUB</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#msgack">MSGACK</a></td>
 	<td>Client</td>
 	<td>Confirmation that the MSG was received</td>
+	<td>PUB/SUB</td>
 	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#unsub">UNSUB</a></td>
 	<td>Client</td>
 	<td>A client unsubscribe by sending a UNSUB message to the server</td>
+	<td>PUB/SUB</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#unsuback">UNSUBACK</a></td>
 	<td>Server</td>
 	<td>Confirmation that the UNSUB was received</td>
+	<td>PUB/SUB</td>
 	<td>V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#ping">PING</a></td>
 	<td>Both</td>
 	<td>Heartbeat, PING</td>
+	<td>-</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#pong">PONG</a></td>
 	<td>Both</td>
 	<td>Heartbeat, PONG</td>
+	<td>-</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#ok">+OK</a></td>
 	<td>Server</td>
 	<td>Confirmation that the message sent from the client was accepted by the protocol (sent only when Endpoint was started in Interactive mode)</td>
+	<td>-</td>
 	<td>V1,V2</td>
 </tr>
 <tr>
 	<td><a href="introduktion.htm#err">-ERR</a></td>
 	<td>Server</td>
 	<td>Protocol Error, will terminate the connection</td>
+	<td>-</td>
 	<td>V1,V2</td>
 </tr>
 </tbody>
