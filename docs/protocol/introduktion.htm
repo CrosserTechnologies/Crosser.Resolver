@@ -244,13 +244,13 @@ The RPC/RMI operation are NOT case sensitive.</p>
 <p><code>CALL</code> will let you call a server-side method on a specific controller.</p>
 <h3 id="example-3">Example<a class="headerlink" href="#example-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <h4 id="v1">V1<a class="headerlink" href="#v1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
-<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code> and the call-id <code>c1</code>.  </p>
-<pre><code>CALL foo bar 11 c1\r\nHello World\r\n
+<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code>.  </p>
+<pre><code>CALL foo bar 11\r\nHello World\r\n
 </code></pre>
 
 <h4 id="v2">V2<a class="headerlink" href="#v2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
-<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code>.  </p>
-<pre><code>CALL foo bar 11\r\nHello World\r\n
+<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code> and the call-id <code>c1</code>.  </p>
+<pre><code>CALL foo bar 11 c1\r\nHello World\r\n
 </code></pre>
 
 <h2 id="callack">CALLACK<a class="headerlink" href="#callack" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
@@ -281,9 +281,21 @@ The method does not return anything and therefor this example has the length <co
 CB foo bar 0 cbid1\r\n\r\n
 </code></pre>
 
-<h2 id="req">REQ<a class="headerlink" href="#req" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="sub">SUB<a class="headerlink" href="#sub" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>TBD</p>
-<h2 id="resp">RESP<a class="headerlink" href="#resp" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h2 id="suback">SUBACK<a class="headerlink" href="#suback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="pub">PUB<a class="headerlink" href="#pub" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="puback">PUBACK<a class="headerlink" href="#puback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="msg">MSG<a class="headerlink" href="#msg" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="msgack">MSGACK<a class="headerlink" href="#msgack" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="unsub">UNSUB<a class="headerlink" href="#unsub" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="unsuback">UNSUBACK<a class="headerlink" href="#unsuback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>TBD</p>
 <h2 id="ping">PING<a class="headerlink" href="#ping" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>TBD</p>
