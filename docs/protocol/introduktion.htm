@@ -214,7 +214,7 @@ The RPC/RMI operation are NOT case sensitive.</p>
 <pre><code>HI {&lt;key&gt;:&lt;value&gt;,&lt;key&gt;:&lt;value&gt;,...}\r\n
 </code></pre>
 
-<p>TODO: write possible key/value parameters  </p>
+<p>TODO: write possible key/value parameters</p>
 <h3 id="description-1">Description<a class="headerlink" href="#description-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p>If the client <code>INFO</code> message states that the client have to authenticate the client have to send the <code>HI</code> message before anything else is sent to the server.</p>
 <h3 id="example-1">Example<a class="headerlink" href="#example-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
@@ -232,27 +232,53 @@ The RPC/RMI operation are NOT case sensitive.</p>
 </code></pre>
 
 <h2 id="call">CALL<a class="headerlink" href="#call" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<h3 id="syntax-3">Syntax<a class="headerlink" href="#syntax-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="syntax-v1">Syntax V1<a class="headerlink" href="#syntax-v1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>CALL &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt; [callback-id]\r\n[payload]\r\n 
+</code></pre>
+
+<h3 id="syntax-v2">Syntax V2<a class="headerlink" href="#syntax-v2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>CALL &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt; &lt;call-id&gt; [callback-id]\r\n[payload]\r\n 
 </code></pre>
 
 <h3 id="description-3">Description<a class="headerlink" href="#description-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p><code>CALL</code> will let you call a server-side method on a specific controller.</p>
 <h3 id="example-3">Example<a class="headerlink" href="#example-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code>. </p>
+<h4 id="v1">V1<a class="headerlink" href="#v1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code> and the call-id <code>c1</code>.  </p>
+<pre><code>CALL foo bar 11 c1\r\nHello World\r\n
+</code></pre>
+
+<h4 id="v2">V2<a class="headerlink" href="#v2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code>.  </p>
 <pre><code>CALL foo bar 11\r\nHello World\r\n
 </code></pre>
 
-<h2 id="msg">MSG<a class="headerlink" href="#msg" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<h3 id="syntax-4">Syntax<a class="headerlink" href="#syntax-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<pre><code>MSG &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt;\r\n[payload]\r\n 
+<h2 id="callack">CALLACK<a class="headerlink" href="#callack" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-3">Syntax<a class="headerlink" href="#syntax-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>CALLACK &lt;call-id&gt;\r\n[payload]\r\n 
 </code></pre>
 
 <h3 id="description-4">Description<a class="headerlink" href="#description-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p><code>MSG</code> is sent from the server-side to the clients. The logic for sending such messages is written by developers with the help of the Crosser server-side API</p>
+<p><code>CALLACK</code> is sent from the server-side to the client as a response to the client doing a <code>CALL</code> with a call-id included.
+The <code>CALLACK</code> will be sent back as soon as the server has parsed the message sent form the client.</p>
 <h3 id="example-4">Example<a class="headerlink" href="#example-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
-<p>This is an example where the server controller <code>Foo</code> send a message with the topic <code>Bar</code> and the payload <code>Hello World</code>. </p>
-<pre><code>MSG foo bar 11\r\nHello World\r\n
+<p>This is an example where the client sends a <code>CALL</code> to the controller <code>foo</code> and method <code>bar</code> with call-id <code>c1</code>. The payload is <code>hello world</code></p>
+<pre><code>CALL foo bar 11 c1\r\nHello World\r\n
+</code></pre>
+
+<h2 id="callback">CALLBACK<a class="headerlink" href="#callback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-4">Syntax<a class="headerlink" href="#syntax-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>CB &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt; &lt;callback-id&gt;\r\n[payload]\r\n 
+</code></pre>
+
+<h3 id="description-5">Description<a class="headerlink" href="#description-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>CB</code> is sent from the server-side to the client and includes the result of the method called on the server-side. The <code>CALLBACK</code> is only executed if the client has passed in a <code>callback-id</code> in the <code>CALL</code></p>
+<h3 id="example-5">Example<a class="headerlink" href="#example-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the client sends a <code>CALL</code> to the controller <code>foo</code> and method <code>bar</code> with callback-id <code>cbid1</code>. The payload is <code>hello world</code>.
+The method does not return anything and therefor this example has the length <code>0</code> in the callback.</p>
+<pre><code>CALL foo bar 11 cbid1\r\nHello World\r\n
+
+CB foo bar 0 cbid1\r\n\r\n
 </code></pre>
 
 <h2 id="req">REQ<a class="headerlink" href="#req" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
