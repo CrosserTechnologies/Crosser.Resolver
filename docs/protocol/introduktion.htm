@@ -223,7 +223,14 @@ The RPC/RMI operation are NOT case sensitive.</p>
 <pre><code>INFO {&lt;key&gt;:&lt;value&gt;,&lt;key&gt;:&lt;value&gt;,...}\r\n
 </code></pre>
 
-<p>TODO: write possible key/value parameters  </p>
+<p>You can add custom key/value parameters, but the ones below wil lbe automatically populated by the server-side if provided.
+All values passed will be found on the server-side under <a href="https://crossertechnologies.github.io/Crosser.Resolver/Help/html/49609f83-e547-4e31-a1c9-3f7ea298d8d0.htm" target="_blank">ConnectionContext.Vars</a> dictionary</p>
+<pre><code>- interactive: if true the server will confirm every valid operation parsed.
+- todo: ...
+- todo: ...
+- todo: ...
+</code></pre>
+
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <p><code>INFO</code> is sent from the server when a client connects to a <code>Crosser Endpoint</code>. This message will not be sent to halt duplex endpoints such as HTTP.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
