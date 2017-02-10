@@ -546,6 +546,8 @@
   <HelpKINode Title="ControllerFactory.ControllerFactory constructor" Url="html/a5fa46a9-9cd0-554d-5edf-8271ddd578c2.htm" />
   <HelpKINode Title="ControllerFactory.Controllers property" Url="html/dfa080aa-e68a-68c6-5bb6-ac7d9137d28b.htm" />
   <HelpKINode Title="ControllerFactory.Create method" Url="html/835d365f-2127-a832-7979-0538376c375b.htm" />
+  <HelpKINode Title="ControllerFactory.GetController(Of T) method" Url="html/6458ea2c-6e95-3ad0-b99f-351ba6e7d07f.htm" />
+  <HelpKINode Title="ControllerFactory.GetController&lt;T&gt; method" Url="html/6458ea2c-6e95-3ad0-b99f-351ba6e7d07f.htm" />
   <HelpKINode Title="ControllerFactory.GetMethod method" Url="html/60558b60-fba3-3acc-7a58-1a2d2cb344d1.htm" />
   <HelpKINode Title="ControllerFactory.GetMethods method" Url="html/43c15dbd-1010-48d7-211b-6db8e3e54df9.htm" />
   <HelpKINode Title="ControllerFactory.RemovePlugin method" Url="html/34a767a3-83e9-8ebe-1c54-a9a1d5e6386c.htm" />
@@ -1038,6 +1040,14 @@
     <HelpKINode Title="Storage(TStorageEntity, TKey, TValue).GetByIdWithKey Method " Url="html/fe927d83-ef6f-d2fa-9c0c-6d10aee18928.htm" />
   </HelpKINode>
   <HelpKINode Title="GetCertificateFromStore method" Url="html/7a52d0ab-bb4a-aed0-8012-b7460bea1a74.htm" />
+  <HelpKINode Title="GetController(Of T) method">
+    <HelpKINode Title="ControllerFactory.GetController(T) Method " Url="html/6458ea2c-6e95-3ad0-b99f-351ba6e7d07f.htm" />
+    <HelpKINode Title="IControllerFactory.GetController(T) Method " Url="html/8c2327ad-16c9-44e7-774d-2ba728e530bf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetController&lt;T&gt; method">
+    <HelpKINode Title="ControllerFactory.GetController(T) Method " Url="html/6458ea2c-6e95-3ad0-b99f-351ba6e7d07f.htm" />
+    <HelpKINode Title="IControllerFactory.GetController(T) Method " Url="html/8c2327ad-16c9-44e7-774d-2ba728e530bf.htm" />
+  </HelpKINode>
   <HelpKINode Title="GetControllerDelegate method" Url="html/00270e37-3982-8708-66e2-0e93fef9c5bc.htm" />
   <HelpKINode Title="GetCustomAttributesOfType method" Url="html/706714c0-3c5e-9479-7376-1f414f4838f8.htm" />
   <HelpKINode Title="GetDeadConnectionFrame method">
@@ -1288,6 +1298,8 @@
   <HelpKINode Title="IControllerFactory.ContainsController method" Url="html/5692f4a0-fdc3-f590-2df8-ebd5fb3fee4d.htm" />
   <HelpKINode Title="IControllerFactory.Controllers property" Url="html/fd343afd-f769-0c6b-8d42-a2d3febd6654.htm" />
   <HelpKINode Title="IControllerFactory.Create method" Url="html/2dd08496-253d-d71c-e3d2-96857540c6c8.htm" />
+  <HelpKINode Title="IControllerFactory.GetController(Of T) method" Url="html/8c2327ad-16c9-44e7-774d-2ba728e530bf.htm" />
+  <HelpKINode Title="IControllerFactory.GetController&lt;T&gt; method" Url="html/8c2327ad-16c9-44e7-774d-2ba728e530bf.htm" />
   <HelpKINode Title="IControllerFactory.GetMethod method" Url="html/d0f3bf26-59cb-5bb7-ea61-e924d3d21683.htm" />
   <HelpKINode Title="IControllerFactory.GetMethods method" Url="html/f1412d71-2306-dc07-b85f-98fc996c6256.htm" />
   <HelpKINode Title="IControllerFactory.RemovePlugin method" Url="html/9004a3d5-ab4f-c008-7dd6-05b3f183ab17.htm" />
@@ -1618,8 +1630,8 @@
   <HelpKINode Title="Log class">
     <HelpKINode Title="Log Class" Url="html/d66d6b7f-9232-d6a7-efcf-e386b77cdb86.htm" />
     <HelpKINode Title="about Log class" Url="html/d66d6b7f-9232-d6a7-efcf-e386b77cdb86.htm" />
-    <HelpKINode Title="methods" Url="html/09cb9813-667a-dc6f-15f7-a80e22cc38d7.htm" />
     <HelpKINode Title="methods" Url="html/13c87f9b-5bc7-bf94-0677-125d80fc2e7d.htm" />
+    <HelpKINode Title="methods" Url="html/09cb9813-667a-dc6f-15f7-a80e22cc38d7.htm" />
   </HelpKINode>
   <HelpKINode Title="Log.Debug method" Url="html/88ee8c37-dae1-2cd9-ca31-84677fe60a38.htm" />
   <HelpKINode Title="Log.Error method" Url="html/89d0d4f5-0ca0-320a-c51f-741e9524be2b.htm" />

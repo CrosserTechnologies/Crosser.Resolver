@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.1.28.0" projectFile="C:\Users\Uffe\Desktop\CrosserApiDocs.shfbproj" started="2017-02-07 09:48:10">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.1.28.0" projectFile="C:\Users\Uffe\Desktop\CrosserApiDocs.shfbproj" started="2017-02-10 09:19:18">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -40,16 +40,16 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0310
+</plugIn>    Last step completed in 00:00:00,0312
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0134
+    Last step completed in 00:00:00,0156
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - GenerateRefInfo.proj]
-Build started 2017-02-07 09:48:18.
+Build started 2017-02-10 09:19:29.
 The target &quot;_ConvertPdbFiles&quot; listed in a BeforeTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)&quot; does not exist in the project, and will be ignored.
 The target &quot;_CollectPdbFiles&quot; listed in an AfterTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)&quot; does not exist in the project, and will be ignored.
 The target &quot;_CollectMdbFiles&quot; listed in a BeforeTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,38)&quot; does not exist in the project, and will be ignored.
@@ -63,7 +63,7 @@ GenerateRefInfo:
   Portions Copyright &#184; 2006-2016, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
   Loaded 4 assemblies for reflection and 1 dependency assemblies.
-  Wrote information on 32 namespaces, 112 types, and 796 members
+  Wrote information on 32 namespaces, 112 types, and 798 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2017.1.28.0)
   Copyright &#184; 2006-2017, Microsoft Corporation, All Rights Reserved.
@@ -73,13 +73,13 @@ Done Building Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs
 
 Build succeeded.
 
-Time Elapsed 00:00:01.04
-    Last step completed in 00:00:01,2193
+Time Elapsed 00:00:01.19
+    Last step completed in 00:00:01,3692
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - TransformManifest.proj]
-Build started 2017-02-07 09:48:19.
+Build started 2017-02-10 09:19:31.
 Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2017.1.28.0)
@@ -103,17 +103,17 @@ Done Building Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs
 
 Build succeeded.
 
-Time Elapsed 00:00:00.85
-    Last step completed in 00:00:00,9426
+Time Elapsed 00:00:00.88
+    Last step completed in 00:00:00,9798
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0455
+    Last step completed in 00:00:00,0534
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00,0005
+    Last step completed in 00:00:00,0000
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
@@ -122,7 +122,7 @@ Merging conceptual and additional tables of contents...
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 2017-02-07 09:48:20.
+Build started 2017-02-10 09:19:32.
 Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2017.1.28.0)
@@ -135,24 +135,24 @@ Build succeeded.
 
 Time Elapsed 00:00:00.13
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,2272
+    Last step completed in 00:00:00,2318
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,3162
+    Last step completed in 00:00:00,3385
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\sandcastle.config
   Updating reference topic configurations.
   No conceptual content.  Removing conceptual content components.
-    Last step completed in 00:00:00,0100
+    Last step completed in 00:00:00,0156
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - BuildTopics.proj]
-Build started 2017-02-07 09:48:21.
+Build started 2017-02-10 09:19:32.
 Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2017.1.28.0)
@@ -217,7 +217,7 @@ BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Proto
 BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;frameType&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ResolveReferenceLinksComponent: [P:Crosser.Server.Modules.Serializer.JsonSerializer.SerializerSettings] Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
-  Processed 1100 topic(s)
+  Processed 1102 topic(s)
   57 warning(s)
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 15 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 5 of 30.
@@ -226,12 +226,12 @@ Done Building Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs
 
 Build succeeded.
 
-Time Elapsed 00:00:32.68
-    Last step completed in 00:00:32,8347
+Time Elapsed 00:00:32.54
+    Last step completed in 00:00:32,7181
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0050
+    Last step completed in 00:00:00,0156
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -243,11 +243,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing website files in C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website
-Processed 1100 HTML files
+Processed 1102 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\WebKI.xml
 Saving website table of contents to C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\WebTOC.xml
-    Last step completed in 00:00:03,7386
+    Last step completed in 00:00:03,5854
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -327,7 +327,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\scripts\clipboard.min.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:00,2577
+    Last step completed in 00:00:00,2626
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
@@ -338,7 +338,7 @@ Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:04,3841
+</plugIn>    Last step completed in 00:00:04,2129
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
@@ -346,16 +346,16 @@ Copying website files to output folder...
 Copied 500 files
 Copied 1000 files
 Copied 1500 files
-Copied 1534 files for the website content
-    Last step completed in 00:00:01,2726
+Copied 1536 files for the website content
+    Last step completed in 00:00:01,3024
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,2523
+    Last step completed in 00:00:00,2692
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 2017-02-07 09:49:04.  Total time: 00:00:53,6101
+Build completed successfully at 2017-02-10 09:20:14.  Total time: 00:00:56,1151
 
 </buildStep>
 </shfbBuild>
