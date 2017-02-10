@@ -301,33 +301,82 @@ CB foo bar 0 cbid1\r\n\r\n
 </code></pre>
 
 <h2 id="sub">SUB<a class="headerlink" href="#sub" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
+<h3 id="syntax-5">Syntax<a class="headerlink" href="#syntax-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>SUB &lt;topic&gt; [max-messages]\r\n 
+</code></pre>
+
+<h3 id="description-6">Description<a class="headerlink" href="#description-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>SUB</code> is sent from the client-side to the server. Note that topics are case sensitive. The topic can contain wild-cards, <code>+</code> for level wild-card and <code>#</code> for full wild-card.
+If the optional [max-messages] is sent the client will be unsibscribed by the server after receiving a number of messages equivalent to [max-messages].</p>
+<h3 id="example-6">Example<a class="headerlink" href="#example-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the client sends a <code>SUB</code> to the server with topic <code>foo</code>.</p>
+<pre><code>SUB foo\r\n
+</code></pre>
+
+<p>This is an example where the client sends a <code>SUB</code> to the server with topic a level wild-card <code>foo/+/bar</code>.</p>
+<pre><code>SUB foo/+/bar\r\n
+</code></pre>
+
 <h2 id="suback">SUBACK<a class="headerlink" href="#suback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
+<p>TBD (V2)</p>
 <h2 id="pub">PUB<a class="headerlink" href="#pub" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
+<h3 id="syntax-6">Syntax<a class="headerlink" href="#syntax-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>PUB &lt;topic&gt; &lt;payload-length&gt;\r\n[payload]\r\n  
+</code></pre>
+
+<h3 id="description-7">Description<a class="headerlink" href="#description-7" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>PUB</code> is sent from the client-side to the server. Note that topics are case sensitive.</p>
+<h3 id="example-7">Example<a class="headerlink" href="#example-7" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the client sends a <code>PUB</code> to the server with topic <code>foo</code>.</p>
+<pre><code>SUB foo\r\n
+</code></pre>
+
+<p>This is an example where the client sends a <code>PUB</code> to the server with a topic that will match the wild-card subscription shown in the <code>SUB</code> section.</p>
+<pre><code>PUB foo/boo/bar 5\r\nHello\r\n
+</code></pre>
+
 <h2 id="puback">PUBACK<a class="headerlink" href="#puback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
+<p>TBD (V2)</p>
 <h2 id="msg">MSG<a class="headerlink" href="#msg" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
+<h3 id="syntax-7">Syntax<a class="headerlink" href="#syntax-7" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>MSG &lt;topic&gt; &lt;payload-length&gt;\r\n[payload]\r\n  
+</code></pre>
+
+<h3 id="description-8">Description<a class="headerlink" href="#description-8" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>MSG</code> is sent from the server-side to the clients. This is the server sending a message to all subscribers found when a client sent a <code>PUB</code> to the server</p>
+<h3 id="example-8">Example<a class="headerlink" href="#example-8" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the server sends a <code>MSG</code> to the clients with topic <code>foo</code> and payload <code>Hello</code>.</p>
+<pre><code>MSG foo 5\r\nHello\r\n
+</code></pre>
+
 <h2 id="msgack">MSGACK<a class="headerlink" href="#msgack" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
+<p>TBD (V2)</p>
 <h2 id="unsub">UNSUB<a class="headerlink" href="#unsub" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
+<h3 id="syntax-8">Syntax<a class="headerlink" href="#syntax-8" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>UNSUB &lt;topic&gt;\r\n
+</code></pre>
+
+<h3 id="description-9">Description<a class="headerlink" href="#description-9" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>UNSUB</code> is sent from the client-side to the server to remove a subscription.</p>
+<h3 id="example-9">Example<a class="headerlink" href="#example-9" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where a client removes a subscription for the topic <code>foo</code></p>
+<pre><code>UNSUB foo\r\n
+</code></pre>
+
 <h2 id="unsuback">UNSUBACK<a class="headerlink" href="#unsuback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
+<p>TBD (V2)</p>
 <h2 id="ping">PING<a class="headerlink" href="#ping" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>TBD</p>
 <h2 id="pong">PONG<a class="headerlink" href="#pong" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>TBD</p>
 <h2 id="ok">OK<a class="headerlink" href="#ok" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<h3 id="syntax-5">Syntax<a class="headerlink" href="#syntax-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="syntax-9">Syntax<a class="headerlink" href="#syntax-9" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>+OK
 </code></pre>
 
 <p>If the Endpoint of the connection has interact+ set, the server acknowledges each successfully parsed operation from the client with a +OK message.</p>
 <h2 id="err">ERR<a class="headerlink" href="#err" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<h3 id="syntax-6">Syntax<a class="headerlink" href="#syntax-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h3 id="syntax-10">Syntax<a class="headerlink" href="#syntax-10" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
 <pre><code>-ERR &lt;error message&gt;
 </code></pre>
 
