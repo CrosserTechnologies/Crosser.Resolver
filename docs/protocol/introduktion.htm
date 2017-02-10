@@ -74,7 +74,7 @@
 <h1 id="crosser-protocol">Crosser Protocol<a class="headerlink" href="#crosser-protocol" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
 <p>The <code>Crosser Protocol</code> is very simple and text-based. It was very much inspired by the protocol written by the people at <code>NATS.IO</code>, especially the idea about using a <a href="https://www.youtube.com/watch?v=ylRKac5kSOk&amp;feature=youtu.be&amp;t=10m46s" target="_blank">zero allocation byte parser</a>.
 The simplicity of the protocol makes it easy to write new clients or just connect via <code>TELNET</code> to test functionality.
-Although the protocol is inspired by NATS they are much different in functionality. The Crosser Protocol supports RPC/RMI as well as a basic PUB/SUB pattern.</p>
+Although the protocol is inspired by NATS they are much different in functionality. The Crosser Protocol supports RPC/RMI as well as PUB/SUB pattern.</p>
 <h2 id="crosser-protocol-operations">Crosser Protocol Operations<a class="headerlink" href="#crosser-protocol-operations" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>This table provides an overview for each protocol operation in the <code>Crosser Protocol</code>.
 The PUB/SUB operations are case sensitive.
@@ -320,10 +320,28 @@ CB foo bar 0 cbid1\r\n\r\n
 <p>TBD</p>
 <h2 id="pong">PONG<a class="headerlink" href="#pong" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
 <p>TBD</p>
-<h2 id="ok">+OK<a class="headerlink" href="#ok" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
-<h2 id="err">-ERR<a class="headerlink" href="#err" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
-<p>TBD</p>
+<h2 id="ok">OK<a class="headerlink" href="#ok" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-5">Syntax<a class="headerlink" href="#syntax-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>+OK
+</code></pre>
+
+<p>If the Endpoint of the connection has interact+ set, the server acknowledges each successfully parsed operation from the client with a +OK message.</p>
+<h2 id="err">ERR<a class="headerlink" href="#err" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-6">Syntax<a class="headerlink" href="#syntax-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>-ERR &lt;error message&gt;
+</code></pre>
+
+<p>The -ERR message is used by the server indicate a protocol, authorization, or other runtime connection error to the client. These errors result in the server closing the connection.</p>
+<p>Protocol error messages:</p>
+<pre><code>-ERR 'Protocol Violation'
+-ERR 'Controller/Method Not Found'
+-ERR 'Maximum Payload Length Exceeded'
+-ERR 'Authentication Timeout'
+-ERR 'Authentication Failed'
+-ERR 'Security Violation'
+-ERR 'Dead Connection'
+</code></pre>
+
 
                     </div>
                 </div>

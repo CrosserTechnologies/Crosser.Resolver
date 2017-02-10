@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.1.28.0" projectFile="C:\Users\Uffe\Desktop\CrosserApiDocs.shfbproj" started="2017-02-05 20:30:49">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.1.28.0" projectFile="C:\Users\Uffe\Desktop\CrosserApiDocs.shfbproj" started="2017-02-07 09:48:10">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -32,29 +32,29 @@ Source: C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Serve
     Found assembly &#39;C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Server\bin\Debug\net46\Crosser.Server.dll&#39;
 
 Copying XML comments files
-    C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Server\bin\Debug\net46\Crosser.Common.xml -&gt; C:\Users\Uffe\Desktop\Help\Working\Crosser.Common.xml
-    C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Server\bin\Debug\net46\Crosser.Logger.xml -&gt; C:\Users\Uffe\Desktop\Help\Working\Crosser.Logger.xml
-    C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Server\bin\Debug\net46\Crosser.Resolver.xml -&gt; C:\Users\Uffe\Desktop\Help\Working\Crosser.Resolver.xml
-    C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Server\bin\Debug\net46\Crosser.Server.xml -&gt; C:\Users\Uffe\Desktop\Help\Working\Crosser.Server.xml
+    C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Server\bin\Debug\net46\Crosser.Common.xml -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Crosser.Common.xml
+    C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Server\bin\Debug\net46\Crosser.Logger.xml -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Crosser.Logger.xml
+    C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Server\bin\Debug\net46\Crosser.Resolver.xml -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Crosser.Resolver.xml
+    C:\Users\Uffe\Source\Workspaces\CrosserTech\Crosser\Server\Crosser.Server\bin\Debug\net46\Crosser.Server.xml -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Crosser.Server.xml
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0130
+</plugIn>    Last step completed in 00:00:00,0310
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0155
+    Last step completed in 00:00:00,0134
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - GenerateRefInfo.proj]
-Build started 2017-02-05 20:30:57.
+Build started 2017-02-07 09:48:18.
 The target &quot;_ConvertPdbFiles&quot; listed in a BeforeTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,37)&quot; does not exist in the project, and will be ignored.
 The target &quot;_CollectPdbFiles&quot; listed in an AfterTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (34,70)&quot; does not exist in the project, and will be ignored.
 The target &quot;_CollectMdbFiles&quot; listed in a BeforeTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,38)&quot; does not exist in the project, and will be ignored.
 The target &quot;_CopyMdbFiles&quot; listed in an AfterTargets attribute at &quot;C:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets (41,71)&quot; does not exist in the project, and will be ignored.
-Project &quot;C:\Users\Uffe\Desktop\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
+Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
 GenerateRefInfo:
@@ -69,18 +69,18 @@ GenerateRefInfo:
   Copyright &#184; 2006-2017, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\MergeDuplicates.xsl&#39;.
-Done Building Project &quot;C:\Users\Uffe\Desktop\Help\Working\GenerateRefInfo.proj&quot; (default targets).
+Done Building Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\GenerateRefInfo.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.91
-    Last step completed in 00:00:01,0193
+Time Elapsed 00:00:01.04
+    Last step completed in 00:00:01,2193
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - TransformManifest.proj]
-Build started 2017-02-05 20:30:58.
-Project &quot;C:\Users\Uffe\Desktop\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
+Build started 2017-02-07 09:48:19.
+Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2017.1.28.0)
   Copyright &#184; 2006-2017, Microsoft Corporation, All Rights Reserved.
@@ -99,21 +99,21 @@ TransformManifest:
   Copyright &#184; 2006-2017, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\ProductionTransforms\ReflectionToManifest.xsl&#39;.
-Done Building Project &quot;C:\Users\Uffe\Desktop\Help\Working\TransformManifest.proj&quot; (default targets).
+Done Building Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\TransformManifest.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.91
-    Last step completed in 00:00:01,0079
+Time Elapsed 00:00:00.85
+    Last step completed in 00:00:00,9426
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0615
+    Last step completed in 00:00:00,0455
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00,0000
+    Last step completed in 00:00:00,0005
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
@@ -122,29 +122,29 @@ Merging conceptual and additional tables of contents...
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 2017-02-05 20:30:59.
-Project &quot;C:\Users\Uffe\Desktop\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
+Build started 2017-02-07 09:48:20.
+Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2017.1.28.0)
   Copyright &#184; 2006-2017, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\\ProductionTransforms\CreateVSToc.xsl&#39;.
-Done Building Project &quot;C:\Users\Uffe\Desktop\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
+Done Building Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\GenerateIntermediateTOC.proj&quot; (default targets).
 
 Build succeeded.
 
 Time Elapsed 00:00:00.13
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,2394
+    Last step completed in 00:00:00,2272
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,1726
+    Last step completed in 00:00:00,3162
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
-C:\Users\Uffe\Desktop\Help\Working\sandcastle.config
+C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\sandcastle.config
   Updating reference topic configurations.
   No conceptual content.  Removing conceptual content components.
     Last step completed in 00:00:00,0100
@@ -152,82 +152,82 @@ C:\Users\Uffe\Desktop\Help\Working\sandcastle.config
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe - BuildTopics.proj]
-Build started 2017-02-05 20:31:00.
-Project &quot;C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
+Build started 2017-02-07 09:48:21.
+Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2017.1.28.0)
   Copyright &#184; 2006-2017, Microsoft Corporation, All Rights Reserved.
   Portions Copyright &#184; 2006-2016, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Byte[])] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Byte[])] Missing &lt;typeparam name=&quot;TTarget&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Byte[])] Missing &lt;param name=&quot;o&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize(System.Byte[],System.Type)] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize(System.Byte[],System.Type)] Missing &lt;param name=&quot;o&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize(System.Byte[],System.Type)] Missing &lt;param name=&quot;t&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Object)] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Object)] Missing &lt;typeparam name=&quot;TTarget&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Object)] Missing &lt;param name=&quot;o&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;param name=&quot;json&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;param name=&quot;parameterName&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;param name=&quot;parameterType&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;param name=&quot;defaultValue&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Serialize``1(``0)] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Serialize``1(``0)] Missing &lt;typeparam name=&quot;TSource&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Serialize``1(``0)] Missing &lt;param name=&quot;o&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [F:Crosser.Logger.Logger.LogSwicth] Unknown reference link target &#39;T:Serilog.Core.LoggingLevelSwitch&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Crosser.Resolve.Model.DependencyObject`1] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:Crosser.Resolve.Model.DependencyObject`1] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:Crosser.Resolve.Model.DependencyObject`1.Get] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Crosser.Resolve.Model.SingletonDependencyObject`1] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:Crosser.Resolve.Model.SingletonDependencyObject`1] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:Crosser.Resolve.Model.SingletonDependencyObject`1.Get] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Resolve.PlatformHelpers.TypeExtensions.IsInterface``1] Missing &lt;typeparam name=&quot;T&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;reqid&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Crosser.Server.Modules.Protocol.HTTP.Http] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:Crosser.Server.Modules.Protocol.HTTP.Http] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.GetDeadConnectionFrame] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;frameType&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;reqid&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.GetDeadConnectionFrame] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;hub&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;frameType&quot;/&gt; documentation [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
-BuildAssembler : warning : ResolveReferenceLinksComponent: [P:Crosser.Server.Modules.Serializer.JsonSerializer.SerializerSettings] Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;. [C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Byte[])] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Byte[])] Missing &lt;typeparam name=&quot;TTarget&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Byte[])] Missing &lt;param name=&quot;o&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize(System.Byte[],System.Type)] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize(System.Byte[],System.Type)] Missing &lt;param name=&quot;o&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize(System.Byte[],System.Type)] Missing &lt;param name=&quot;t&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Object)] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Object)] Missing &lt;typeparam name=&quot;TTarget&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Deserialize``1(System.Object)] Missing &lt;param name=&quot;o&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;param name=&quot;json&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;param name=&quot;parameterName&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;param name=&quot;parameterType&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.DeserializeFromString(System.String,System.String,System.Type,System.Object)] Missing &lt;param name=&quot;defaultValue&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Serialize``1(``0)] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Serialize``1(``0)] Missing &lt;typeparam name=&quot;TSource&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Common.Utilities.Serialization.ISerializer.Serialize``1(``0)] Missing &lt;param name=&quot;o&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [F:Crosser.Logger.Logger.LogSwicth] Unknown reference link target &#39;T:Serilog.Core.LoggingLevelSwitch&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Crosser.Resolve.Model.DependencyObject`1] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:Crosser.Resolve.Model.DependencyObject`1] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:Crosser.Resolve.Model.DependencyObject`1.Get] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Crosser.Resolve.Model.SingletonDependencyObject`1] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:Crosser.Resolve.Model.SingletonDependencyObject`1] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:Crosser.Resolve.Model.SingletonDependencyObject`1.Get] Unknown reference link target &#39;P:Crosser.Resolve.Model.DependencyObject`1.Enabled&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Resolve.PlatformHelpers.TypeExtensions.IsInterface``1] Missing &lt;typeparam name=&quot;T&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;summary&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;reqid&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Protocol.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Crosser.Server.Modules.Protocol.HTTP.Http] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:Crosser.Server.Modules.Protocol.HTTP.Http] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.GetDeadConnectionFrame] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(Crosser.Common.Utilities.Binary.BinaryKey,System.String,System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;frameType&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;controller&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;reqid&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.HTTP.Http.Send(System.Byte[],System.Byte[],System.Byte[],System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [T:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [Methods.T:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.GetDeadConnectionFrame] Unknown reference link target &#39;F:Crosser.Server.Modules.Protocol.Crosser.CrosserProtocolMessages.Errors.DeadConnection&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[])] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;hub&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;method&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;data&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:Crosser.Server.Modules.Protocol.Monitor.HttpMonitor.Send(System.Byte[],System.String,System.Byte[],Crosser.Common.Server.Protocol.FrameType)] Missing &lt;param name=&quot;frameType&quot;/&gt; documentation [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ResolveReferenceLinksComponent: [P:Crosser.Server.Modules.Serializer.JsonSerializer.SerializerSettings] Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;. [C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj]
   Processed 1100 topic(s)
   57 warning(s)
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 15 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 5 of 30.
   SaveComponent: Waiting for the document writer task to finish (100 Website API file(s) remaining)...
-Done Building Project &quot;C:\Users\Uffe\Desktop\Help\Working\BuildTopics.proj&quot; (default targets).
+Done Building Project &quot;C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\BuildTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:32.70
-    Last step completed in 00:00:32,8327
+Time Elapsed 00:00:32.68
+    Last step completed in 00:00:32,8347
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
@@ -242,92 +242,92 @@ E-Mail: Eric@EWoodruff.us
 
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
-Processing website files in C:\Users\Uffe\Desktop\Help\Working\Output\Website
+Processing website files in C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website
 Processed 1100 HTML files
 Sorting keywords and generating See Also indices
-Saving website keyword index to C:\Users\Uffe\Desktop\Help\Working\WebKI.xml
-Saving website table of contents to C:\Users\Uffe\Desktop\Help\Working\WebTOC.xml
-    Last step completed in 00:00:04,7206
+Saving website keyword index to C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\WebKI.xml
+Saving website table of contents to C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\WebTOC.xml
+    Last step completed in 00:00:03,7386
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\AlertCaution.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\AlertNote.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\AlertSecurity.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\CFW.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\CodeExample.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\favicon.ico
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\privstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protoperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\protstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubclass.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubdelegate.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubenumeration.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubevent.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubextension.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubfield.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubinterface.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubmethod.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\puboperator.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubproperty.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\pubstructure.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\SectionCollapsed.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\SectionExpanded.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\slMobile.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\static.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\xna.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\scripts\branding.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-cs-CZ.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-de-DE.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-en-US.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-es-ES.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-fr-FR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-Help1.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-HelpViewer.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-it-IT.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-ja-JP.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-ko-KR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-pl-PL.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-pt-BR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-ru-RU.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-tr-TR.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-Website.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-zh-CN.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding-zh-TW.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\styles\branding.css
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\index.html -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\index.html
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\search.html -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\search.html
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.aspx -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\SearchHelp.aspx
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.inc.php -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\SearchHelp.inc.php
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.php -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\SearchHelp.php
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\Web.Config -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\Web.Config
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\Search.png -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\Search.png
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocClose.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\TocClose.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocCollapsed.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\TocCollapsed.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocExpanded.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\TocExpanded.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\icons\TocOpen.gif
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\scripts\branding-Website.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\scripts\clipboard.min.js
-C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; C:\Users\Uffe\Desktop\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:00,0951
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertCaution.png -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\AlertCaution.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertNote.png -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\AlertNote.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\AlertSecurity.png -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\AlertSecurity.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CFW.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\CFW.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\CodeExample.png -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\CodeExample.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\favicon.ico -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\favicon.ico
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privclass.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privdelegate.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privenumeration.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privevent.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privextension.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privfield.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privinterface.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privmethod.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privproperty.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\privstructure.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\privstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protclass.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protdelegate.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protenumeration.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protevent.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protextension.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protfield.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protinterface.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protmethod.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protoperator.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protoperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protproperty.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\protstructure.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\protstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubclass.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubclass.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubdelegate.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubdelegate.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubenumeration.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubenumeration.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubevent.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubevent.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubextension.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubextension.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubfield.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubfield.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubinterface.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubinterface.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubmethod.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubmethod.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\puboperator.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\puboperator.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubproperty.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubproperty.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\pubstructure.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\pubstructure.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionCollapsed.png -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\SectionCollapsed.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\SectionExpanded.png -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\SectionExpanded.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\slMobile.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\slMobile.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\static.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\static.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\icons\xna.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\xna.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\scripts\branding.js -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\scripts\branding.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-cs-CZ.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-cs-CZ.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-de-DE.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-de-DE.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-en-US.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-en-US.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-es-ES.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-es-ES.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-fr-FR.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-fr-FR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Help1.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-Help1.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-HelpViewer.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-HelpViewer.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-it-IT.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-it-IT.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ja-JP.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-ja-JP.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ko-KR.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-ko-KR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pl-PL.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-pl-PL.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-pt-BR.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-pt-BR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-ru-RU.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-ru-RU.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-tr-TR.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-tr-TR.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-Website.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-Website.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-zh-CN.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding-zh-TW.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\styles\branding.css
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\index.html -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\index.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\search.html -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\search.html
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.aspx -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\SearchHelp.aspx
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.inc.php -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\SearchHelp.inc.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\SearchHelp.php -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\SearchHelp.php
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\Web.Config -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\Web.Config
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\Search.png -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\Search.png
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocClose.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\TocClose.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocCollapsed.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\TocCollapsed.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocExpanded.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\TocExpanded.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\icons\TocOpen.gif
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\scripts\branding-Website.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\clipboard.min.js -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\scripts\clipboard.min.js
+C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; C:\Users\Uffe\Documents\GitHub\Crosser.Resolver\docs\Help\Working\Output\Website\scripts\jquery-1.11.0.min.js
+    Last step completed in 00:00:00,2577
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
@@ -338,7 +338,7 @@ Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:05,2885
+</plugIn>    Last step completed in 00:00:04,3841
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
@@ -347,15 +347,15 @@ Copied 500 files
 Copied 1000 files
 Copied 1500 files
 Copied 1534 files for the website content
-    Last step completed in 00:00:01,3394
+    Last step completed in 00:00:01,2726
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,2347
+    Last step completed in 00:00:00,2523
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 2017-02-05 20:31:44.  Total time: 00:00:55,2228
+Build completed successfully at 2017-02-07 09:49:04.  Total time: 00:00:53,6101
 
 </buildStep>
 </shfbBuild>

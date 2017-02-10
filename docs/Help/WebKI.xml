@@ -1112,8 +1112,8 @@
     <HelpKINode Title="constructor" Url="html/8dab8861-3f30-6fb4-550e-bb2f23eecf42.htm" />
     <HelpKINode Title="fields" Url="html/c0a32598-9918-eaa0-a554-4da42ad28fba.htm" />
     <HelpKINode Title="methods" Url="html/9b23a6f3-03eb-d6a8-30b2-b1f6cdf487ff.htm" />
-    <HelpKINode Title="properties" Url="html/151f2855-f532-ae7c-a789-3354e4272dbb.htm" />
     <HelpKINode Title="properties" Url="html/734a5136-c73e-1c52-0935-b94b6cf7f8db.htm" />
+    <HelpKINode Title="properties" Url="html/151f2855-f532-ae7c-a789-3354e4272dbb.htm" />
   </HelpKINode>
   <HelpKINode Title="Http.Dispose method" Url="html/19eca9d9-995d-6431-3367-3b81acd738fe.htm" />
   <HelpKINode Title="Http.ExecuteHttpCall method" Url="html/fc1a15b8-6622-a8c3-8a5c-f12edcc51833.htm" />
@@ -1618,8 +1618,8 @@
   <HelpKINode Title="Log class">
     <HelpKINode Title="Log Class" Url="html/d66d6b7f-9232-d6a7-efcf-e386b77cdb86.htm" />
     <HelpKINode Title="about Log class" Url="html/d66d6b7f-9232-d6a7-efcf-e386b77cdb86.htm" />
-    <HelpKINode Title="methods" Url="html/13c87f9b-5bc7-bf94-0677-125d80fc2e7d.htm" />
     <HelpKINode Title="methods" Url="html/09cb9813-667a-dc6f-15f7-a80e22cc38d7.htm" />
+    <HelpKINode Title="methods" Url="html/13c87f9b-5bc7-bf94-0677-125d80fc2e7d.htm" />
   </HelpKINode>
   <HelpKINode Title="Log.Debug method" Url="html/88ee8c37-dae1-2cd9-ca31-84677fe60a38.htm" />
   <HelpKINode Title="Log.Error method" Url="html/89d0d4f5-0ca0-320a-c51f-741e9524be2b.htm" />
