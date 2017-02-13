@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crosser.Protocol - Crosser Technologies</title>
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/theme_colors.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/styles/vs.css">
+    <link rel="stylesheet" href="../../css/font-awesome.4.5.0.min.css">
+</head>
+<body role="document">
+    <div class="grid-for-nav">
+        <nav data-toggle="nav-shift" class="nav-side stickynav">
+            <div class="side-nav-search">
+                <a href="../../index.htm"><i class="fa fa-home"></i> Crosser Technologies</a>
+                <div role="search">
+                    <form id="search-form" class="form" action="../../Docnet_search.htm" method="get">
+                        <input type="text" name="q" placeholder="Search docs" />
+                    </form>
+                </div>
+            </div>
+            <div class="menu menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+<ul>
+<li class="tocentry"><a href="../../index.htm">Home</a>
+</li>
+
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../GettingStarted.htm">Getting Started</a></span>
+</li>
+<li class="tocentry">
+<ul>
+<li><span class="navigationgroup"><i class="fa fa-caret-down"></i> <a href="../../internals/index.htm">Crosser Internals</a></span></li>
+
+<li class="tocentry current"><a class="current" href="../../internals/protocol/introduktion.htm">Crosser.Protocol</a>
+<ul class="currentrelative">
+<li class="tocentry"><a href="#crosser-protocol-operations">Crosser Protocol Operations</a></li>
+<li class="tocentry"><a href="#info">INFO</a></li>
+<li class="tocentry"><a href="#hi">HI</a></li>
+<li class="tocentry"><a href="#bye">BYE</a></li>
+<li class="tocentry"><a href="#call">CALL</a></li>
+<li class="tocentry"><a href="#callack">CALLACK</a></li>
+<li class="tocentry"><a href="#callback">CALLBACK</a></li>
+<li class="tocentry"><a href="#sub">SUB</a></li>
+<li class="tocentry"><a href="#suback">SUBACK</a></li>
+<li class="tocentry"><a href="#pub">PUB</a></li>
+<li class="tocentry"><a href="#puback">PUBACK</a></li>
+<li class="tocentry"><a href="#msg">MSG</a></li>
+<li class="tocentry"><a href="#msgack">MSGACK</a></li>
+<li class="tocentry"><a href="#unsub">UNSUB</a></li>
+<li class="tocentry"><a href="#unsuback">UNSUBACK</a></li>
+<li class="tocentry"><a href="#ping">PING</a></li>
+<li class="tocentry"><a href="#pong">PONG</a></li>
+<li class="tocentry"><a href="#ok">OK</a></li>
+<li class="tocentry"><a href="#err">ERR</a></li>
+</ul>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../internalsCrosserResolver.htm">Crosser.Resolver</a></span>
+</li>
+</ul>
+</li>
+<li class="tocentry">
+<span class="navigationgroup"><i class="fa fa-caret-right"></i> <a href="../../API/index.htm">API</a></span>
+</li>
+</ul>
+				<div class="toc-footer">
+					<span class="text-small">
+						<hr/>
+						<a href="https://github.com/FransBouma/DocNet" target="_blank">Made with <i class="fa fa-github"></i> DocNet</a>
+					</span>
+				</div>	
+			</div>
+            &nbsp;
+        </nav>
+        <section data-toggle="nav-shift" class="nav-content-wrap">
+            <nav class="nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="nav-top" class="fa fa-bars"></i>
+                <a href="../../index.htm">Crosser Technologies</a>
+            </nav>
+            <div class="nav-content">
+                <div role="navigation" aria-label="breadcrumbs navigation">
+                    <div class="breadcrumbs">
+<ul><li><a href="../../index.htm">Home</a></li> / <li><a href="../../internals/index.htm">Crosser Internals</a></li> / <li><a href="../../internals/protocol/introduktion.htm">Crosser.Protocol</a></li></ul>
+					
+                    </div>
+                    <hr />
+                </div>
+                <div role="main">
+                    <div class="section">
+<h1 id="crosser-protocol">Crosser Protocol<a class="headerlink" href="#crosser-protocol" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h1>
+<p>The <code>Crosser Protocol</code> is very simple and text-based. It was very much inspired by the protocol written by the people at <code>NATS.IO</code>, especially the idea about using a <a href="https://www.youtube.com/watch?v=ylRKac5kSOk&amp;feature=youtu.be&amp;t=10m46s" target="_blank">zero allocation byte parser</a>.
+The simplicity of the protocol makes it easy to write new clients or just connect via <code>TELNET</code> to test functionality.
+Although the protocol is inspired by NATS they are much different in functionality. The Crosser Protocol supports RPC/RMI as well as PUB/SUB pattern.</p>
+<h2 id="crosser-protocol-operations">Crosser Protocol Operations<a class="headerlink" href="#crosser-protocol-operations" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>This table provides an overview for each protocol operation in the <code>Crosser Protocol</code>.
+The PUB/SUB operations are case sensitive.
+The RPC/RMI operation are NOT case sensitive.</p>
+<table class="table table-bordered-all table-responsive">
+<thead>
+<tr>
+	<th>OPERATION</th>
+	<th>SENDER</th>
+	<th>DESCRIPTION</th>
+	<th>PATTERN</th>
+	<th>PROTOCOL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><a href="introduktion.htm#info">INFO</a></td>
+	<td>Server</td>
+	<td>Information about the server sent when a TCP/IP connection is established</td>
+	<td>-</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#hi">HI</a></td>
+	<td>Client</td>
+	<td>Set information about the connection</td>
+	<td>-</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#bye">BYE</a></td>
+	<td>Client</td>
+	<td>Close the connection</td>
+	<td>-</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#call">CALL</a></td>
+	<td>Both</td>
+	<td>Call a controller/method on server/client</td>
+	<td>RPC/RMI</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#callack">CALLACK</a></td>
+	<td>Both</td>
+	<td>Confirmation that the CALL operation was received</td>
+	<td>RPC/RMI</td>
+	<td>V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#callback">CB</a></td>
+	<td>Server</td>
+	<td>A callback to the client after the client doing a CALL to the server with a callback-id attached</td>
+	<td>RPC/RMI</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#sub">SUB</a></td>
+	<td>Client</td>
+	<td>A subscription sent from the client to the server.</td>
+	<td>PUB/SUB</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#suback">SUBACK</a></td>
+	<td>Server</td>
+	<td>Confirmation that the SUB was received</td>
+	<td>PUB/SUB</td>
+	<td>V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#pub">PUB</a></td>
+	<td>Client</td>
+	<td>A publish message sent to the server from a client</td>
+	<td>PUB/SUB</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#puback">PUBACK</a></td>
+	<td>Server</td>
+	<td>Confirmation that the PUB was received</td>
+	<td>PUB/SUB</td>
+	<td>V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#msg">MSG</a></td>
+	<td>Server</td>
+	<td>A message sent to subscribing client(s) from the server</td>
+	<td>PUB/SUB</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#msgack">MSGACK</a></td>
+	<td>Client</td>
+	<td>Confirmation that the MSG was received</td>
+	<td>PUB/SUB</td>
+	<td>V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#unsub">UNSUB</a></td>
+	<td>Client</td>
+	<td>A client unsubscribe by sending a UNSUB message to the server</td>
+	<td>PUB/SUB</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#unsuback">UNSUBACK</a></td>
+	<td>Server</td>
+	<td>Confirmation that the UNSUB was received</td>
+	<td>PUB/SUB</td>
+	<td>V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#ping">PING</a></td>
+	<td>Both</td>
+	<td>Heartbeat, PING</td>
+	<td>-</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#pong">PONG</a></td>
+	<td>Both</td>
+	<td>Heartbeat, PONG</td>
+	<td>-</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#ok">+OK</a></td>
+	<td>Server</td>
+	<td>Confirmation that the message sent from the client was accepted by the protocol (sent only when Endpoint was started in Interactive mode)</td>
+	<td>-</td>
+	<td>V1,V2</td>
+</tr>
+<tr>
+	<td><a href="introduktion.htm#err">-ERR</a></td>
+	<td>Server</td>
+	<td>Protocol Error, will terminate the connection</td>
+	<td>-</td>
+	<td>V1,V2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="info">INFO<a class="headerlink" href="#info" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>INFO {&lt;key&gt;:&lt;value&gt;,&lt;key&gt;:&lt;value&gt;,...}\r\n
+</code></pre>
+
+<p>TODO: Add list of parameters sent back from the server.</p>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>INFO</code> is sent from the server when a client connects to a <code>Crosser Endpoint</code>. This message will not be sent to half-duplex endpoints such as HTTP.</p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>INFO {&quot;Id&quot;:&quot;320a4a6e-c382-4a1d-8336-bafd56314970&quot;,&quot;Version&quot;:&quot;0.0.5.0&quot;,&quot;Framework&quot;:&quot;.NETSTANDARD_1_6&quot;,&quot;Location&quot;:&quot;localhost&quot;,&quot;Port&quot;:&quot;6661&quot;,&quot;PingTimeout&quot;:&quot;0&quot;,&quot;AuthRequired&quot;:&quot;False&quot;,&quot;AuthTimeout&quot;:&quot;1000&quot;,&quot;SecureRequired&quot;:&quot;False&quot;,&quot;Interactive&quot;:&quot;False&quot;,&quot;ProtocolVersions&quot;:&quot;V1&quot;,&quot;CertificateRequired&quot;:&quot;False&quot;,&quot;SslProtocols&quot;:&quot;Tls12&quot;}
+</code></pre>
+
+<h2 id="hi">HI<a class="headerlink" href="#hi" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-1">Syntax<a class="headerlink" href="#syntax-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>HI {&lt;key&gt;:&lt;value&gt;,&lt;key&gt;:&lt;value&gt;,...}\r\n
+</code></pre>
+
+<p>You can add custom key/value parameters, but the ones below wil lbe automatically populated by the server-side if provided.
+All values passed will be found on the server-side under <a href="https://crossertechnologies.github.io/Crosser.Resolver/Help/html/49609f83-e547-4e31-a1c9-3f7ea298d8d0.htm" target="_blank">ConnectionContext.Vars</a> dictionary</p>
+<pre><code>- interactive: if true the server will confirm every valid operation parsed.
+- todo: ...
+- todo: ...
+- todo: ...
+</code></pre>
+
+<h3 id="description-1">Description<a class="headerlink" href="#description-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>If the client <code>INFO</code> message states that the client have to authenticate the client have to send the <code>HI</code> message before anything else is sent to the server.</p>
+<h3 id="example-1">Example<a class="headerlink" href="#example-1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>TODO: Show example output from telnet</p>
+<h2 id="bye">BYE<a class="headerlink" href="#bye" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-2">Syntax<a class="headerlink" href="#syntax-2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>BYE
+</code></pre>
+
+<h3 id="description-2">Description<a class="headerlink" href="#description-2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>BYE</code> will gracefully close the connection and cleanup resources.</p>
+<h3 id="example-2">Example<a class="headerlink" href="#example-2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>The following will send the close operation to the server</p>
+<pre><code>BYE\r\n
+</code></pre>
+
+<h2 id="call">CALL<a class="headerlink" href="#call" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-v1">Syntax V1<a class="headerlink" href="#syntax-v1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>CALL &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt; [callback-id]\r\n[payload]\r\n 
+</code></pre>
+
+<h3 id="syntax-v2">Syntax V2<a class="headerlink" href="#syntax-v2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>CALL &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt; &lt;call-id&gt; [callback-id]\r\n[payload]\r\n 
+</code></pre>
+
+<h3 id="description-3">Description<a class="headerlink" href="#description-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>CALL</code> will let you call a server-side method on a specific controller.</p>
+<h3 id="example-3">Example<a class="headerlink" href="#example-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<h4 id="v1">V1<a class="headerlink" href="#v1" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code>.  </p>
+<pre><code>CALL foo bar 11\r\nHello World\r\n
+</code></pre>
+
+<h4 id="v2">V2<a class="headerlink" href="#v2" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h4>
+<p>This example will call the method <code>Bar</code> on the controller <code>Foo</code> with the payload <code>Hello World</code> and the call-id <code>c1</code>.  </p>
+<pre><code>CALL foo bar 11 c1\r\nHello World\r\n
+</code></pre>
+
+<h2 id="callack">CALLACK<a class="headerlink" href="#callack" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-3">Syntax<a class="headerlink" href="#syntax-3" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>CALLACK &lt;call-id&gt;\r\n[payload]\r\n 
+</code></pre>
+
+<h3 id="description-4">Description<a class="headerlink" href="#description-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>CALLACK</code> is sent from the server-side to the client as a response to the client doing a <code>CALL</code> with a call-id included.
+The <code>CALLACK</code> will be sent back as soon as the server has parsed the message sent form the client.</p>
+<h3 id="example-4">Example<a class="headerlink" href="#example-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the client sends a <code>CALL</code> to the controller <code>foo</code> and method <code>bar</code> with call-id <code>c1</code>. The payload is <code>hello world</code></p>
+<pre><code>CALL foo bar 11 c1\r\nHello World\r\n
+</code></pre>
+
+<h2 id="callback">CALLBACK<a class="headerlink" href="#callback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-4">Syntax<a class="headerlink" href="#syntax-4" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>CB &lt;controller&gt; &lt;method&gt; &lt;payload-length&gt; &lt;callback-id&gt;\r\n[payload]\r\n 
+</code></pre>
+
+<h3 id="description-5">Description<a class="headerlink" href="#description-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>CB</code> is sent from the server-side to the client and includes the result of the method called on the server-side. The <code>CALLBACK</code> is only executed if the client has passed in a <code>callback-id</code> in the <code>CALL</code></p>
+<h3 id="example-5">Example<a class="headerlink" href="#example-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the client sends a <code>CALL</code> to the controller <code>foo</code> and method <code>bar</code> with callback-id <code>cbid1</code>. The payload is <code>hello world</code>.
+The method does not return anything and therefor this example has the length <code>0</code> in the callback.</p>
+<pre><code>CALL foo bar 11 cbid1\r\nHello World\r\n
+
+CB foo bar 0 cbid1\r\n\r\n
+</code></pre>
+
+<h2 id="sub">SUB<a class="headerlink" href="#sub" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-5">Syntax<a class="headerlink" href="#syntax-5" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>SUB &lt;topic&gt; [max-messages]\r\n 
+</code></pre>
+
+<h3 id="description-6">Description<a class="headerlink" href="#description-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>SUB</code> is sent from the client-side to the server. Note that topics are case sensitive. The topic can contain wild-cards, <code>+</code> for level wild-card and <code>#</code> for full wild-card.
+If the optional [max-messages] is sent the client will be unsibscribed by the server after receiving a number of messages equivalent to [max-messages].</p>
+<h3 id="example-6">Example<a class="headerlink" href="#example-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the client sends a <code>SUB</code> to the server with topic <code>foo</code>.</p>
+<pre><code>SUB foo\r\n
+</code></pre>
+
+<p>This is an example where the client sends a <code>SUB</code> to the server with topic a level wild-card <code>foo/+/bar</code>.</p>
+<pre><code>SUB foo/+/bar\r\n
+</code></pre>
+
+<h2 id="suback">SUBACK<a class="headerlink" href="#suback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD (V2)</p>
+<h2 id="pub">PUB<a class="headerlink" href="#pub" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-6">Syntax<a class="headerlink" href="#syntax-6" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>PUB &lt;topic&gt; &lt;payload-length&gt;\r\n[payload]\r\n  
+</code></pre>
+
+<h3 id="description-7">Description<a class="headerlink" href="#description-7" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>PUB</code> is sent from the client-side to the server. Note that topics are case sensitive.</p>
+<h3 id="example-7">Example<a class="headerlink" href="#example-7" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the client sends a <code>PUB</code> to the server with topic <code>foo</code>.</p>
+<pre><code>SUB foo\r\n
+</code></pre>
+
+<p>This is an example where the client sends a <code>PUB</code> to the server with a topic that will match the wild-card subscription shown in the <code>SUB</code> section.</p>
+<pre><code>PUB foo/boo/bar 5\r\nHello\r\n
+</code></pre>
+
+<h2 id="puback">PUBACK<a class="headerlink" href="#puback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD (V2)</p>
+<h2 id="msg">MSG<a class="headerlink" href="#msg" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-7">Syntax<a class="headerlink" href="#syntax-7" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>MSG &lt;topic&gt; &lt;payload-length&gt;\r\n[payload]\r\n  
+</code></pre>
+
+<h3 id="description-8">Description<a class="headerlink" href="#description-8" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>MSG</code> is sent from the server-side to the clients. This is the server sending a message to all subscribers found when a client sent a <code>PUB</code> to the server</p>
+<h3 id="example-8">Example<a class="headerlink" href="#example-8" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where the server sends a <code>MSG</code> to the clients with topic <code>foo</code> and payload <code>Hello</code>.</p>
+<pre><code>MSG foo 5\r\nHello\r\n
+</code></pre>
+
+<h2 id="msgack">MSGACK<a class="headerlink" href="#msgack" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD (V2)</p>
+<h2 id="unsub">UNSUB<a class="headerlink" href="#unsub" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-8">Syntax<a class="headerlink" href="#syntax-8" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>UNSUB &lt;topic&gt;\r\n
+</code></pre>
+
+<h3 id="description-9">Description<a class="headerlink" href="#description-9" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p><code>UNSUB</code> is sent from the client-side to the server to remove a subscription.</p>
+<h3 id="example-9">Example<a class="headerlink" href="#example-9" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<p>This is an example where a client removes a subscription for the topic <code>foo</code></p>
+<pre><code>UNSUB foo\r\n
+</code></pre>
+
+<h2 id="unsuback">UNSUBACK<a class="headerlink" href="#unsuback" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD (V2)</p>
+<h2 id="ping">PING<a class="headerlink" href="#ping" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="pong">PONG<a class="headerlink" href="#pong" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<p>TBD</p>
+<h2 id="ok">OK<a class="headerlink" href="#ok" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-9">Syntax<a class="headerlink" href="#syntax-9" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>+OK
+</code></pre>
+
+<p>If the Endpoint of the connection has interact+ set, the server acknowledges each successfully parsed operation from the client with a +OK message.</p>
+<h2 id="err">ERR<a class="headerlink" href="#err" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h2>
+<h3 id="syntax-10">Syntax<a class="headerlink" href="#syntax-10" title="Permalink to this headline"><i class="fa fa-link" aria-hidden="true"></i></a></h3>
+<pre><code>-ERR &lt;error message&gt;
+</code></pre>
+
+<p>The -ERR message is used by the server indicate a protocol, authorization, or other runtime connection error to the client. These errors result in the server closing the connection.</p>
+<p>Protocol error messages:</p>
+<pre><code>-ERR 'Protocol Violation'
+-ERR 'Controller/Method Not Found'
+-ERR 'Maximum Payload Length Exceeded'
+-ERR 'Authentication Timeout'
+-ERR 'Authentication Failed'
+-ERR 'Security Violation'
+-ERR 'Dead Connection'
+</code></pre>
+
+
+                    </div>
+                </div>
+                <footer>
+                    <hr />
+                    <div role="contentinfo">
+Made with DocNet. Get your copy at: <a href='https://github.com/FransBouma/DocNet' target='_blank'>https://github.com/FransBouma/DocNet</a>.
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="../../js/modernizr-2.8.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script src="../../js/theme.js"></script>
+
+</body>
+</html>

@@ -22,6 +22,7 @@
     <HelpKINode Title="DefaultPubSubCache.AddSubscription Method " Url="html/7d0a21d5-bdea-0b42-8a8c-44e17ee24b2d.htm" />
     <HelpKINode Title="IPubSubCache.AddSubscription Method " Url="html/e5531cb1-c9d9-58f5-55d3-9ebcf7bac514.htm" />
   </HelpKINode>
+  <HelpKINode Title="AddUser method" Url="html/a106f910-9207-4a72-03a4-7bdc9462888f.htm" />
   <HelpKINode Title="Alias property">
     <HelpKINode Title="AliasAttribute.Alias Property " Url="html/084b1afc-6a0b-d230-9348-aa9c714674b2.htm" />
     <HelpKINode Title="Controller.Alias Property " Url="html/8d3846c1-1faf-63e4-a267-3bd8a9c585cb.htm" />
@@ -253,7 +254,7 @@
     <HelpKINode Title="Bootstrapper.Modules.Endpoints Class" Url="html/458a8bac-e5bf-d58e-e830-71d947d3595d.htm" />
     <HelpKINode Title="about Bootstrapper.Modules.Endpoints class" Url="html/458a8bac-e5bf-d58e-e830-71d947d3595d.htm" />
   </HelpKINode>
-  <HelpKINode Title="Bootstrapper.Modules.Endpoints.RegisterCrosserEndpoint method" Url="html/c485d3db-ae46-711a-d603-9c39def20310.htm" />
+  <HelpKINode Title="Bootstrapper.Modules.Endpoints.RegisterCrosserEndpoint method" Url="html/99b91186-6b58-7ea8-fba3-a1526e9167a5.htm" />
   <HelpKINode Title="Bootstrapper.Modules.Endpoints.RegisterHttpEndpoint method" Url="html/90697564-b355-c3cd-c5f8-cabe3719cea0.htm" />
   <HelpKINode Title="Bootstrapper.Modules.Endpoints.RegisterMonitorEndpoint method" Url="html/932c3d90-87bd-cc38-b62d-3ddaae255be1.htm" />
   <HelpKINode Title="Bootstrapper.Modules.Log class">
@@ -322,6 +323,11 @@
     <HelpKINode Title="about Bootstrapper.Settings.PubSub class" Url="html/a1ae784e-6d05-eb56-3da4-d6595a5ea04c.htm" />
   </HelpKINode>
   <HelpKINode Title="Bootstrapper.Settings.PubSub.TopicMaxLength property" Url="html/f6ce0e83-8e21-c2a6-ec58-18e4a3c001cd.htm" />
+  <HelpKINode Title="Bootstrapper.Settings.Security class">
+    <HelpKINode Title="Bootstrapper.Settings.Security Class" Url="html/b1dacead-33f9-e3f7-8544-66b010a307cf.htm" />
+    <HelpKINode Title="about Bootstrapper.Settings.Security class" Url="html/b1dacead-33f9-e3f7-8544-66b010a307cf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Bootstrapper.Settings.Security.AddUser method" Url="html/a106f910-9207-4a72-03a4-7bdc9462888f.htm" />
   <HelpKINode Title="Bootstrapper.Settings.SlowConsumerLimits class">
     <HelpKINode Title="Bootstrapper.Settings.SlowConsumerLimits Class" Url="html/ab5451d2-c44c-9411-8bb5-9a3ab17273fb.htm" />
     <HelpKINode Title="about Bootstrapper.Settings.SlowConsumerLimits class" Url="html/ab5451d2-c44c-9411-8bb5-9a3ab17273fb.htm" />
@@ -398,6 +404,7 @@
   <HelpKINode Title="ClientStats.SetPendingBytes method" Url="html/58d35859-961f-9d17-da06-24e02880e785.htm" />
   <HelpKINode Title="ClientStats.SetPendingMessages method" Url="html/f34d3432-c244-c8a1-77b4-e97dddc82e16.htm" />
   <HelpKINode Title="ClientStats.ToString method" Url="html/a9053ad4-644e-1071-9842-6cb9221bab03.htm" />
+  <HelpKINode Title="ClientStats.Version property" Url="html/e910bd4a-083e-093b-85ef-562e8c6a6dec.htm" />
   <HelpKINode Title="CLOSE field" Url="html/03f47a50-fabf-e4a6-cf2b-38b25694ab3d.htm" />
   <HelpKINode Title="Close method">
     <HelpKINode Title="Controller.Close Method " Url="html/313fc74c-82e1-67a1-b46f-719d53bb7444.htm" />
@@ -487,6 +494,7 @@
   <HelpKINode Title="Controller.GetInstance method" Url="html/25416438-80c4-a73b-a8f0-2b50e8250b93.htm" />
   <HelpKINode Title="Controller.OnClosed method" Url="html/eeeb9407-486a-2e0f-f7dc-34dc1f0e0716.htm" />
   <HelpKINode Title="Controller.OnInitialize method" Url="html/21c2b1c8-ae3f-4dff-a176-19c07e6e0b84.htm" />
+  <HelpKINode Title="Controller.Open method" Url="html/dccc3edc-d47c-d9a4-5208-419c794ccaab.htm" />
   <HelpKINode Title="Controller.Protocol property" Url="html/b459fdaa-16c7-dfd6-9349-2829ff9decf4.htm" />
   <HelpKINode Title="ControllerDelegate class">
     <HelpKINode Title="ControllerDelegate Class" Url="html/c8aed3a7-8533-0e66-d89b-5c4d8fcbe53e.htm" />
@@ -565,12 +573,13 @@
   <HelpKINode Title="ControllerWrapper class">
     <HelpKINode Title="ControllerWrapper Class" Url="html/f2d12d96-37c9-7d8a-5b1b-23f171d54245.htm" />
     <HelpKINode Title="about ControllerWrapper class" Url="html/f2d12d96-37c9-7d8a-5b1b-23f171d54245.htm" />
-    <HelpKINode Title="constructor" Url="html/5b8681ed-e3e0-8c7b-0352-8b55a99883ed.htm" />
+    <HelpKINode Title="constructor" Url="html/82b6aaa0-ba4c-6a3b-9ba8-faec9a4561dc.htm" />
     <HelpKINode Title="methods" Url="html/ea6ec2c7-f717-3b95-445d-dd88ffcecd8b.htm" />
     <HelpKINode Title="properties" Url="html/e74d7152-db05-23b8-7630-f00815add2bf.htm" />
   </HelpKINode>
   <HelpKINode Title="ControllerWrapper.Controller property" Url="html/96627ef4-e974-d89b-9cde-2062af381add.htm" />
-  <HelpKINode Title="ControllerWrapper.ControllerWrapper constructor" Url="html/5b8681ed-e3e0-8c7b-0352-8b55a99883ed.htm" />
+  <HelpKINode Title="ControllerWrapper.ControllerWrapper constructor" Url="html/82b6aaa0-ba4c-6a3b-9ba8-faec9a4561dc.htm" />
+  <HelpKINode Title="ControllerWrapper.Instance property" Url="html/e4a2ae2c-0d0b-e134-8fa5-22b850fd7503.htm" />
   <HelpKINode Title="ControllerWrapper.Type property" Url="html/244866c3-0067-740b-9fc5-47a2e485adc5.htm" />
   <HelpKINode Title="Count property">
     <HelpKINode Title="BlockingByteArrayQueue.Count Property " Url="html/152c936b-dded-9472-0a1a-daf813710ca4.htm" />
@@ -622,7 +631,7 @@
   <HelpKINode Title="Crosser.Common.Server.Protocol.IHttp interface" Url="html/b686302f-58c9-8b09-ef00-158331d3e4d0.htm" />
   <HelpKINode Title="Crosser.Common.Server.Protocol.IHttpMonitor interface" Url="html/37d8cbb0-f81a-d643-c873-7c9afb4752f0.htm" />
   <HelpKINode Title="Crosser.Common.Server.Protocol.IProtocol interface" Url="html/143f98b6-aacc-2173-8804-8e3533ee6fba.htm" />
-  <HelpKINode Title="Crosser.Common.Server.Protocol.ProtocolVersions enumeration" Url="html/2cc3511b-1efd-9a5f-ea3f-c167226b263d.htm" />
+  <HelpKINode Title="Crosser.Common.Server.Protocol.ProtocolVersion enumeration" Url="html/6f8a7599-7ee9-a3d0-9e5e-25dc5fc8b730.htm" />
   <HelpKINode Title="Crosser.Common.Server.Protocol.WebSocketOpCodes class" Url="html/f7acbfe1-0608-40d6-48ef-b72ba9f06cde.htm" />
   <HelpKINode Title="Crosser.Common.Server.PubSub namespace" Url="html/64aee2c4-9497-503f-571d-3af4adac2675.htm" />
   <HelpKINode Title="Crosser.Common.Server.PubSub.IPubSubCache interface" Url="html/2d7e5843-8781-c20f-5c88-d0b94f5f0f8b.htm" />
@@ -696,6 +705,7 @@
   <HelpKINode Title="Crosser.Server.Bootstrapper.Settings.Http class" Url="html/9f5f8d12-16ed-9777-c4f5-a46b1234642d.htm" />
   <HelpKINode Title="Crosser.Server.Bootstrapper.Settings.Messages class" Url="html/f61c9aee-b173-0977-58e3-9f3774d6663f.htm" />
   <HelpKINode Title="Crosser.Server.Bootstrapper.Settings.PubSub class" Url="html/a1ae784e-6d05-eb56-3da4-d6595a5ea04c.htm" />
+  <HelpKINode Title="Crosser.Server.Bootstrapper.Settings.Security class" Url="html/b1dacead-33f9-e3f7-8544-66b010a307cf.htm" />
   <HelpKINode Title="Crosser.Server.Bootstrapper.Settings.SlowConsumerLimits class" Url="html/ab5451d2-c44c-9411-8bb5-9a3ab17273fb.htm" />
   <HelpKINode Title="Crosser.Server.Bootstrapper.Settings.Statistics class" Url="html/72ae94cb-8c3c-5adf-f26c-9c7b16413232.htm" />
   <HelpKINode Title="Crosser.Server.Bootstrapper.Settings.Transport class" Url="html/807d71f1-37cb-15fd-8117-d2fb90cae56d.htm" />
@@ -1063,7 +1073,6 @@
   <HelpKINode Title="GetInstance method">
     <HelpKINode Title="Controller.GetInstance Method " Url="html/25416438-80c4-a73b-a8f0-2b50e8250b93.htm" />
     <HelpKINode Title="Dashboard.GetInstance Method " Url="html/0647d8a8-83d8-2e1d-cbb7-c88a267b8b61.htm" />
-    <HelpKINode Title="IController.GetInstance Method " Url="html/8bd27165-66ad-a0b0-e870-68df249a7e9d.htm" />
   </HelpKINode>
   <HelpKINode Title="GetLogEventLevel method">
     <HelpKINode Title="ILogger.GetLogEventLevel Method " Url="html/5c109725-3d5a-4a20-2b14-a36fcd84eed7.htm" />
@@ -1122,8 +1131,8 @@
     <HelpKINode Title="constructor" Url="html/8dab8861-3f30-6fb4-550e-bb2f23eecf42.htm" />
     <HelpKINode Title="fields" Url="html/c0a32598-9918-eaa0-a554-4da42ad28fba.htm" />
     <HelpKINode Title="methods" Url="html/9b23a6f3-03eb-d6a8-30b2-b1f6cdf487ff.htm" />
-    <HelpKINode Title="properties" Url="html/734a5136-c73e-1c52-0935-b94b6cf7f8db.htm" />
     <HelpKINode Title="properties" Url="html/151f2855-f532-ae7c-a789-3354e4272dbb.htm" />
+    <HelpKINode Title="properties" Url="html/734a5136-c73e-1c52-0935-b94b6cf7f8db.htm" />
   </HelpKINode>
   <HelpKINode Title="Http.Dispose method" Url="html/19eca9d9-995d-6431-3367-3b81acd738fe.htm" />
   <HelpKINode Title="Http.ExecuteHttpCall method" Url="html/fc1a15b8-6622-a8c3-8a5c-f12edcc51833.htm" />
@@ -1265,7 +1274,6 @@
   <HelpKINode Title="IController.BinaryKey property" Url="html/06b176a3-4ebd-5525-f4f8-b8813e3514a6.htm" />
   <HelpKINode Title="IController.Close method" Url="html/edf19d8c-8a89-e84a-5ad1-84b1fb9c3a44.htm" />
   <HelpKINode Title="IController.ConnectionContext property" Url="html/13a863e2-3e75-c5da-33c6-368e56957542.htm" />
-  <HelpKINode Title="IController.GetInstance method" Url="html/8bd27165-66ad-a0b0-e870-68df249a7e9d.htm" />
   <HelpKINode Title="IController.OnClosed method" Url="html/6222b035-7ef4-5f1d-11f1-e57072b5b9ab.htm" />
   <HelpKINode Title="IController.OnInitialize method" Url="html/1a58d2a0-c055-0b24-40a4-ca4256836686.htm" />
   <HelpKINode Title="IController.Protocol property" Url="html/a08967ec-4143-4ee0-4efe-de75632dcf58.htm" />
@@ -1309,6 +1317,7 @@
     <HelpKINode Title="properties" Url="html/326a276e-d2b6-ae4e-a482-95ef0ada139d.htm" />
   </HelpKINode>
   <HelpKINode Title="IControllerWrapper.Controller property" Url="html/ad322b38-8681-e5ec-5abb-94ea6204c98c.htm" />
+  <HelpKINode Title="IControllerWrapper.Instance property" Url="html/2f04dc83-62a8-1ab4-ed43-128eadbea504.htm" />
   <HelpKINode Title="IControllerWrapper.Type property" Url="html/c2b3cb33-9486-abee-4699-77a1b4103644.htm" />
   <HelpKINode Title="ICrosserEndpoint interface">
     <HelpKINode Title="ICrosserEndpoint Interface" Url="html/17024288-5ac4-bc79-164e-5dad653bcac5.htm" />
@@ -1422,6 +1431,10 @@
   <HelpKINode Title="InitClientStats method" Url="html/3a0a8625-40c5-75fe-66fa-16f635489ebc.htm" />
   <HelpKINode Title="InQueue field" Url="html/d436f1e5-d57e-593d-b92e-5478e81c45d4.htm" />
   <HelpKINode Title="Instance field" Url="html/7df56c87-7969-4d62-4de5-8d4f8af64267.htm" />
+  <HelpKINode Title="Instance property">
+    <HelpKINode Title="ControllerWrapper.Instance Property " Url="html/e4a2ae2c-0d0b-e134-8fa5-22b850fd7503.htm" />
+    <HelpKINode Title="IControllerWrapper.Instance Property " Url="html/2f04dc83-62a8-1ab4-ed43-128eadbea504.htm" />
+  </HelpKINode>
   <HelpKINode Title="INT enumeration member" Url="html/04cf19de-a7ed-8484-2b23-76a9107289bd.htm" />
   <HelpKINode Title="INTE enumeration member" Url="html/04cf19de-a7ed-8484-2b23-76a9107289bd.htm" />
   <HelpKINode Title="INTER enumeration member" Url="html/04cf19de-a7ed-8484-2b23-76a9107289bd.htm" />
@@ -1630,8 +1643,8 @@
   <HelpKINode Title="Log class">
     <HelpKINode Title="Log Class" Url="html/d66d6b7f-9232-d6a7-efcf-e386b77cdb86.htm" />
     <HelpKINode Title="about Log class" Url="html/d66d6b7f-9232-d6a7-efcf-e386b77cdb86.htm" />
-    <HelpKINode Title="methods" Url="html/13c87f9b-5bc7-bf94-0677-125d80fc2e7d.htm" />
     <HelpKINode Title="methods" Url="html/09cb9813-667a-dc6f-15f7-a80e22cc38d7.htm" />
+    <HelpKINode Title="methods" Url="html/13c87f9b-5bc7-bf94-0677-125d80fc2e7d.htm" />
   </HelpKINode>
   <HelpKINode Title="Log.Debug method" Url="html/88ee8c37-dae1-2cd9-ca31-84677fe60a38.htm" />
   <HelpKINode Title="Log.Error method" Url="html/89d0d4f5-0ca0-320a-c51f-741e9524be2b.htm" />
@@ -1776,6 +1789,7 @@
     <HelpKINode Title="IServer.OnStopped Property " Url="html/43f01946-06ac-0cb1-9179-bfece0df8fee.htm" />
     <HelpKINode Title="Server.OnStopped Property " Url="html/29cb68e8-ec78-a5cc-6eae-0140e7e9fe2f.htm" />
   </HelpKINode>
+  <HelpKINode Title="Open method" Url="html/dccc3edc-d47c-d9a4-5208-419c794ccaab.htm" />
   <HelpKINode Title="OutQueue field" Url="html/84ca125d-4ca4-5184-7302-e0bb04717df1.htm" />
   <HelpKINode Title="P enumeration member">
     <HelpKINode Title="CrosserReadState Enumeration" Url="html/04cf19de-a7ed-8484-2b23-76a9107289bd.htm" />
@@ -1945,11 +1959,11 @@
     <HelpKINode Title="IProtocol.ProtocolIdentifier Property " Url="html/b8f14935-f1d7-6547-b6db-22a096270968.htm" />
     <HelpKINode Title="Protocol.ProtocolIdentifier Property " Url="html/d2258c02-cd33-43c5-d0df-9d6f3c94541e.htm" />
   </HelpKINode>
+  <HelpKINode Title="ProtocolVersion enumeration" Url="html/6f8a7599-7ee9-a3d0-9e5e-25dc5fc8b730.htm" />
   <HelpKINode Title="ProtocolVersion property">
     <HelpKINode Title="ConnectionContext.ProtocolVersion Property " Url="html/fecae5e4-2474-c99c-5d27-c851d314055d.htm" />
     <HelpKINode Title="IConnectionContext.ProtocolVersion Property " Url="html/eaac71bd-109b-84bd-1717-96eed4fc12e2.htm" />
   </HelpKINode>
-  <HelpKINode Title="ProtocolVersions enumeration" Url="html/2cc3511b-1efd-9a5f-ea3f-c167226b263d.htm" />
   <HelpKINode Title="ProtocolVersions property">
     <HelpKINode Title="IServer.ProtocolVersions Property " Url="html/e31f06ae-3f33-076e-5aa7-f486e5a125cc.htm" />
     <HelpKINode Title="Server.ProtocolVersions Property " Url="html/34a7d397-afcd-fcae-4718-9b9c34d39ba2.htm" />
@@ -2025,7 +2039,7 @@
   <HelpKINode Title="ReflectionHelper.GetCustomAttributesOfType method" Url="html/706714c0-3c5e-9479-7376-1f414f4838f8.htm" />
   <HelpKINode Title="RegisterAuthentication method" Url="html/6c47b6d7-d503-22d8-8262-0f49204d59e0.htm" />
   <HelpKINode Title="RegisterAuthorization method" Url="html/08b488dd-574b-8237-c8a9-b36fcf94815b.htm" />
-  <HelpKINode Title="RegisterCrosserEndpoint method" Url="html/c485d3db-ae46-711a-d603-9c39def20310.htm" />
+  <HelpKINode Title="RegisterCrosserEndpoint method" Url="html/99b91186-6b58-7ea8-fba3-a1526e9167a5.htm" />
   <HelpKINode Title="RegisterDefaultCrosserEndpoint property" Url="html/dda65b9e-7b76-a924-6b6a-86bb63e827ab.htm" />
   <HelpKINode Title="RegisterDefaultHttpEndpoint property" Url="html/4e7b96e7-a62e-b7d5-5261-7afe5a30ad15.htm" />
   <HelpKINode Title="RegisterDefaultMonitorEndpoint property" Url="html/1d1766b8-4cb4-f266-fdfb-10de4cd8a8c9.htm" />
@@ -2211,6 +2225,7 @@
     <HelpKINode Title="IBaseEndpoint.SecureRequired Property " Url="html/15217893-8626-6171-c926-a316f7a2ea49.htm" />
   </HelpKINode>
   <HelpKINode Title="Security class">
+    <HelpKINode Title="methods" Url="html/01c5a98c-f172-1570-5fbe-7414a25b1280.htm" />
     <HelpKINode Title="methods" Url="html/36960952-d9d9-4468-4535-1be9e8b56fc5.htm" />
   </HelpKINode>
   <HelpKINode Title="SecurityViolation enumeration member" Url="html/f85a4f68-3a1a-ec39-cfa5-0403430e0191.htm" />
@@ -2576,8 +2591,8 @@
     <HelpKINode Title="MonitorEndpoint.Username Property " Url="html/f330d5ff-6970-2dfa-b96c-13f0951a769b.htm" />
   </HelpKINode>
   <HelpKINode Title="Users property" Url="html/ce7c3e60-0c94-9dd0-e186-3a374f3813c9.htm" />
-  <HelpKINode Title="V1 enumeration member" Url="html/2cc3511b-1efd-9a5f-ea3f-c167226b263d.htm" />
-  <HelpKINode Title="V2 enumeration member" Url="html/2cc3511b-1efd-9a5f-ea3f-c167226b263d.htm" />
+  <HelpKINode Title="V1 enumeration member" Url="html/6f8a7599-7ee9-a3d0-9e5e-25dc5fc8b730.htm" />
+  <HelpKINode Title="V2 enumeration member" Url="html/6f8a7599-7ee9-a3d0-9e5e-25dc5fc8b730.htm" />
   <HelpKINode Title="validTopic field" Url="html/da5ca5e9-8f45-7ddf-fbf4-b96ade22862e.htm" />
   <HelpKINode Title="Vars property">
     <HelpKINode Title="ConnectionContext.Vars Property " Url="html/ea7d06cb-44ca-2b84-0f75-524ec1e4da1c.htm" />
@@ -2590,6 +2605,7 @@
     <HelpKINode Title="Logger.Verbose Method " Url="html/0f53dc12-ef5d-286b-cf56-5162dee685d6.htm" />
   </HelpKINode>
   <HelpKINode Title="Version property">
+    <HelpKINode Title="ClientStats.Version Property " Url="html/e910bd4a-083e-093b-85ef-562e8c6a6dec.htm" />
     <HelpKINode Title="IServer.Version Property " Url="html/05105900-c939-cafc-a848-50dd8936db2b.htm" />
     <HelpKINode Title="Server.Version Property " Url="html/f0f0f7be-3f13-c0ee-ba94-edc6c94923f8.htm" />
   </HelpKINode>

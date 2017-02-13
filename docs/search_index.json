@@ -1,44 +1,62 @@
 {
   "docs": [
     {
-      "location": "resolver/benchmarks.htm",
-      "breadcrumbs": "Home / Crosser.Resolver / Benchmarks",
+      "location": "gettingstarted/installing.htm",
+      "breadcrumbs": "Home / Getting Started / Installing",
+      "keywords": "2 4 5 a add as command CORE crosser Crosser Distribution easiest Frameworks from get https install Install Installing is it latest Latest NET nuget org package Package packages pre Pre release Release server Server suffix Supported tagged Technologies the The to To way www you",
+      "title": "Installing"
+    },
+    {
+      "location": "gettingstarted/running.htm",
+      "breadcrumbs": "Home / Getting Started / Running",
+      "keywords": "about and Before bootstrapper Bootstrapper can configuration Crosser For get GetServer hosting information Init initialize initialized is it more need options Running section sections see server Server settings start Start Technologies the to using var we When you",
+      "title": "Running"
+    },
+    {
+      "location": "internals/protocol/introduktion.htm",
+      "breadcrumbs": "Home / Crosser Internals / Crosser.Protocol",
+      "keywords": "0 1000 10m46s 11 320a4a6e 3f7ea298d8d0 49609f83 4a1d 4e31 5 6661 8336 a A a1c9 about accepted acknowledges add Add after all All allocation Although an and anything are as at attached authenticate Authentication authorization AuthRequired AuthTimeout automatically back bafd56314970 bar Bar based be before below boo Both but by bye BYE byte c1 c382 call Call CALL callack CALLACK callback CALLBACK called can card cards case CB cbid1 CertificateRequired cleanup client Client clients close Close closing com confirm Confirmation connect connection Connection ConnectionContext connects contain controller Controller Crosser crossertechnologies custom Dead Description DESCRIPTION dictionary different does doing duplex e547 each easy else Endpoint endpoints equivalent err ERR error Error errors especially established every example Example Exceeded executed Failed False feature following foo Foo for form found Found Framework from full functionality github gracefully half has have Heartbeat hello Hello Help hi HI htm html HTTP https id Id idea if If in included includes indicate info INFO information Information inspired interact interactive Interactive introduktion io IO IP is it It just key lbe length Length let level list localhost Location makes match max Maximum message messages method Method mode msg MSG msgack MSGACK much n NATS NETSTANDARD_1_6 new nHello not Not NOT Note number of ok OK on ones only operation OPERATION operations Operations optional or other output overview parameters parsed parser passed pattern PATTERN payload Payload people ping PING PingTimeout pong PONG populated Port protocol Protocol PROTOCOL ProtocolVersions provided provides pub PUB puback PUBACK publish r received receiving remove removes Resolver resources response result return RMI RPC runtime s section SecureRequired Security send SENDER sending sends sensitive sent server Server set Set Show shown side simple simplicity soon specific SslProtocols started states sub SUB suback SUBACK subscribers subscribing subscription successfully such supports Syntax t table TBD TCP telnet TELNET terminate test text that the The therefor These they this This Timeout Tls12 to todo TODO topic topics true under unsibscribed unsub UNSUB unsuback UNSUBACK unsubscribe used using v V1 V2 valid value values Vars was watch well Version very when where via wil wild will Violation with world World write written www ylRKac5kSOk you You youtu youtube zero",
+      "title": "Crosser.Protocol"
+    },
+    {
+      "location": "internals/resolver/benchmarks.htm",
+      "breadcrumbs": "Home / Crosser Internals / Crosser.Resolver / Benchmarks",
       "keywords": "000 01 02 03 04 05 07 100 102 103 1053 1055 106870 10771 11524 11975 120 127 1276 129 130 13431 136 1367 14947 15 151 15402 159 160 16316 168 1715 179 18 186 1878 193 195 198 2 20 21384 22 2266 229 2301 233 24243 25 254 256 259 260 2630 271 2819 2827 302 30911 30GHz 32 32030 32069 325 327 33 34 341 345 3454 350 36 3784 37867 38 4 40 4055 42 4207 424 43 435 44 4421 44844 45 46 46211 47 4850HQ 4866 49 5 500 52 53 54 542 577 58 59 5966 5995 6 619 62 623 63 64 66 69 69774 707 70747 71 76 78 8 8063 8144 82 85 86720 87 899 9 90 91990 922 941 9412 98 99 a according aimed alert all already and as at axis Basic being below benchmark Benchmarks best better bigger bold broke but certainly charts com Combined comes comparison compete Complex Container containers Containers core Core CPU Crosser Daniel danielpalme Dependency Details DI difference Disclaimer does DOES done dotnet DryIoC due during Each efforts end Enumerable Every exceptions executed fast Fast fastest features fFastInjector fix following for framework Framework frameworks from full Func functions GB github got Hardware has have https i7 IEnumerable IfInjector images in included info Instead Intel interface IoC IocPerformance IoCPerformance is LightInject logarithmic logical Logical lower machine means measured Mef2 Memory mentioned Mhz Microsoft might milliseconds much multi MultiThread multithreaded needed needs NET Ninject No not Not NOT Note Numbers on only original our out Overview Overview_Basic_Fast Overview_Basic_Slow Palme performed png Processor processors Property R ran realtime removed resolved resolver Resolver Result running s scale see since single SingleThread Singleton Slow slowest streaming support supports test tests Tests than that the The there think This threaded threads time times TinyIoC TM to Transient try Unity used values was we We well very when Windsor with written x you",
       "title": "Benchmarks"
     },
     {
-      "location": "resolver/features.htm",
-      "breadcrumbs": "Home / Crosser.Resolver / Features",
+      "location": "internals/resolver/features.htm",
+      "breadcrumbs": "Home / Crosser Internals / Crosser.Resolver / Features",
       "keywords": "20 a about all at basic below container Crosser Dependency Designing DI Disable Enable Enumerable fast features Features few for Get had htm IDictionary instances IoC is kb listed mappings Named needs object properties Read Resolver Rewrite runtime Set Singleton SingletonCollections specific string Support the tiny to Transient under usage we very",
       "title": "Features"
     },
     {
-      "location": "resolver/usage.htm",
-      "breadcrumbs": "Home / Crosser.Resolver / Usage",
+      "location": "internals/resolver/usage.htm",
+      "breadcrumbs": "Home / Crosser Internals / Crosser.Resolver / Usage",
       "keywords": "0 1 123 3 a add Add adding alert all All ALL Also although always an and And another answer any appears approach as As ask asking assumes at attach back be being between bit boolean both bottom but by call calling can cant change changed choose chuck Chuck chuck1 chuck2 chuckProperties class classes code Code collection collections concrete configuration Configuration configure conrecte Console container contains create Creating Crosser currently custom default developers Dictionary did different directly disable Disable DisableAll DisableAllOf disabled disables do doesn each easy enable Enable EnableAll EnableAllOf enables end enumerable exception exceptions Expression f fa fails fake FakeChuck fakeChuckProperties fakeChuckProps false feature feel for foreach forward found Framework from Func get Get GetAll GetFact GetNamedInstance grouped gt has have Having hello htm IAmFake IChuckNorris IDictionary if If implementation in In include included individually info instance instances instead interface interfaces is IS it Iterate just keyword let little look looks lt magic managing Many map Map mapped mapping mappings mark may metadata method might migth mirror modules n name named Named namedInstance NamedInstance namespace need new never normally Norris not NOT Note nothing now Now null num number object objects odd of on once one One or our over page pass passing phone properties Properties property props public real realchuck realChuckProperties realChuckProps reason Register registering registration remap reset Reset Resolve resolver Resolver ResolverConfig return returns rewritable Rewritable rewrite same sample Sample samples sealed second seen set setting settings several since Since single singleton Singleton SingletonCollection singletons so some Some specific static str straight string success supported supposed T telling that the The theOnlyChuck TheOnlyChuck There theRealChuck TheRealDeal they this This throw ThrowErrorOnDeniedMapping thrown time to transient Transient true type Type types usage Usage Use used using wanna want var was way ways we well when When Whenever where will with without working works world WriteLine wrong yet you You your",
       "title": "Usage"
     },
     {
-      "location": "resolver/usage-advanced.htm",
-      "breadcrumbs": "Home / Crosser.Resolver / Advanced Usage",
+      "location": "internals/resolver/usage-advanced.htm",
+      "breadcrumbs": "Home / Crosser Internals / Crosser.Resolver / Advanced Usage",
       "keywords": "0 1 2 3 320 332 365 4 400 450 5 a above Above advanced Advanced all All also and AnotherInterfaceImplementation As ask assumes at Basically be bottom but by can car Car CarRepository carService CarService change class classes code Code common concrete Console constructor container could Crosser ctor decouple Dependency do each efforts Ferrari for foreach found from get Get GetFastestCars has have htm html IAnotherInterface ICarRepository ICarService Id IEnumerable if If Implement implementation implementations in include included Injection instad int interface interfaces Interfaces is ISomeInterface it List look map mapping maxHits minimal Model Name namespace needs new Now of ok on one One OrderByDescending other p page pass passing properties Property protected public Register registered repository Repository Resolve Resolver return sample Sample samples see set since so SomeInterfaceImplementation SomeProperty Speed static string take Take test that the this to To TODO TopSpeed type usage Usage used using var way we when will with WriteLine you",
       "title": "Advanced Usage"
     },
     {
-      "location": "resolver/installing.htm",
-      "breadcrumbs": "Home / Crosser.Resolver / Installing",
+      "location": "internals/resolver/installing.htm",
+      "breadcrumbs": "Home / Crosser Internals / Crosser.Resolver / Installing",
       "keywords": "can crosser Crosser from https install Install Installing nuget org Package packages resolver Resolver the You",
       "title": "Installing"
     },
     {
-      "location": "resolver/license.htm",
-      "breadcrumbs": "Home / Crosser.Resolver / License",
+      "location": "internals/resolver/license.htm",
+      "breadcrumbs": "Home / Crosser Internals / Crosser.Resolver / License",
       "keywords": "2016 a A AB above ACTION all AN and AND any ANY ARISING AS associated AUTHORS be BE BUT c charge CLAIM conditions CONNECTION CONTRACT copies copy copyright Copyright COPYRIGHT Crosser DAMAGES deal DEALINGS distribute do documentation EVENT EXPRESS files FITNESS following FOR free FROM furnished granted hereby HOLDERS IMPLIED in IN included including INCLUDING is IS KIND LIABILITY LIABLE License limitation LIMITED MERCHANTABILITY merge MIT modify NO NONINFRINGEMENT NOT notice obtaining of OF or OR OTHER OTHERWISE OUT PARTICULAR permission Permission permit person persons portions PROVIDED publish PURPOSE restriction rights sell shall SHALL so software Software SOFTWARE subject sublicense substantial Technologies the The THE this to TO TORT use USE WARRANTIES WARRANTY WHETHER whom WITH without WITHOUT",
       "title": "License"
     },
     {
-      "location": "resolver/source.htm",
-      "breadcrumbs": "Home / Crosser.Resolver / Source",
+      "location": "internals/resolver/source.htm",
+      "breadcrumbs": "Home / Crosser Internals / Crosser.Resolver / Source",
       "keywords": "available com Crosser CrosserTechnologies fa github https is on Resolver source Source The",
       "title": "Source"
     }
