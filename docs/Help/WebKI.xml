@@ -114,6 +114,7 @@
   <HelpKINode Title="B enumeration member" Url="html/04cf19de-a7ed-8484-2b23-76a9107289bd.htm" />
   <HelpKINode Title="Backlog property">
     <HelpKINode Title="BaseEndpoint.Backlog Property " Url="html/e7e74b08-26b8-ee2c-5283-c1ed9fc0c512.htm" />
+    <HelpKINode Title="Bootstrapper.Settings.Endpoints.Backlog Property " Url="html/e34808eb-4a4b-0eec-383f-8495105c9e31.htm" />
     <HelpKINode Title="IBaseEndpoint.Backlog Property " Url="html/598fc51d-3950-6ab4-0024-6be62e76dd09.htm" />
   </HelpKINode>
   <HelpKINode Title="BaseEndpoint class">
@@ -298,6 +299,9 @@
     <HelpKINode Title="Bootstrapper.Settings.Endpoints Class" Url="html/9db72828-a185-10c3-58e7-56a0972e19fe.htm" />
     <HelpKINode Title="about Bootstrapper.Settings.Endpoints class" Url="html/9db72828-a185-10c3-58e7-56a0972e19fe.htm" />
   </HelpKINode>
+  <HelpKINode Title="Bootstrapper.Settings.Endpoints.Backlog property" Url="html/e34808eb-4a4b-0eec-383f-8495105c9e31.htm" />
+  <HelpKINode Title="Bootstrapper.Settings.Endpoints.Interactive property" Url="html/a99498f7-1d7d-c44a-40d8-4066643e7829.htm" />
+  <HelpKINode Title="Bootstrapper.Settings.Endpoints.MaxConnections property" Url="html/91e9e434-8961-befa-0864-4782117f3a36.htm" />
   <HelpKINode Title="Bootstrapper.Settings.Endpoints.PingTimeout property" Url="html/1ef888ee-6d04-2538-02ad-4731274c72cb.htm" />
   <HelpKINode Title="Bootstrapper.Settings.Endpoints.RegisterDefaultCrosserEndpoint property" Url="html/dda65b9e-7b76-a924-6b6a-86bb63e827ab.htm" />
   <HelpKINode Title="Bootstrapper.Settings.Endpoints.RegisterDefaultHttpEndpoint property" Url="html/4e7b96e7-a62e-b7d5-5261-7afe5a30ad15.htm" />
@@ -309,7 +313,6 @@
   <HelpKINode Title="Bootstrapper.Settings.Http.MaxLengthPostBody property" Url="html/3df0f6d5-121c-642e-060c-9521c80ddfd5.htm" />
   <HelpKINode Title="Bootstrapper.Settings.Http.MaxLengthQueryString property" Url="html/625c9427-7570-3089-1d02-caa795263646.htm" />
   <HelpKINode Title="Bootstrapper.Settings.Http.MaxLengthURL property" Url="html/f3417d75-0dbd-b4e9-506b-ea68267b30c0.htm" />
-  <HelpKINode Title="Bootstrapper.Settings.MaxConnections property" Url="html/e94d9b5a-4d07-9574-2def-ce786f2bd494.htm" />
   <HelpKINode Title="Bootstrapper.Settings.Messages class">
     <HelpKINode Title="Bootstrapper.Settings.Messages Class" Url="html/f61c9aee-b173-0977-58e3-9f3774d6663f.htm" />
     <HelpKINode Title="about Bootstrapper.Settings.Messages class" Url="html/f61c9aee-b173-0977-58e3-9f3774d6663f.htm" />
@@ -491,7 +494,6 @@
   <HelpKINode Title="Controller.ConnectionContext property" Url="html/e7536813-a647-e86d-a1b6-cba0691f278a.htm" />
   <HelpKINode Title="Controller.Controller constructor" Url="html/c90859ef-9814-2bcb-31f9-9903cf1f61c8.htm" />
   <HelpKINode Title="Controller.Dispose method" Url="html/6bb2e4ea-f658-de8c-c359-8d5c7cd403f6.htm" />
-  <HelpKINode Title="Controller.GetInstance method" Url="html/25416438-80c4-a73b-a8f0-2b50e8250b93.htm" />
   <HelpKINode Title="Controller.OnClosed method" Url="html/eeeb9407-486a-2e0f-f7dc-34dc1f0e0716.htm" />
   <HelpKINode Title="Controller.OnInitialize method" Url="html/21c2b1c8-ae3f-4dff-a176-19c07e6e0b84.htm" />
   <HelpKINode Title="Controller.Open method" Url="html/dccc3edc-d47c-d9a4-5208-419c794ccaab.htm" />
@@ -1070,10 +1072,7 @@
     <HelpKINode Title="BinaryKey.GetHashCode Method " Url="html/808709b3-327d-d986-4c71-fe67d6dce9d3.htm" />
     <HelpKINode Title="BinaryKeyComparer.GetHashCode Method " Url="html/5ca55481-0056-6dcd-00ef-32e1f0cedb78.htm" />
   </HelpKINode>
-  <HelpKINode Title="GetInstance method">
-    <HelpKINode Title="Controller.GetInstance Method " Url="html/25416438-80c4-a73b-a8f0-2b50e8250b93.htm" />
-    <HelpKINode Title="Dashboard.GetInstance Method " Url="html/0647d8a8-83d8-2e1d-cbb7-c88a267b8b61.htm" />
-  </HelpKINode>
+  <HelpKINode Title="GetInstance method" Url="html/0647d8a8-83d8-2e1d-cbb7-c88a267b8b61.htm" />
   <HelpKINode Title="GetLogEventLevel method">
     <HelpKINode Title="ILogger.GetLogEventLevel Method " Url="html/5c109725-3d5a-4a20-2b14-a36fcd84eed7.htm" />
     <HelpKINode Title="Log.GetLogEventLevel Method " Url="html/7c57d035-2d64-1df7-6172-62411f7976d8.htm" />
@@ -1131,8 +1130,8 @@
     <HelpKINode Title="constructor" Url="html/8dab8861-3f30-6fb4-550e-bb2f23eecf42.htm" />
     <HelpKINode Title="fields" Url="html/c0a32598-9918-eaa0-a554-4da42ad28fba.htm" />
     <HelpKINode Title="methods" Url="html/9b23a6f3-03eb-d6a8-30b2-b1f6cdf487ff.htm" />
-    <HelpKINode Title="properties" Url="html/151f2855-f532-ae7c-a789-3354e4272dbb.htm" />
     <HelpKINode Title="properties" Url="html/734a5136-c73e-1c52-0935-b94b6cf7f8db.htm" />
+    <HelpKINode Title="properties" Url="html/151f2855-f532-ae7c-a789-3354e4272dbb.htm" />
   </HelpKINode>
   <HelpKINode Title="Http.Dispose method" Url="html/19eca9d9-995d-6431-3367-3b81acd738fe.htm" />
   <HelpKINode Title="Http.ExecuteHttpCall method" Url="html/fc1a15b8-6622-a8c3-8a5c-f12edcc51833.htm" />
@@ -1444,6 +1443,7 @@
   <HelpKINode Title="Interactive field" Url="html/e5741d11-8e2d-759e-3e01-4429955cc571.htm" />
   <HelpKINode Title="Interactive property">
     <HelpKINode Title="BaseEndpoint.Interactive Property " Url="html/62f52af0-6471-dd8f-4f18-45d08872df74.htm" />
+    <HelpKINode Title="Bootstrapper.Settings.Endpoints.Interactive Property " Url="html/a99498f7-1d7d-c44a-40d8-4066643e7829.htm" />
     <HelpKINode Title="ClientStats.Interactive Property " Url="html/8af33e18-cd6b-81e8-a941-c0994affa5fd.htm" />
     <HelpKINode Title="IBaseEndpoint.Interactive Property " Url="html/510eb82c-a608-b708-15b1-9398e40aad03.htm" />
   </HelpKINode>
@@ -1643,8 +1643,8 @@
   <HelpKINode Title="Log class">
     <HelpKINode Title="Log Class" Url="html/d66d6b7f-9232-d6a7-efcf-e386b77cdb86.htm" />
     <HelpKINode Title="about Log class" Url="html/d66d6b7f-9232-d6a7-efcf-e386b77cdb86.htm" />
-    <HelpKINode Title="methods" Url="html/09cb9813-667a-dc6f-15f7-a80e22cc38d7.htm" />
     <HelpKINode Title="methods" Url="html/13c87f9b-5bc7-bf94-0677-125d80fc2e7d.htm" />
+    <HelpKINode Title="methods" Url="html/09cb9813-667a-dc6f-15f7-a80e22cc38d7.htm" />
   </HelpKINode>
   <HelpKINode Title="Log.Debug method" Url="html/88ee8c37-dae1-2cd9-ca31-84677fe60a38.htm" />
   <HelpKINode Title="Log.Error method" Url="html/89d0d4f5-0ca0-320a-c51f-741e9524be2b.htm" />
@@ -1709,7 +1709,7 @@
   <HelpKINode Title="Many&lt;TInterface&gt;.Properties method" Url="html/48a956eb-b4ba-e8ec-9923-ba549568996d.htm" />
   <HelpKINode Title="Many&lt;TInterface&gt;.Remove&lt;TClass&gt; method" Url="html/e473bc15-4897-bc80-e57e-b87389ba21e7.htm" />
   <HelpKINode Title="Many&lt;TInterface&gt;.Reset method" Url="html/b47e4f01-d9e4-fcd8-ba51-da705a6eaa85.htm" />
-  <HelpKINode Title="MaxConnections property" Url="html/e94d9b5a-4d07-9574-2def-ce786f2bd494.htm" />
+  <HelpKINode Title="MaxConnections property" Url="html/91e9e434-8961-befa-0864-4782117f3a36.htm" />
   <HelpKINode Title="MaxLengthPostBody property" Url="html/3df0f6d5-121c-642e-060c-9521c80ddfd5.htm" />
   <HelpKINode Title="MaxLengthQueryString property" Url="html/625c9427-7570-3089-1d02-caa795263646.htm" />
   <HelpKINode Title="MaxLengthURL property" Url="html/f3417d75-0dbd-b4e9-506b-ea68267b30c0.htm" />
@@ -2225,8 +2225,8 @@
     <HelpKINode Title="IBaseEndpoint.SecureRequired Property " Url="html/15217893-8626-6171-c926-a316f7a2ea49.htm" />
   </HelpKINode>
   <HelpKINode Title="Security class">
-    <HelpKINode Title="methods" Url="html/01c5a98c-f172-1570-5fbe-7414a25b1280.htm" />
     <HelpKINode Title="methods" Url="html/36960952-d9d9-4468-4535-1be9e8b56fc5.htm" />
+    <HelpKINode Title="methods" Url="html/01c5a98c-f172-1570-5fbe-7414a25b1280.htm" />
   </HelpKINode>
   <HelpKINode Title="SecurityViolation enumeration member" Url="html/f85a4f68-3a1a-ec39-cfa5-0403430e0191.htm" />
   <HelpKINode Title="Send method">
